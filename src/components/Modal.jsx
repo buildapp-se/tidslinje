@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { WikiIcon } from './icons'
 
 const ICONS = {
@@ -16,10 +16,18 @@ function imgSrc(path) {
 }
 
 export default function Modal({ event, onClose }) {
+  const closeRef = useRef(null)
+
   useEffect(() => {
     const handler = (e) => { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', handler)
-    return () => document.removeEventListener('keydown', handler)
+    closeRef.current?.focus()
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', handler)
+      document.body.style.overflow = prevOverflow
+    }
   }, [onClose])
 
   const imgUrl = imgSrc(event.image)
@@ -28,6 +36,9 @@ export default function Modal({ event, onClose }) {
     <div
       className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={event.title}
     >
       <div
         className="bg-white max-w-xl w-full rounded-xl shadow-2xl max-h-[85vh] overflow-y-auto"
@@ -54,6 +65,7 @@ export default function Modal({ event, onClose }) {
               </h2>
             </div>
             <button
+              ref={closeRef}
               onClick={onClose}
               aria-label="Stäng"
               className="text-gray-400 hover:text-gray-700 text-xl leading-none ml-4 mt-0.5"

@@ -28,7 +28,7 @@
 - [x] Svenska Wikipedia-länkar tillagda
 - [x] LO Play-videor tillagda (Sundsvallsstrejken, Amalthea, Ådalen, Saltsjöbaden)
 - [x] Podcast "Vi bygger landet" (LO) tillagd
-- [ ] **Granska 5 flaggade länkar manuellt i webbläsare** (2026-07-06-audit): 3 sverigesradio.se gav 403 (troligen bot-block), 2 lo.se Play-länkar (Ådalen, Saltsjöbaden) timeoutade. Resten av 71 länkar såg friska ut vid stickprov.
+- [x] Granska 5 flaggade länkar (2026-07-21): alla 5 OK i riktig webbläsare. sverigesradio.se×3 gav 403 bara mot automatiska fetchers (bot-block), fungerar för riktiga användare. lo.se×2 (Ådalen, Saltsjöbaden) laddar utan timeout. Ingen ändring behövs.
 - [ ] **Hitta fler podcasts** — t.ex. Historiepodden om Seskaröupproret, och andra relevanta avsnitt
 
 ## Bilder

@@ -1,5 +1,7 @@
 # To-do
 
+> Tvärprojekt-prio: se `../master-backlog.md`, uppdatera båda vid ändring.
+
 ## Setup
 - [x] Projektfiler skapade (ersätter `npm create vite@latest`)
 - [x] Tailwind CSS konfigurerat (tailwind.config.js + postcss.config.js + index.css)

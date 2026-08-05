@@ -1,19 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { WikiIcon } from './icons'
-
-const ICONS = {
-  podcast: '🎙️',
-  video: '🎬',
-  wiki: <WikiIcon className="w-[18px] h-[18px]" />,
-}
-
-const LINK_LABEL = { podcast: 'Podcast', video: 'Video', wiki: 'Läs mer' }
-
-function imgSrc(path) {
-  if (!path) return null
-  if (path.startsWith('http')) return path
-  return `${import.meta.env.BASE_URL}${path}`
-}
+import { imgSrc, linkIcon, LINK_LABEL } from '../shared'
 
 export default function Modal({ event, onClose }) {
   const closeRef = useRef(null)
@@ -31,6 +17,7 @@ export default function Modal({ event, onClose }) {
   }, [onClose])
 
   const imgUrl = imgSrc(event.image)
+  const credit = event.imageCredit
 
   return (
     <div
@@ -44,13 +31,32 @@ export default function Modal({ event, onClose }) {
         className="bg-white max-w-xl w-full rounded-xl shadow-2xl max-h-[85vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Stor bild högst upp — visas bara om bild finns */}
+        {/* Stor bild högst upp — visas bara om bild finns.
+            Bildtexten är inte pynt: bilderna är hämtade från Wikimedia
+            Commons och licenserna kräver att upphovsmannen namnges. Flera av
+            bilderna är dessutom tidstypiska illustrationer snarare än foton
+            av själva händelsen, och då behöver läsaren veta vad hen ser. */}
         {imgUrl && (
-          <img
-            src={imgUrl}
-            alt={event.title}
-            className="w-full h-52 object-cover rounded-t-xl"
-          />
+          <figure className="m-0">
+            <img
+              src={imgUrl}
+              alt={credit?.caption || event.title}
+              className="w-full h-52 object-cover rounded-t-xl"
+            />
+            {credit && (
+              <figcaption className="px-6 pt-2 text-[11px] text-gray-400 leading-snug">
+                {credit.caption && <span>{credit.caption}. </span>}
+                <a
+                  href={credit.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-accent"
+                >
+                  {credit.by}
+                </a>
+              </figcaption>
+            )}
+          </figure>
         )}
 
         <div className="p-6">
@@ -88,7 +94,7 @@ export default function Modal({ event, onClose }) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-accent transition-colors"
                 >
-                  <span className="text-lg">{ICONS[link.type] ?? '🔗'}</span>
+                  <span className="text-lg">{linkIcon(link.type, 'w-[18px] h-[18px]')}</span>
                   <span>{LINK_LABEL[link.type] || link.type}</span>
                 </a>
               ))}

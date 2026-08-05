@@ -18,7 +18,13 @@
         "type": "wiki",
         "url": "https://www.gsfacket.se/sv/avdelningar/avdelning-9---ostra-svealand/sveriges-aldsta-fackforening/"
       }
-    ]
+    ],
+    "image": "images/1846-typograferna.webp",
+    "imageCredit": {
+      "caption": "Sättare i Svenska Dagbladets sätteri i Stockholm, 1904",
+      "by": "Svenska Dagbladet, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Case_department_at_SvD.jpg"
+    }
   },
   {
     "id": "1879-sundsvall",
@@ -48,7 +54,12 @@
         "url": "https://poddtoppen.se/podcast/1665577095/vi-bygger-landet/sundsvallsstrejken-den-forsta-stora-striden"
       }
     ],
-    "image": "images/1879-sundsvall.webp"
+    "image": "images/1879-sundsvall.webp",
+    "imageCredit": {
+      "caption": "Sundsvalls hamn på 1870-talet",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Sundsvall_harbour_1870s.jpg"
+    }
   },
   {
     "id": "1889-traarbetare",
@@ -70,7 +81,12 @@
         "url": "https://sv.wikipedia.org/wiki/Svenska_tr%C3%A4arbetaref%C3%B6rbundet"
       }
     ],
-    "image": "images/1889-traarbetare.webp"
+    "image": "images/1889-traarbetare.webp",
+    "imageCredit": {
+      "caption": "Rasmus Hansen, facklig ledare",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Rasmus.jensen.jpg"
+    }
   },
   {
     "id": "1889-sap",
@@ -97,7 +113,12 @@
         "url": "https://shows.acast.com/vi-bygger-landet/episodes/63d270b7f34d560011134473"
       }
     ],
-    "image": "images/1889-sap.webp"
+    "image": "images/1889-sap.webp",
+    "imageCredit": {
+      "caption": "Hjalmar Branting, en av grundarna och partiets förste ledare",
+      "by": "Henry B. Goodwin, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Hjalmar_branting_stor_bild.jpg"
+    }
   },
   {
     "id": "1890-folkets-hus",
@@ -123,7 +144,12 @@
         "url": "http://www.fhp.nu/Hem/Om-oss/"
       }
     ],
-    "image": "images/1890-folkets-hus.webp"
+    "image": "images/1890-folkets-hus.webp",
+    "imageCredit": {
+      "caption": "",
+      "by": "Vattkoppa, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:1maj_085.jpg"
+    }
   },
   {
     "id": "1898-lo",
@@ -146,7 +172,12 @@
         "url": "https://sv.wikipedia.org/wiki/Landsorganisationen_i_Sverige"
       }
     ],
-    "image": "images/1898-lo.webp"
+    "image": "images/1898-lo.webp",
+    "imageCredit": {
+      "caption": "LO:s skylt i Stockholm",
+      "by": "Holger.Ellgaard, CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:LO_skylt_Stockholm.jpg"
+    }
   },
   {
     "id": "1901-forlossning",
@@ -163,7 +194,18 @@
       "föräldraledighet"
     ],
     "persons": [],
-    "links": []
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://arbetet.se/2024/07/17/foraldraforsakringen-fyller-50-ar-sverige-blev-forst-i-varlden/"
+      }
+    ],
+    "image": "images/1901-forlossning.webp",
+    "imageCredit": {
+      "caption": "Arbeterska vid Vänersborgs tändsticksfabrik, omkring 1900",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Arbeterska_V%C3%A4nersborgs_t%C3%A4ndstickafabrik.jpg"
+    }
   },
   {
     "id": "1902-saf",
@@ -184,8 +226,7 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Svenskt_N%C3%A4ringsliv"
       }
-    ],
-    "image": "images/1902-saf.webp"
+    ]
   },
   {
     "id": "1906-december",
@@ -207,7 +248,12 @@
         "url": "https://sv.wikipedia.org/wiki/Decemberkompromissen"
       }
     ],
-    "image": "images/1906-december.webp"
+    "image": "images/1906-december.webp",
+    "imageCredit": {
+      "caption": "Hjalmar von Sydow, SAF:s verkställande direktör från 1907",
+      "by": "Fotograf okänd, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Hjalmar_von_Sydow_1936.JPG"
+    }
   },
   {
     "id": "1908-amalthea",
@@ -239,7 +285,12 @@
         "url": "https://shows.acast.com/historiepodden/episodes/564-amaltheadadet-och-storstrejken-1909"
       }
     ],
-    "image": "images/1908-amalthea.webp"
+    "image": "images/1908-amalthea.webp",
+    "imageCredit": {
+      "caption": "S/s Amalthea in the Port of Malmö with visible hole from bombing by anarchists",
+      "by": "Unknown photographer, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Amalthea-1908.jpg"
+    }
   },
   {
     "id": "1909-storstrejk",
@@ -266,7 +317,12 @@
         "url": "https://podcasts.apple.com/se/podcast/storstrejken-del-1-attack-och-motattack/id1665577095?i=1000702145216"
       }
     ],
-    "image": "images/1909-storstrejk.webp"
+    "image": "images/1909-storstrejk.webp",
+    "imageCredit": {
+      "caption": "Storstrejken 1909",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Storstrejken1909.jpg"
+    }
   },
   {
     "id": "1912-abf",
@@ -289,7 +345,12 @@
         "url": "https://sv.wikipedia.org/wiki/Arbetarnas_bildningsf%C3%B6rbund"
       }
     ],
-    "image": "images/1912-abf.webp"
+    "image": "images/1912-abf.webp",
+    "imageCredit": {
+      "caption": "ABF-huset på Sveavägen i Stockholm",
+      "by": "Ankara, CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:ABF-huset.jpg"
+    }
   },
   {
     "id": "1914-ww1",
@@ -311,7 +372,12 @@
         "url": "https://sv.wikipedia.org/wiki/F%C3%B6rsta_v%C3%A4rldskriget"
       }
     ],
-    "image": "images/1914-ww1.webp"
+    "image": "images/1914-ww1.webp",
+    "imageCredit": {
+      "caption": "Bildmontage från första världskriget",
+      "by": "User:Hohum, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:WWImontage.jpg"
+    }
   },
   {
     "id": "1915-joe-hill",
@@ -340,7 +406,12 @@
         "url": "https://www.sverigesradio.se/avsnitt/670328"
       }
     ],
-    "image": "images/1915-joe-hill.webp"
+    "image": "images/1915-joe-hill.webp",
+    "imageCredit": {
+      "caption": "Joe Hill",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Joe_hill002.jpg"
+    }
   },
   {
     "id": "1917-seskaro",
@@ -361,8 +432,18 @@
       {
         "type": "podcast",
         "url": "https://shows.acast.com/historiepodden/episodes/244-seskaroupproret-1917"
+      },
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Seskarö-upproret"
       }
-    ]
+    ],
+    "image": "images/1917-seskaro.webp",
+    "imageCredit": {
+      "caption": "Protesterande mödrar på väg till Mjölkcentralen i Stockholm, 27 april 1917",
+      "by": "Axel Malmström, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Protesterande_m%C3%B6drar_till_Mj%C3%B6lcentralen_Axel_Malmstr%C3%B6m.JPG"
+    }
   },
   {
     "id": "1917-ryska-rev",
@@ -385,7 +466,12 @@
         "url": "https://sv.wikipedia.org/wiki/Ryska_revolutionen"
       }
     ],
-    "image": "images/1917-ryska-rev.webp"
+    "image": "images/1917-ryska-rev.webp",
+    "imageCredit": {
+      "caption": "Gatuoroligheter på Nevskij prospekt i Petrograd, 4 juli 1917",
+      "by": "Viktor Bulla, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:19170704_Riot_on_Nevsky_prosp_Petrograd.jpg"
+    }
   },
   {
     "id": "1918-finska-inb",
@@ -408,10 +494,15 @@
         "url": "https://sv.wikipedia.org/wiki/Finska_inb%C3%B6rdeskriget"
       }
     ],
-    "image": "images/1918-finska-inb.webp"
+    "image": "images/1918-finska-inb.webp",
+    "imageCredit": {
+      "caption": "Jägarbataljonen på torget i Vasa, februari 1918",
+      "by": "Karl Johan Borlin, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Jaakarit_vaasan_torilla.jpg"
+    }
   },
   {
-    "id": "1919-rösträtt",
+    "id": "1919-rostratt",
     "year": 1919,
     "title": "Allmän och lika rösträtt",
     "epoch": "informera-och-agitera",
@@ -435,7 +526,12 @@
         "url": "https://shows.acast.com/vi-bygger-landet/episodes/6554d4705eb5d300129838c5"
       }
     ],
-    "image": "images/1919-rostratt.webp"
+    "image": "images/1919-rostratt.webp",
+    "imageCredit": {
+      "caption": "Mötesaffisch för kvinnlig rösträtt",
+      "by": "This image was produced by me, David Castor ( user:dcastor ). The pictures I submit to the Wikipedia Project are released to the public domain. This gives you the right to use them in any way you like, without any kind of notification. This said, I would still appreciate to be mentioned as the originator whenever you think it complies well with your use of the picture. A message to me about how it has been used would also be welcome. You are obviously not required to respond to these wishes of mine, just in a friendly manner encouraged to. (All my photos are placed in Category:Images by David Castor or a subcategory thereof.), Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:M%C3%B6tesaffisch_f%C3%B6r_kvinnlig_r%C3%B6str%C3%A4tt.jpg"
+    }
   },
   {
     "id": "1919-8timmar",
@@ -456,7 +552,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Arbetstidslagen"
       }
-    ]
+    ],
+    "image": "images/1919-8timmar.webp",
+    "imageCredit": {
+      "caption": "Demonstration i Trelleborg för rösträtt och åtta timmars arbetsdag, före 1918",
+      "by": "Okänd fotograf, Trelleborgs museum, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:TM.ETB_849_R%C3%B6str%C3%A4ttsdemonstration_i_Trelleborg%28%3F%29.jpg"
+    }
   },
   {
     "id": "1929-arbetsdomstolen",
@@ -477,8 +579,7 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Arbetsdomstolen"
       }
-    ],
-    "image": "images/1929-arbetsdomstolen.webp"
+    ]
   },
   {
     "id": "1929-borskrasch",
@@ -501,7 +602,12 @@
         "url": "https://sv.wikipedia.org/wiki/Wall_Street-kraschen_1929"
       }
     ],
-    "image": "images/1929-borskrasch.webp"
+    "image": "images/1929-borskrasch.webp",
+    "imageCredit": {
+      "caption": "Folksamling utanför börsen i New York",
+      "by": "US-gov, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Crowd_outside_nyse.jpg"
+    }
   },
   {
     "id": "1931-adalen",
@@ -532,7 +638,12 @@
         "url": "https://podcasts.apple.com/se/podcast/%C3%A5dalen-31-n%C3%A4r-milit%C3%A4ren-sk%C3%B6t-arbetare/id1665577095?i=1000653647085"
       }
     ],
-    "image": "images/1931-adalen.webp"
+    "image": "images/1931-adalen.webp",
+    "imageCredit": {
+      "caption": "",
+      "by": "Sten Sjöberg/IBL, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:1led0513adalen.jpg"
+    }
   },
   {
     "id": "1932-sap-makten",
@@ -556,7 +667,12 @@
         "url": "https://sv.wikipedia.org/wiki/Folkhemmet"
       }
     ],
-    "image": "images/1932-sap-makten.webp"
+    "image": "images/1932-sap-makten.webp",
+    "imageCredit": {
+      "caption": "Per Albin Hansson, porträtt 1935",
+      "by": "Fotograf: Jan de Meyere (Nederländerna, 1879 - 1950). Jan de Meyere var en nederländsk-svensk fotograf, målare, skulptör och skådespelare., Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Per_Albin_Hansson%2C_statsminister%2C_portr%C3%A4ttbild_1935.jpg"
+    }
   },
   {
     "id": "1938-saltsjobad",
@@ -587,7 +703,12 @@
         "url": "https://poddtoppen.se/podcast/1665577095/vi-bygger-landet/saltsjobadsavtalet-en-historisk-kompromiss"
       }
     ],
-    "image": "images/1938-saltsjobad.webp"
+    "image": "images/1938-saltsjobad.webp",
+    "imageCredit": {
+      "caption": "Underskrift av Saltsjöbadsavtalet 1938",
+      "by": "Photographer Meyerhöffer, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Saltsjobadsavtalet.jpg"
+    }
   },
   {
     "id": "1939-ww2",
@@ -609,7 +730,12 @@
         "url": "https://sv.wikipedia.org/wiki/Andra_v%C3%A4rldskriget"
       }
     ],
-    "image": "images/1939-ww2.webp"
+    "image": "images/1939-ww2.webp",
+    "imageCredit": {
+      "caption": "Slaget vid Changde under andra världskriget",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Changde_battle.jpg"
+    }
   },
   {
     "id": "1940-norrskensflamman",
@@ -636,7 +762,12 @@
         "url": "https://shows.acast.com/historiepodden/episodes/historiepodden-14-norrskensflamman-brinner"
       }
     ],
-    "image": "images/1940-norrskensflamman.webp"
+    "image": "images/1940-norrskensflamman.webp",
+    "imageCredit": {
+      "caption": "Norrskensflamman 1940",
+      "by": "Reportagebild, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Norrskensflamman_1940.jpg"
+    }
   },
   {
     "id": "1945-statare",
@@ -663,7 +794,12 @@
         "url": "https://shows.acast.com/historiepodden/episodes/605-statarna"
       }
     ],
-    "image": "images/1945-statare.webp"
+    "image": "images/1945-statare.webp",
+    "imageCredit": {
+      "caption": "Mjölkerskor och lagårdskarlar vid ladugården, Julita gård i Södermanland",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Statare._Mj%C3%B6lkerskor_och_lag%C3%A5rdskarlar_uppst%C3%A4llda_vid_ladug%C3%A5rden._Julita_g%C3%A5rd%2C_S%C3%B6dermanland_-_Nordiska_Museet_-_NMA.0040766.jpg"
+    }
   },
   {
     "id": "1951-3veckor",
@@ -684,7 +820,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Semesterlagen"
       }
-    ]
+    ],
+    "image": "images/1951-3veckor.webp",
+    "imageCredit": {
+      "caption": "Badplatsen vid Axamosjön utanför Jönköping, 1956",
+      "by": "AB Flygtrafik, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Axamosj%C3%B6n_1956.jpg"
+    }
   },
   {
     "id": "1959-atp",
@@ -710,7 +852,13 @@
         "type": "podcast",
         "url": "https://shows.acast.com/vi-bygger-landet/episodes/66f5110a10237237778eadd6"
       }
-    ]
+    ],
+    "image": "images/1959-atp.webp",
+    "imageCredit": {
+      "caption": "Tage Erlander, Olof Palme och Ingvar Carlsson i Lund 1959",
+      "by": "Kurt Hagblom, Hagblom-Foto, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Tage_Erlander%2C_Olof_Palme_och_Ingvar_Carlsson_p%C3%A5_Studentafton_i_Lund.jpg"
+    }
   },
   {
     "id": "1960-kvinnoloner",
@@ -727,7 +875,18 @@
       "jämställdhet"
     ],
     "persons": [],
-    "links": []
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://www.lo.se/i-samhallet/samhallet-a-o/los-och-arbetarrorelsens-historia/1960-1979"
+      }
+    ],
+    "image": "images/1960-kvinnoloner.webp",
+    "imageCredit": {
+      "caption": "Kvinnor syr handskar i tekoindustrin i Laholm, omkring 1955 till 1960",
+      "by": "Erik Liljeroth, CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tekoindustri._Kvinnor_syr_handskar_i_Laholm_-_Nordiska_museet_-_NMA.0029900.jpg"
+    }
   },
   {
     "id": "1962-forskola",
@@ -749,8 +908,7 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/F%C3%B6rskola"
       }
-    ],
-    "image": "images/1962-forskola.webp"
+    ]
   },
   {
     "id": "1963-4veckor",
@@ -771,7 +929,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Semesterlagen"
       }
-    ]
+    ],
+    "image": "images/1963-4veckor.webp",
+    "imageCredit": {
+      "caption": "Tältcamping på en klippäng i Sverige 1957",
+      "by": "K. W. Gullers, CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:NMAx.0087186.jpg"
+    }
   },
   {
     "id": "1966-offentliga",
@@ -788,7 +952,18 @@
       "konflikt"
     ],
     "persons": [],
-    "links": []
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://www.publikt.se/fordjupning/lang-vag-till-ratten-att-forhandla-18101"
+      }
+    ],
+    "image": "images/1966-offentliga.webp",
+    "imageCredit": {
+      "caption": "TCO:s delegation granskar slutbudet i avtalet för kommunalanställda, 1962",
+      "by": "Okänd fotograf, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Agreement-between-TCO-and-SACO-352106734844.jpg"
+    }
   },
   {
     "id": "1968-komvux",
@@ -834,7 +1009,12 @@
         "url": "https://www.sverigesradio.se/avsnitt/den-vilda-gruvstrejken-i-kiruna-malmberget-norrbotten-1969-1970"
       }
     ],
-    "image": "images/1969-gruvstrejk.webp"
+    "image": "images/1969-gruvstrejk.webp",
+    "imageCredit": {
+      "caption": "Industrianläggningarna vid Kiirunavaara i Kiruna",
+      "by": "Helleborus, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Kiirunavaara_industry_plants.jpg"
+    }
   },
   {
     "id": "1971-arbetstid",
@@ -855,7 +1035,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Arbetstidslagen"
       }
-    ]
+    ],
+    "image": "images/1971-arbetstid.webp",
+    "imageCredit": {
+      "caption": "Verkstadsgolvet i Atlas Copcos Siroccoverkstad i Nacka, 1966",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Siroccoverkstaden_1966.jpg"
+    }
   },
   {
     "id": "1974-las-fml",
@@ -876,7 +1062,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Lagen_om_anst%C3%A4llningsskydd"
       }
-    ]
+    ],
+    "image": "images/1974-las-fml.webp",
+    "imageCredit": {
+      "caption": "Olof Palme vid förstamajdemonstrationen på Norra Bantorget 1973",
+      "by": "Oiving, CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Palme_1973.jpg"
+    }
   },
   {
     "id": "1976-mbl",
@@ -919,7 +1111,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Semesterlagen"
       }
-    ]
+    ],
+    "image": "images/1978-5veckor.webp",
+    "imageCredit": {
+      "caption": "Svensk sommarstuga fotograferad på 1970-talet",
+      "by": "Andersreilund, CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stora_byg%C3%A4rde%2C_sommarstuga%2C_byggd_1962.jpg"
+    }
   },
   {
     "id": "1978-timbro",
@@ -928,8 +1126,8 @@
     "epoch": "folkhemmet-och-valfardsstaten",
     "country": "sverige",
     "size": "medium",
-    "short": "Svenskt Näringsliv bildar Timbro som liberal tankesmedja och motpol till vänstern.",
-    "long": "Organisationen Svenskt Näringsliv bildar Timbro som en liberal och marknadsorienterad tankesmedja. Timbro fick en viktig roll i att forma och sprida idéer om privatisering, avreglering och marknadslösningar som motvikt till den dominerande socialdemokratiska ideologin. Grundandet kan ses som ett svar på 1970-talets fackliga framgångar.",
+    "short": "SAF bildar Timbro som liberal tankesmedja och motpol till vänstern.",
+    "long": "Svenska Arbetsgivareföreningen (SAF) bildar Timbro som en liberal och marknadsorienterad tankesmedja. Timbro fick en viktig roll i att forma och sprida idéer om privatisering, avreglering och marknadslösningar som motvikt till den dominerande socialdemokratiska ideologin. Grundandet kan ses som ett svar på 1970-talets fackliga framgångar. Svenskt Näringsliv, som i dag står bakom Timbro, bildades först 2001 när SAF gick samman med Industriförbundet.",
     "tags": [
       "organisation",
       "politisk"
@@ -956,7 +1154,18 @@
       "konflikt"
     ],
     "persons": [],
-    "links": []
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Storkonflikten_i_Sverige_1980"
+      }
+    ],
+    "image": "images/1980-storlockout.webp",
+    "imageCredit": {
+      "caption": "Förstamajdemonstration utanför SAF:s huvudkontor under storkonflikten 1980",
+      "by": "Hans-Göran Öhlin, CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Storkonflikten_1980%2C_demonstration_1_maj.jpg"
+    }
   },
   {
     "id": "1983-jamlikt",
@@ -972,7 +1181,12 @@
       "ekonomi"
     ],
     "persons": [],
-    "links": []
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Ojämlikhet_i_Sverige"
+      }
+    ]
   },
   {
     "id": "1983-lontagarfonder",
@@ -998,7 +1212,13 @@
         "type": "podcast",
         "url": "https://podcasts.apple.com/se/podcast/l%C3%B6ntagarfonderna-den-sista-striden/id1665577095?i=1000714749439"
       }
-    ]
+    ],
+    "image": "images/1983-lontagarfonder.webp",
+    "imageCredit": {
+      "caption": "Ekonomen Rudolf Meidner, mannen bakom löntagarfondsförslaget, 1966",
+      "by": "Harald Borgström, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Rudolf-Meidner-143458166346.jpg"
+    }
   },
   {
     "id": "1985-kreditreglering",
@@ -1019,8 +1239,18 @@
       {
         "type": "podcast",
         "url": "https://podcasts.apple.com/se/podcast/90-talskrisen-del-1-mot-avgrunden/id1665577095?i=1000745386901"
+      },
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Novemberrevolutionen_(Sverige)"
       }
-    ]
+    ],
+    "image": "images/1985-kreditreglering.webp",
+    "imageCredit": {
+      "caption": "Riksbankens huvudkontor i Stockholm, där utlåningstaket avskaffades 1985",
+      "by": "Arild Vågen, CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Riksbankshuset_April_2015.jpg"
+    }
   },
   {
     "id": "1986-palme",
@@ -1047,7 +1277,12 @@
         "url": "https://www.sverigesradio.se/avsnitt/det-olosta-palmemordet-r"
       }
     ],
-    "image": "images/1986-palme.webp"
+    "image": "images/1986-palme.webp",
+    "imageCredit": {
+      "caption": "Olof Palme",
+      "by": "Firma Hagblom-Foto, CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Olof_Palme_-_Alvin_%28239694%29.jpg"
+    }
   },
   {
     "id": "1989-berlinmuren",
@@ -1069,7 +1304,12 @@
         "url": "https://sv.wikipedia.org/wiki/Berlinmuren"
       }
     ],
-    "image": "images/1989-berlinmuren.webp"
+    "image": "images/1989-berlinmuren.webp",
+    "imageCredit": {
+      "caption": "Berlinmuren vid Potsdamer Platz, november 1975",
+      "by": "Edward Valachovic https://www.flickr.com/people/fauxaddress/, CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Berlin_Wall_Potsdamer_Platz_November_1975_looking_east_crop.jpg"
+    }
   },
   {
     "id": "1991-27dagar",
@@ -1090,7 +1330,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Semesterlagen"
       }
-    ]
+    ],
+    "image": "images/1991-27dagar.webp",
+    "imageCredit": {
+      "caption": "Badstrand vid Nybrostrand utanför Ystad",
+      "by": "Johan Wessman / News Oresund, CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nybrostrand_beach_20130717_008F_%289313937352%29.jpg"
+    }
   },
   {
     "id": "1994-2dagar",
@@ -1160,7 +1406,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Lex_Laval"
       }
-    ]
+    ],
+    "image": "images/2007-lex-laval.webp",
+    "imageCredit": {
+      "caption": "EU-domstolen i Luxemburg, som avgjorde Lavalmålet i december 2007",
+      "by": "Cédric Puisney from Brussels, Belgium, CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:European_Court_of_Justice_%28ECJ%29_in_Luxembourg_with_flags_0017_%281674479483%29.jpg"
+    }
   },
   {
     "id": "2007-a-kassa",
@@ -1182,7 +1434,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Arbetsl%C3%B6shetsf%C3%B6rs%C3%A4kring_i_Sverige"
       }
-    ]
+    ],
+    "image": "images/2007-a-kassa.webp",
+    "imageCredit": {
+      "caption": "Statsminister Fredrik Reinfeldt 2009",
+      "by": "Baltic Development Forum from Denmark, CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fredrik_Reinfeldt_%283994691715%29.jpg"
+    }
   },
   {
     "id": "2007-ava",
@@ -1203,7 +1461,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Allm%C3%A4n_visstid"
       }
-    ]
+    ],
+    "image": "images/2007-ava.webp",
+    "imageCredit": {
+      "caption": "Sven Otto Littorin, arbetsmarknadsminister när allmän visstid infördes",
+      "by": "Torstensson_and_Littorin.JPG : Henrik Ishihara Globaljuggler derivative work: Entheta ( talk ), CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Littorin.jpg"
+    }
   },
   {
     "id": "2015-huvudentreprenad",
@@ -1212,14 +1476,25 @@
     "epoch": "forvaltande",
     "country": "sverige",
     "size": "small",
-    "short": "Lag om ansvar längs entreprenadkedjor för att motverka lönedumpning.",
-    "long": "En lagstiftning om huvudentreprenörsansvar innebär att den som anlitar underentreprenörer ansvarar för att löner betalas ut korrekt längs hela leveranskedjan. Det är ett verktyg för att motverka social dumpning och löneunderskridanden i branscher med komplexa underentreprenadkedjor.",
+    "short": "Byggnads får igenom huvudentreprenörsansvar i kollektivavtal, lagen kommer först 2018.",
+    "long": "Huvudentreprenörsansvar innebär att den som anlitar underentreprenörer ansvarar för att löner betalas ut korrekt längs hela kedjan. Det är ett verktyg mot social dumpning och löneunderskridanden i branscher med långa underentreprenadkedjor. 2015 drev Byggnads in ansvaret i Byggavtalet och flera andra kollektivavtal. Först 2018 kom lagen om entreprenörsansvar för lönefordringar (2018:1472), och då bara för bygg- och anläggningsbranschen.",
     "tags": [
       "lag",
       "lön"
     ],
     "persons": [],
-    "links": []
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://www.byggnadsarbetaren.se/byggnads-positivt-till-lagforslag-om-huvudentreprenorsansvar/"
+      }
+    ],
+    "image": "images/2015-huvudentreprenad.webp",
+    "imageCredit": {
+      "caption": "Byggarbetsplats i centrala Göteborg 2023",
+      "by": "W.carter, CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Construction_workers_at_a_site_on_S%C3%B6dra_Hamngatan%2C_Gothenburg.jpg"
+    }
   },
   {
     "id": "2016-hamnkonflikten",
@@ -1241,7 +1516,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Svenska_hamnarbetarf%C3%B6rbundet"
       }
-    ]
+    ],
+    "image": "images/2016-hamnkonflikten.webp",
+    "imageCredit": {
+      "caption": "Fartyg vid APM Terminals i Göteborgs hamn 2015, året före konflikten",
+      "by": "Eduard47, CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2015-07-02_ANNA_SIRKKA_im_Hafen_von_G%C3%B6teborg_RB1507.jpg"
+    }
   },
   {
     "id": "2019-strejkratt",
@@ -1263,7 +1544,13 @@
         "type": "wiki",
         "url": "https://www.transportarbetaren.se/tva-ar-som-andrade-strejkratten/"
       }
-    ]
+    ],
+    "image": "images/2019-strejkratt.webp",
+    "imageCredit": {
+      "caption": "Riksdagens plenisal, fotograferad i augusti 2019",
+      "by": "BugWarp, CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Assembly_hall_of_the_Riksdag_Tour_1_Wikimania_2019_02.jpg"
+    }
   },
   {
     "id": "2023-tesla",
@@ -1289,6 +1576,12 @@
         "type": "podcast",
         "url": "https://da.se/2025/06/podd-teslastrejken-del-ett-tesla-var-min-drom/"
       }
-    ]
+    ],
+    "image": "images/2023-tesla.webp",
+    "imageCredit": {
+      "caption": "Teslas butik i Göteborg 2016. Strejken gällde Teslas svenska verksamhet",
+      "by": "Andrzej Otrębski, CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Goteborg_salon_Tesla_1.jpg"
+    }
   }
 ]

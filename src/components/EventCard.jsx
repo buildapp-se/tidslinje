@@ -1,11 +1,4 @@
-import { WikiIcon } from './icons'
-
-// Ikoner för länktyper — wiki har egen SVG för att skilja sig från emojis
-const ICONS = {
-  podcast: '🎙️',
-  video: '🎬',
-  wiki: <WikiIcon className="w-3.5 h-3.5" />,
-}
+import { imgSrc, linkIcon } from '../shared'
 
 // Tailwind-klasser per kortstorlek
 const SIZE = {
@@ -18,13 +11,6 @@ const TITLE_SIZE = {
   large: 'text-base',
   medium: 'text-sm',
   small: 'text-sm',
-}
-
-// Löser sökväg för bilder i public/ med hänsyn till Vite:s base-URL
-function imgSrc(path) {
-  if (!path) return null
-  if (path.startsWith('http')) return path
-  return `${import.meta.env.BASE_URL}${path}`
 }
 
 export default function EventCard({ event, onOpen }) {
@@ -74,7 +60,7 @@ export default function EventCard({ event, onOpen }) {
         <div className="flex items-center gap-2 mt-2">
           {event.links.map((link, i) => (
             <span key={i} title={link.type} className="text-sm leading-none">
-              {ICONS[link.type] ?? '🔗'}
+              {linkIcon(link.type, 'w-3.5 h-3.5')}
             </span>
           ))}
         </div>

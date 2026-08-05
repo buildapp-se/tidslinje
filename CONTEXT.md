@@ -14,12 +14,23 @@ en artikel.
   tre epoker.
 - Fyra komponenter: `Timeline` hämtar och sorterar, `EventCard` visar kortet i tre
   storlekar, `Modal` visar lång text och stor bild, `EpochGroup` grupperar per epok.
-- `imgSrc()` hanterar Vite base-URL så att bilder fungerar både lokalt och under
-  GitHub Pages underkatalog.
+- `src/shared.jsx` håller det som kort och modal måste vara överens om: `imgSrc()`
+  som hanterar Vite base-URL, och länkikonerna. Låg tidigare som dubbletter i båda
+  komponenterna.
+- `scripts/download-images.py` hämtar och konverterar bilder samt skriver
+  `image` och `imageCredit` i `events.json`. `scripts/test_helpers.py` kontrollerar
+  skriptets textparsning och datafilens invarianter.
 
 ## Constraints
 
-- Bildfilnamn måste vara ren ASCII. Å, ä och ö har orsakat renderingsproblem förut.
+- Händelsens `id` måste vara ren ASCII. Bildfilen döps efter id:t, och å, ä och ö
+  har orsakat renderingsproblem förut. Ett id med icke-ASCII gör dessutom att
+  nedladdningsskriptet aldrig hittar den redan hämtade filen.
+- Varje publicerad bild måste ha `imageCredit`. Bilderna kommer från Wikimedia
+  Commons och är nästan alltid CC BY eller CC BY-SA, vilket kräver att
+  upphovsmannen namnges. Kan upphovsmannen inte beläggas publiceras inte bilden.
+- Hellre ingen bild än en missvisande. En bild som föreställer fel organisation,
+  fel land eller fel årtionde gör tidslinjen otillförlitlig.
 - `vite.config.js` har en `base` som måste matcha reponamnet, annars bryts alla
   relativa sökvägar i produktion.
 - Ingen backend. All data är statisk JSON i bygget.
@@ -67,6 +78,21 @@ Datafilen är `src/data/events.json` och redigeras för hand i en texteditor.
 
 **Bildregel:** börjar `image` med `http` tolkas det som extern URL, annars som
 `public/images/{image}`. Fältet är valfritt och utelämnas när ingen bild finns.
+Filnamnet är alltid `images/{id}.webp`.
+
+**Bildkredit:** följer med varje `image` och visas som bildtext i modalen.
+
+```json
+"imageCredit": {
+  "caption": "Vad bilden faktiskt föreställer, på svenska",
+  "by": "Upphovsman, Licens",
+  "source": "https://commons.wikimedia.org/wiki/File:..."
+}
+```
+
+`caption` kan vara tom när motivet inte går att fastställa, men `by` och `source`
+måste finnas. Bildtexten skrivs på svenska och ska vara ärlig: många bilder är
+tidstypiska illustrationer, inte foton av själva händelsen.
 
 ## Design
 
@@ -99,6 +125,11 @@ kontexten och behöver inte grunderna förklarade.
 
 ## Environments and operations
 
-`git push` till `main` bygger och driftsätter via GitHub Pages. Ingen backend,
-inga hemligheter, inga migreringar. Den fullständiga arbetslistan står i
-`to-do-list.md`.
+Driftsättning är två separata steg, och `git push` är inte ett av dem:
+
+1. `git push` till `main` sparar källkoden. Det driftsätter ingenting.
+2. `npm run deploy` bygger med `--mode gh` och pushar `dist/` till grenen
+   `gh-pages`, som är den GitHub Pages faktiskt serverar.
+
+Sajten ligger på `buildapp.se/tidslinje/`. Ingen backend, inga hemligheter, inga
+migreringar. Arbetslistan står i `BACKLOG.md` och läget i `HANDOFF.md`.

@@ -51,3 +51,7 @@
 - [ ] Hårdkodade strängar finns i `App.jsx` och `Modal.jsx` trots att
       dokumentationen säger motsatsen. Lös motsägelsen, antingen i koden eller i
       dokumentet.
+
+## Captured
+
+- [ ] [P2] [Wish] Bygga en funktion för tidslinjen. lägga till i tidslinjen ett spel som liknar spelet Hittster där man lägger kort för eller efter ett annat kort om det är för eller efter i tidslinjen.

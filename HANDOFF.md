@@ -2,12 +2,62 @@
 schemaVersion: 1
 status: active
 currentGoal: Fylla ut tidslinjens innehåll så att fler händelser har bild och källa
-nextAction: Hitta bild till de nio händelser som fortfarande saknar en, i första hand 1902-saf, 1962-forskola och 1976-mbl
+nextAction: Granska de 26 handplockade bilderna mot sina bildtexter genom att faktiskt titta på filerna i public/images, och notera vilka som är missvisande eller oläsliga i kortets 64 px-beskärning
 blockers: []
-reviewedAt: 2026-08-05
+reviewedAt: 2026-08-06
 ---
 
 # Handoff: tidslinje
+
+## Sökning och områdesfilter, 2026-08-06
+
+Båda punkterna under **Funktioner** i backloggen är byggda. `CONTEXT.md` sa att
+de var "förberedda i datat men inte byggda"; nu är läsvägen byggd och datat är
+orört.
+
+- **Matchningen ligger i `src/search.js`**, inte i komponenten. Filen är ren
+  JavaScript utan JSX och utan `import.meta.env`, vilket är hela poängen: då kan
+  `node scripts/test_search.js` importera den utan testramverk, precis som
+  `scripts/test_helpers.py` kontrollerar nedladdningsskriptet. `npm test` kör båda.
+- **Diakriter normaliseras bort**, så `adalen` hittar `Skotten i Ådalen`. Den som
+  söker snabbt skriver sällan å, ä och ö.
+- **Flera sökord smalnar av**, de vidgar inte. `strejk 1909` ska ge storstrejken,
+  inte allt om strejker plus allt från 1909.
+- **Året är sökbart**, inte bara texten.
+- Sökläget lever bara i `useState`. Ingen URL-parameter och ingen `localStorage`,
+  så en delad länk visar hela tidslinjen och inte någon annans filtrering.
+
+**Motsägelsen om hårdkodade strängar är löst i dokumentet, inte i koden.** Regeln
+"innehåll i JSON, inte i komponenter" gäller händelserna. Rubrik, ingress och
+knapptexter hör hemma i komponenterna: sajten har ett språk och ingen
+översättning, så ett strängregister vore ett extra led utan mottagare. Det står
+nu uttryckligen i `CONTEXT.md` i stället för att lämnas åt läsaren att gissa.
+
+### Verifierat 2026-08-06
+
+- `npm test`: båda kontrollerna gröna, 56 händelser.
+- `npm run build`: bygger utan fel.
+- Kontrollerat i Chrome mot `npm run preview`, både 1440 px och emulerade 390 px:
+  `semester` gav `6 av 56 händelser` och epok 1 försvann helt, `semester` plus
+  `Världen` gav tomläget med en fungerande rensknapp, `adalen` gav 2 träffar och
+  kortet gick att öppna i modalen som vanligt. `document.scrollWidth` är 390 vid
+  390 px, alltså ingen vågrät rullning. Noll konsolmeddelanden efter att
+  `name`-attributet lades på sökfältet; utan det klagade Chrome på fältet.
+
+### Inte gjort, och varför
+
+Två backlogpunkter påbörjades men avbröts av en användningsgräns i sessionen, inte
+av något i projektet:
+
+- **Årtalet för `1901-forlossning`** är fortfarande okontrollerat. Frågan är inte
+  bara 1900 mot 1901 utan om "rätt till ledighet" ens är rätt beskrivning: 1900
+  års lag är formulerad som ett **förbud för arbetsgivaren** att sysselsätta en
+  kvinna de första veckorna efter förlossning. Kontrollera det innan årtalet
+  ändras, annars rättas fel sak.
+- **De 26 handplockade bilderna** är fortfarande inte granskade i verklig
+  rendering. De valdes utifrån Commons filsidas beskrivning, inte utifrån hur de
+  ser ut. Två saker ska bedömas: om motivet stämmer med bildtexten, och om det
+  håller i kortets kvadratiska 64 px-beskärning, där ett porträtt lätt kapas.
 
 ## Läget
 
@@ -80,7 +130,12 @@ Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
 
 ## Resume here
 
-Nästa steg är de nio bildlösa händelserna. `1902-saf`, `1962-forskola` och
+**Börja med bildgranskningen**, den är billigast och skyddar det som gör
+tidslinjen trovärdig: öppna de 26 filerna i `public/images` som listas i `MANUAL`
+i `scripts/download-images.py` och jämför med bildtexten. Det kräver ingen ny
+källa, bara att någon faktiskt tittar.
+
+Därefter de nio bildlösa händelserna. `1902-saf`, `1962-forskola` och
 `1976-mbl` är de som stör mest, eftersom de är centrala poster. Commons räckte
 inte, så det behövs en annan fri källa: Arbetarrörelsens arkiv och bibliotek,
 Digitalt museum eller Nordiska museet. Lägg in fyndet i `MANUAL` i

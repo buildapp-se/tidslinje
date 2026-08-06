@@ -18,6 +18,11 @@
 - [x] `id` `1919-rösträtt` bytt till ASCII, så filnamn och id följs åt igen.
 - [x] Sakfel rättade: Timbro grundades av SAF, huvudentreprenörsansvaret kom
       2015 via kollektivavtal och först 2018 via lag.
+- [x] Fritextsökning och filtrering mellan Sverige och världen. Matchar år,
+      titel, texter och taggar, tål att å, ä och ö skrivs som a och o, och har
+      egen kontroll i `scripts/test_search.js`.
+- [x] Motsägelsen om hårdkodade strängar utredd och löst i `CONTEXT.md`: regeln
+      om innehåll i JSON gäller händelserna, inte gränssnittets egna strängar.
 
 ## Bilder
 
@@ -42,15 +47,17 @@
 
 ## Funktioner
 
-- [ ] Filtrering mellan Sverige och världen.
-- [ ] Sökfunktion.
 - [ ] SVG-ikoner om emojin visar sig otillräcklig.
+- [ ] Överväg om sökningen ska visa vilket fält som gav träffen. I dag ser man
+      inte varför Saltsjöbadsavtalet dyker upp på `semester`; svaret står i den
+      långa texten, som bara syns i modalen.
 
 ## Städning
 
-- [ ] Hårdkodade strängar finns i `App.jsx` och `Modal.jsx` trots att
-      dokumentationen säger motsatsen. Lös motsägelsen, antingen i koden eller i
-      dokumentet.
+- [ ] Händelsetexterna i `events.json` använder tankstreck genomgående, till
+      exempel "Typografernas förening i Stockholm grundas — Sveriges äldsta
+      kända fackförening". Husregeln för svensk text är komma, kolon eller ny
+      mening i stället. Ändringen rör 56 poster och är ren redigering, inte kod.
 
 ## Captured
 

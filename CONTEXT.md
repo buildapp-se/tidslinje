@@ -17,6 +17,11 @@ en artikel.
 - `src/shared.jsx` håller det som kort och modal måste vara överens om: `imgSrc()`
   som hanterar Vite base-URL, och länkikonerna. Låg tidigare som dubbletter i båda
   komponenterna.
+- `src/search.js` innehåller `filterEvents()`, alltså fritextsökningen och
+  områdesfiltret. Filen är ren JavaScript utan JSX och utan Vite-beroenden, just
+  för att `node scripts/test_search.js` ska kunna köra den utan testramverk.
+  `Timeline` äger sökläget och filtrerar innan händelserna delas per epok, så en
+  epok utan träffar försvinner av sig själv.
 - `scripts/download-images.py` hämtar och konverterar bilder samt skriver
   `image` och `imageCredit` i `events.json`. `scripts/test_helpers.py` kontrollerar
   skriptets textparsning och datafilens invarianter.
@@ -111,15 +116,23 @@ kontexten och behöver inte grunderna förklarade.
 ## Important decisions
 
 - Innehåll ligger i JSON, inte i komponenter, så att en händelse kan läggas till
-  utan att röra kod.
+  utan att röra kod. Regeln gäller **händelserna**, inte gränssnittets egna
+  strängar. Rubrik, ingress, sökfältets etikett och knapptexter står i
+  komponenterna, och ska göra det: sajten har ett språk och ingen översättning,
+  så ett strängregister vore ett extra led utan mottagare.
 - Epokerna är tre och namngivna, vilket styr både gruppering och layout.
 - Alternerande vänster och höger på desktop, men allt till höger på mobil.
 - Emoji används som ikoner för podcast, video och wiki. SVG är ett senare val om
   emojin visar sig otillräcklig. Wiki-ikonen är dock redan egen SVG i
   `src/components/icons.jsx`.
 - Inga UI-bibliotek utöver Tailwind.
-- `persons`-fältet finns i JSON men ingen personsida byggs. Filtrering på `country`
-  och sökning på `tags` är förberedda i datat men inte byggda.
+- `persons`-fältet finns i JSON men ingen personsida byggs.
+- Sökningen matchar år, titel, kort text, lång text och taggar. Den normaliserar
+  bort diakriter, så `jamstalldhet` hittar `jämställdhet`. Flera sökord smalnar
+  av träffmängden i stället för att vidga den.
+- Sökläget lever bara i komponentens `useState`. Ingen URL-parameter och ingen
+  `localStorage`: en delad länk ska visa hela tidslinjen, inte någon annans
+  filtrering.
 - Projektet är både ett lärprojekt och en riktig publicering. Begriplighet
   prioriteras över snabbhet.
 
@@ -130,6 +143,10 @@ Driftsättning är två separata steg, och `git push` är inte ett av dem:
 1. `git push` till `main` sparar källkoden. Det driftsätter ingenting.
 2. `npm run deploy` bygger med `--mode gh` och pushar `dist/` till grenen
    `gh-pages`, som är den GitHub Pages faktiskt serverar.
+
+`npm test` kör båda kontrollerna: `node scripts/test_search.js` för sökningen och
+`python scripts/test_helpers.py` för datafilen och nedladdningsskriptet. Inget
+testramverk är installerat, och behövs inte för två filer med `assert`.
 
 Sajten ligger på `buildapp.se/tidslinje/`. Ingen backend, inga hemligheter, inga
 migreringar. Arbetslistan står i `BACKLOG.md` och läget i `HANDOFF.md`.

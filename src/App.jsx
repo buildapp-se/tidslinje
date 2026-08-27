@@ -11,6 +11,11 @@ export default function App() {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <Timeline />
       </main>
+      <footer className="max-w-4xl mx-auto px-4 pb-10 text-sm text-ink/60">
+        <a className="hover:text-accent underline underline-offset-2" href="integritet.html">
+          Integritetspolicy
+        </a>
+      </footer>
     </div>
   )
 }

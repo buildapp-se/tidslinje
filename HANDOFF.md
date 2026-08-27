@@ -4,10 +4,18 @@ status: active
 currentGoal: Fylla ut tidslinjens innehåll så att fler händelser har bild och källa
 nextAction: Granska de 26 handplockade bilderna mot sina bildtexter genom att faktiskt titta på filerna i public/images, och notera vilka som är missvisande eller oläsliga i kortets 64 px-beskärning
 blockers: []
-reviewedAt: 2026-08-06
+reviewedAt: 2026-08-27
 ---
 
 # Handoff: tidslinje
+
+## Web Analytics i policyn, 2026-08-27
+
+Cloudflare-zonen `buildapp.se` injicerar nu `beacon.min.js` (Web Analytics,
+cookiefri) i all HTML, även `/tidslinje/`. `public/integritet.html` version 1.1
+beskriver det: ny punkt under uppgifter, rättslig grund, cookieavsnittet
+omskrivet. Deployat med `npm run deploy`. Inställningen ligger i Cloudflare-
+dashboarden för buildapp-se, inte i det här repot.
 
 ## Sökning och områdesfilter, 2026-08-06
 

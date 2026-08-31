@@ -23,6 +23,13 @@
       egen kontroll i `scripts/test_search.js`.
 - [x] Motsägelsen om hårdkodade strängar utredd och löst i `CONTEXT.md`: regeln
       om innehåll i JSON gäller händelserna, inte gränssnittets egna strängar.
+- [x] Samtliga 26 handplockade bilder granskade genom att faktiskt öppna filerna.
+      17 är OK, 4 bör bytas och 5 är tveksamma. Fynden ligger som egna punkter
+      under `Bilder`.
+- [x] Bildtext till `1890-folkets-hus` och `1931-adalen`, skriven efter att någon
+      tittat på bilderna. Texterna ligger i `MANUAL` i `download-images.py`, inte
+      bara i `events.json`, eftersom `imageCredit` skrivs över helt vid en ny
+      nedladdning.
 
 ## Bilder
 
@@ -31,12 +38,33 @@
       Digitalt museum, Nordiska museet). Skälen står i `NO_AUTO_IMAGE` i
       `scripts/download-images.py`. Viktigast: `1902-saf`, `1962-forskola`,
       `1976-mbl`.
-- [ ] Bildtext till `1890-folkets-hus` och `1931-adalen`. Kräver att någon tittar
-      på bilderna och avgör vad de föreställer.
+- [ ] Ersätt bilden på `1890-folkets-hus`. Den föreställer ett modernt
+      förstamajmöte i Stockholm, medan posten handlar om invigningen i
+      Kristianstad 1890. Bildtexten säger nu rakt ut vad bilden är, men ett foto
+      på huset i Kristianstad vore rätt bild.
+- [ ] **Beskär bort negativramen på `1963-4veckor`.** Filen är en oputsad
+      negativskanning: tjock svart ram och ett handskrivet arkivnummer `1-2886`
+      tvärs över överkanten. Det ser ut som en trasig bild, inte som ett foto.
+      Beskärningen räcker; motivet i sig är rätt, om än litet.
+- [ ] **Byt bild på `1978-5veckor`.** Den är mörk och lågkontrastig och läses som
+      ett uthus med en svart gapande öppning, inte som en sommarstuga. Kortets
+      kvadratiska beskärning träffar nästan bara skuggan.
+- [ ] **Byt bild på `1912-abf`.** Förgrunden är en kyrkogård med gravstenar och
+      ett stenkors; ABF-huset står i bakgrunden. En centrerad 64 px-beskärning
+      landar på en gul länga och träd, alltså inte på ABF alls.
+- [ ] **Byt bild eller bildtext på `1980-storlockout`.** Bildtexten lovar en
+      förstamajdemonstration utanför SAF, men bilden domineras av Grand Hôtel med
+      svenska flaggor och en tom asfaltsyta. Demonstrationen syns knappt.
+- [ ] Överväg `1951-3veckor`. Ett svartvitt flygfoto över sjö och skog utan
+      människor säger ingenting om semester och blir en mörk fläck vid 64 px.
+      Inte missvisande, bara innehållslöst.
+- [ ] Titta en gång till på tre till: `1974-las-fml` (Palme står i profil bortvänd
+      och är oigenkännlig i miniatyr, och inget i bilden säger demonstration),
+      `2015-huvudentreprenad` (spårvägsunderhåll snarare än byggarbetsplats, och en
+      korvreklam med pris syns tydligt i bild) och `1906-december` (fotot ser ut att
+      vara från sekelskiftet, inte 1936 som källfilnamnet påstår).
 - [ ] Överväg att visa bildkredit även vid kortens miniatyrbilder, inte bara i
       modalen.
-- [ ] Kontrollera att de 20 nya bilderna ser rimliga ut i verklig rendering. De
-      är valda utifrån filsidans beskrivning, inte utifrån hur de ser ut i kortet.
 
 ## Innehåll
 

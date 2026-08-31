@@ -2,7 +2,7 @@
 schemaVersion: 1
 status: active
 currentGoal: Fylla ut tidslinjens innehåll så att fler händelser har bild och källa
-nextAction: Granska de 26 handplockade bilderna mot sina bildtexter genom att faktiskt titta på filerna i public/images, och notera vilka som är missvisande eller oläsliga i kortets 64 px-beskärning
+nextAction: Beskär bort negativramen och arkivnumret på 1963-4veckor, den enda bildfelet som får sajten att se trasig ut, och byt sedan bilderna på 1978-5veckor och 1912-abf
 blockers: []
 reviewedAt: 2026-08-27
 ---
@@ -52,20 +52,66 @@ nu uttryckligen i `CONTEXT.md` i stället för att lämnas åt läsaren att giss
   390 px, alltså ingen vågrät rullning. Noll konsolmeddelanden efter att
   `name`-attributet lades på sökfältet; utan det klagade Chrome på fältet.
 
+### Bildgranskningen är gjord, och den hittade fyra riktiga fel
+
+Samtliga 26 handplockade bilder är nu öppnade och tittade på, inte bara lästa som
+filbeskrivningar. **17 är OK, 4 bör bytas och 5 är tveksamma.** Varje fynd ligger
+som en egen punkt i `BACKLOG.md`. De tre värsta är kontrollerade en gång till:
+
+1. **`1963-4veckor` är en oputsad negativskanning.** Tjock svart ram och ett
+   handskrivet arkivnummer `1-2886` tvärs över överkanten. Det här är det enda
+   fyndet som får sajten att se **trasig** ut snarare än fel, och det är också det
+   billigaste att rätta: motivet är rätt, bara ramen ska bort.
+2. **`1978-5veckor` föreställer inte en sommarstuga.** Mörk, lågkontrastig bild av
+   vad som läses som ett uthus med en svart gapande öppning. Kortets kvadratiska
+   beskärning träffar nästan bara skuggan.
+3. **`1912-abf` är i praktiken en kyrkogårdsbild.** Gravstenar och ett stenkors
+   fyller förgrunden, ABF-huset står bakom. En centrerad 64 px-beskärning landar
+   på en gul länga och några träd, alltså inte på ABF.
+
+Den fjärde är `1980-storlockout`, där bildtexten lovar en förstamajdemonstration
+utanför SAF men bilden domineras av Grand Hôtel och en tom asfaltsyta.
+
+**Lärdomen är densamma som förra gången någon mätte i stället för att lita på en
+bock:** bilderna valdes utifrån vad Commons filsida *skrev*, och en filsida kan
+vara helt korrekt om vad bilden föreställer utan att bilden fungerar som
+illustration. Ramar, arkivnummer, avstånd till motivet och den kvadratiska
+beskärningen syns inte i någon beskrivning.
+
+### Bildtext till de två som saknade den
+
+`1890-folkets-hus` och `1931-adalen` har nu bildtext, skriven efter att ha tittat
+på bilderna:
+
+- `1931-adalen` visar ett långt demonstrationståg med fackliga fanor på en grusväg
+  genom en dalgång, med åskådare på en plöjd åker. Bildtexten säger just det och
+  inget mer; inget datum är påhittat.
+- **`1890-folkets-hus` var ett fynd i sig.** Posten handlar om invigningen i
+  Kristianstad 1890, men bilden är ett **modernt förstamajmöte i Stockholm**,
+  framför Folkets Hus och Dansens Hus. Det är samma sorts fel som redan rensats
+  bort en gång, när Svenskt Näringslivs hus från 2012 låg på SAF 1902. Här är den
+  behållen men avväpnad: bildtexten säger rakt ut att bilden är senare än huset i
+  Kristianstad, och den långa texten handlar faktiskt om rörelsen som växte. Ett
+  foto på huset i Kristianstad vore ändå rätt bild, och det står i backloggen.
+
+Båda bildtexterna ligger i `MANUAL` i `scripts/download-images.py`, inte bara i
+`events.json`. Skälet är konkret: `main()` hoppar över en händelse vars `.webp`
+redan finns, men laddas filen någon gång ner på nytt skrivs `imageCredit` över i
+sin helhet med `caption or ""`, och en bildtext som bara stod i JSON vore borta.
+
 ### Inte gjort, och varför
 
-Två backlogpunkter påbörjades men avbröts av en användningsgräns i sessionen, inte
-av något i projektet:
-
-- **Årtalet för `1901-forlossning`** är fortfarande okontrollerat. Frågan är inte
-  bara 1900 mot 1901 utan om "rätt till ledighet" ens är rätt beskrivning: 1900
-  års lag är formulerad som ett **förbud för arbetsgivaren** att sysselsätta en
-  kvinna de första veckorna efter förlossning. Kontrollera det innan årtalet
-  ändras, annars rättas fel sak.
-- **De 26 handplockade bilderna** är fortfarande inte granskade i verklig
-  rendering. De valdes utifrån Commons filsidas beskrivning, inte utifrån hur de
-  ser ut. Två saker ska bedömas: om motivet stämmer med bildtexten, och om det
-  håller i kortets kvadratiska 64 px-beskärning, där ett porträtt lätt kapas.
+- **Årtalet för `1901-forlossning`** är fortfarande okontrollerat, och det beror
+  på saknad nätåtkomst i sessionen, inte på projektet. Frågan är inte bara 1900
+  mot 1901 utan om "rätt till ledighet" ens är rätt beskrivning: lagen från 1900
+  ska enligt uppgift vara formulerad som ett **förbud för arbetsgivaren** att
+  sysselsätta en kvinna de första veckorna efter förlossning. Belägg det mot
+  riksdagen.se eller SFS innan årtalet ändras, annars rättas fel sak. **Gissa
+  inte** på minnet; det här är en publicerad faktapost.
+- **Själva bildbytena är inte gjorda.** Granskningen pekar ut vilka som ska bytas,
+  men att välja en ersättare kräver Commons och därmed nätåtkomst. Beskärningen av
+  `1963-4veckor` kräver bara bildverktyg och är den enda som går att göra utan att
+  leta ny bild.
 
 ## Läget
 
@@ -76,6 +122,17 @@ publicerad bild har numera en angiven upphovsman.
 Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
 
 ## Recent work
+
+**2026-08-27: integritetspolicy, sajten saknade informationsplikt.**
+
+- Ny `public/integritet.html`, statisk sida i sajtens palett (cream, ink, accent)
+  med Fraunces och Archivo och samma inline-logga som appen. Ligger i `public/`
+  så Vite kopierar den rakt till `dist/`, ingen React-route behövdes.
+- Sidfot med länk tillagd i `src/App.jsx`, appen hade ingen sidfot alls.
+- Sajten är den enda av projekten som inte lagrar något alls på besökarens enhet:
+  ingen `localStorage`, inga cookies. Policyn säger det rakt ut.
+- `npm run build:gh` grönt, `npm test` grönt (56 händelser).
+
 
 - **Bilder till 20 nya händelser.** Kurerade för hand från Wikimedia Commons,
   eftersom de flesta av dem är lagar och lagartiklar på Wikipedia saknar foton.
@@ -127,9 +184,9 @@ Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
 - **Tio bilder byttes ut** för att deras ursprung inte gick att belägga.
   Wikipedia-artiklarna har bytt huvudbild sedan de laddades ner första gången.
   De nya bilderna kommer från samma upplösning och är creditade.
-- **Två bilder saknar bildtext**, `1890-folkets-hus` och `1931-adalen`. Filnamnen
-  (`1maj_085.jpg`, `1led0513adalen.jpg`) säger inte vad de föreställer, och en
-  påhittad bildtext är sämre än ingen. Kreditraden visas ändå.
+- ~~Två bilder saknar bildtext~~. Åtgärdat 2026-08-06; se avsnittet ovan. Båda
+  texterna är skrivna efter att någon tittat på bilderna, inte gissade ur
+  filnamnen.
 - **Bildtexten visas bara i modalen**, inte på kortens miniatyrbilder.
 - `1901-forlossning` är daterad till 1901, men lagen är från 17 oktober 1900 och
   trädde i kraft året därpå. Källan säger 1900. Årtalet kan behöva justeras.
@@ -138,12 +195,12 @@ Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
 
 ## Resume here
 
-**Börja med bildgranskningen**, den är billigast och skyddar det som gör
-tidslinjen trovärdig: öppna de 26 filerna i `public/images` som listas i `MANUAL`
-i `scripts/download-images.py` och jämför med bildtexten. Det kräver ingen ny
-källa, bara att någon faktiskt tittar.
+**Bildgranskningen är gjord.** Börja i stället med `1963-4veckor`: beskär bort
+negativramen och arkivnumret. Det är det enda bildfelet som får sajten att se
+trasig ut, och det kräver varken ny källa eller nytt beslut, bara ett bildverktyg.
 
-Därefter de nio bildlösa händelserna. `1902-saf`, `1962-forskola` och
+Därefter bilderna på `1978-5veckor` och `1912-abf`, och sedan de nio bildlösa
+händelserna. `1902-saf`, `1962-forskola` och
 `1976-mbl` är de som stör mest, eftersom de är centrala poster. Commons räckte
 inte, så det behövs en annan fri källa: Arbetarrörelsens arkiv och bibliotek,
 Digitalt museum eller Nordiska museet. Lägg in fyndet i `MANUAL` i

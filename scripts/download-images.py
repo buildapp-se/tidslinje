@@ -65,6 +65,26 @@ MANUAL = {
         "file": "Arbeterska Vänersborgs tändstickafabrik.jpg",
         "caption": "Arbeterska vid Vänersborgs tändsticksfabrik, omkring 1900",
     },
+    # De två bilder som saknade bildtext ända tills någon faktiskt tittade på
+    # dem. Båda kom ursprungligen från wiki-automatiken, inte härifrån, men
+    # bildtexten hör hemma här: skrivs den bara i events.json försvinner den
+    # den dag filen laddas ner på nytt, eftersom imageCredit skrivs över helt.
+    #
+    # 1890-huset är granskningens värsta fynd så här långt. Posten handlar om
+    # invigningen i Kristianstad 1890, men bilden är ett modernt
+    # förstamajmöte i Stockholm. Det är samma sorts fel som redan har rensats
+    # bort en gång (Svenskt Näringslivs hus från 2012 på SAF 1902). Här räddas
+    # den av bildtexten i stället för att tas bort, eftersom den långa texten
+    # faktiskt handlar om rörelsen som växte och inte bara om invigningen.
+    # Byt ut den om ett foto på huset i Kristianstad dyker upp.
+    "1890-folkets-hus": {
+        "file": "1maj_085.jpg",
+        "caption": "Förstamajmöte utanför Folkets Hus i Stockholm, långt senare än det första huset i Kristianstad 1890",
+    },
+    "1931-adalen": {
+        "file": "1led0513adalen.jpg",
+        "caption": "Demonstrationståg med fackliga fanor på väg genom Ådalen",
+    },
     # Inget fritt foto från Seskarö 1917 finns. Det här är samma protestvåg,
     # en månad tidigare, och bildtexten säger rakt ut var bilden är tagen.
     "1917-seskaro": {

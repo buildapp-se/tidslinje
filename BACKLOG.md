@@ -76,9 +76,10 @@
 ## Funktioner
 
 - [ ] SVG-ikoner om emojin visar sig otillräcklig.
-- [ ] Överväg om sökningen ska visa vilket fält som gav träffen. I dag ser man
-      inte varför Saltsjöbadsavtalet dyker upp på `semester`; svaret står i den
-      långa texten, som bara syns i modalen.
+- [x] Sökträffar visar varför kortet är med: när sökordet inte syns i år, titel
+      eller kort text visar kortet den mening ur den långa texten som innehåller
+      det, annars taggen (`matchHint` i `src/search.js`, kontrollerad i
+      `test_search.js`). Byggt 2026-09-08.
 
 ## Städning
 

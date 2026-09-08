@@ -1,4 +1,5 @@
 import { imgSrc, linkIcon } from '../shared'
+import { matchHint } from '../search'
 
 // Tailwind-klasser per kortstorlek
 const SIZE = {
@@ -13,9 +14,16 @@ const TITLE_SIZE = {
   small: 'text-sm',
 }
 
-export default function EventCard({ event, onOpen }) {
+export default function EventCard({ event, query = '', onOpen }) {
   const hasLinks = event.links && event.links.length > 0
   const thumb    = imgSrc(event.image)
+  const showShort = event.size !== 'small'
+  // Varför är kortet med i sökresultatet? Ledtråden visas bara när sökordet inte
+  // redan syns på kortet, alltså när träffen sitter i den långa texten eller i
+  // en tagg. Små kort visar ingen kort text, så för dem räknas bara år och titel.
+  const hint = query
+    ? matchHint(event, query, `${event.year} ${event.title} ${showShort ? event.short : ''}`)
+    : null
 
   return (
     <button
@@ -48,10 +56,17 @@ export default function EventCard({ event, onOpen }) {
         )}
       </div>
 
-      {/* Kort beskrivning — visas ej på small-kort */}
-      {event.size !== 'small' && (
+      {/* Kort beskrivning, visas ej på small-kort */}
+      {showShort && (
         <p className="text-gray-500 text-xs mt-1 line-clamp-2 leading-relaxed">
           {event.short}
+        </p>
+      )}
+
+      {/* Sökträff som inte syns i texten ovan: meningen ur den långa texten, eller taggen */}
+      {hint && (
+        <p className="text-accent/80 text-xs mt-1 italic line-clamp-2 leading-relaxed">
+          {hint}
         </p>
       )}
 

@@ -10,6 +10,25 @@ function normalize(text) {
   return String(text).toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '')
 }
 
+// Varför visas kortet? Kortet visar år, titel och (på större kort) den korta
+// texten, men sökningen går även på den långa texten och taggarna. När träffen
+// bara finns där ser läsaren inte varför Saltsjöbadsavtalet dyker upp på
+// "semester". Då returneras den mening i den långa texten som innehåller
+// sökordet, annars taggen. Hela meningar i stället för utdrag runt ordet:
+// normaliseringen ändrar teckenpositioner (å blir a plus ring), så ett index i
+// den normaliserade texten pekar inte säkert rätt i originalet.
+export function matchHint(event, query, shown) {
+  const terms = normalize(query).split(/\s+/).filter(Boolean)
+  const visible = normalize(shown)
+  const missing = terms.filter((term) => !visible.includes(term))
+  if (missing.length === 0) return null
+  const sentences = String(event.long).match(/[^.!?]+[.!?]+/g) ?? [event.long]
+  const sentence = sentences.find((s) => missing.some((term) => normalize(s).includes(term)))
+  if (sentence) return sentence.trim()
+  const tag = (event.tags ?? []).find((t) => missing.some((term) => normalize(t).includes(term)))
+  return tag ? `Ämne: ${tag}` : null
+}
+
 // Allt sökbart i en händelse som en enda sträng. Årtalet ingår, så "1931" hittar
 // Ådalen. `tags` har alltid funnits i datat men har aldrig varit sökbart förrän nu.
 function haystack(event) {

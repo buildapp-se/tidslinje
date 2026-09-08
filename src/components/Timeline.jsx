@@ -89,6 +89,7 @@ export default function Timeline() {
           key={epoch.id}
           epoch={epoch}
           events={visible.filter((e) => e.epoch === epoch.id)}
+          query={query}
           onOpen={setOpen}
         />
       ))}

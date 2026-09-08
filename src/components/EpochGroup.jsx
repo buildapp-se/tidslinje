@@ -1,6 +1,6 @@
 import EventCard from './EventCard'
 
-export default function EpochGroup({ epoch, events, onOpen }) {
+export default function EpochGroup({ epoch, events, query, onOpen }) {
   if (events.length === 0) return null
 
   return (
@@ -38,7 +38,7 @@ export default function EpochGroup({ epoch, events, onOpen }) {
             >
               {/* Desktop: vänster kort (hidden på mobil → tar ej grid-plats) */}
               <div className="hidden md:flex md:justify-end md:pr-4">
-                {goLeft && <EventCard event={event} onOpen={onOpen} />}
+                {goLeft && <EventCard event={event} query={query} onOpen={onOpen} />}
               </div>
 
               {/* Dot — alltid synlig, centrerad i sin kolumn */}
@@ -50,12 +50,12 @@ export default function EpochGroup({ epoch, events, onOpen }) {
               <div className="pl-3 md:pl-4">
                 {/* Mobil: visa alltid */}
                 <div className="md:hidden">
-                  <EventCard event={event} onOpen={onOpen} />
+                  <EventCard event={event} query={query} onOpen={onOpen} />
                 </div>
                 {/* Desktop: visa bara om kortet ska till höger */}
                 {!goLeft && (
                   <div className="hidden md:block">
-                    <EventCard event={event} onOpen={onOpen} />
+                    <EventCard event={event} query={query} onOpen={onOpen} />
                   </div>
                 )}
               </div>

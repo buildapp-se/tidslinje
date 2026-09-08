@@ -6,7 +6,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
-import { filterEvents, ALL_COUNTRIES } from '../src/search.js'
+import { filterEvents, matchHint, ALL_COUNTRIES } from '../src/search.js'
 
 const events = JSON.parse(
   readFileSync(fileURLToPath(new URL('../src/data/events.json', import.meta.url)), 'utf-8'),
@@ -48,5 +48,22 @@ assert.equal(filterEvents(events, { country: ALL_COUNTRIES }).length, events.len
 assert.ok(filterEvents(events, { query: 'strejk', country: 'världen' }).every(
   (e) => e.country === 'världen',
 ))
+
+// Träffledtråden: bara när sökordet inte redan syns på kortet, och då den
+// mening i den långa texten som innehåller det. Saltsjöbadsavtalet på "semester"
+// är fallet som startade det hela.
+const saltsjobad = events.find((e) => e.id === '1938-saltsjobad')
+const shownOnCard = `${saltsjobad.year} ${saltsjobad.title} ${saltsjobad.short}`
+const hint = matchHint(saltsjobad, 'semester', shownOnCard)
+assert.ok(hint && hint.includes('semester'), `ledtråd saknas: ${hint}`)
+assert.ok(hint.length < saltsjobad.long.length, 'ledtråden ska vara en mening, inte hela texten')
+assert.equal(matchHint(saltsjobad, 'saltsjöbadsavtalet', shownOnCard), null)
+assert.equal(matchHint(saltsjobad, '1938', shownOnCard), null)
+assert.equal(matchHint(saltsjobad, '', shownOnCard), null)
+// Å, ä, ö får inte krävas i ledtråden heller.
+assert.ok(matchHint(saltsjobad, 'forhandlingsordning', shownOnCard)?.includes('förhandlingsordning'))
+// Träff bara i taggarna ger taggen.
+const ad = events.find((e) => e.id === '1929-arbetsdomstolen')
+assert.equal(matchHint(ad, 'rattsvasende', `${ad.year} ${ad.title} ${ad.short}`), 'Ämne: rättsväsende')
 
 console.log(`alla kontroller OK (${events.length} händelser)`)

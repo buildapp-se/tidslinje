@@ -1,13 +1,71 @@
 ---
 schemaVersion: 1
 status: active
-currentGoal: Fylla ut tidslinjens innehåll så att fler händelser har bild och källa
-nextAction: Beskär bort negativramen och arkivnumret på 1963-4veckor, den enda bildfelet som får sajten att se trasig ut, och byt sedan bilderna på 1978-5veckor och 1912-abf
+currentGoal: Tidslinjen är komplett nog att användas i kurs, 69 händelser varav 50 med bild, alla med källa
+nextAction: Patrik säger ja eller nej till batchen 2026-09-08 (13 nya händelser, 11 bildbyten, sökledtråd, SVG-ikoner). Sedan bild till de 13 nya händelserna, de står spärrade i NO_AUTO_IMAGE
 blockers: []
-reviewedAt: 2026-08-27
+reviewedAt: 2026-09-08
 ---
 
 # Handoff: tidslinje
+
+## Hela backloggen genomarbetad, 2026-09-08
+
+Chunk-läge på Patriks uppdrag: allt i `BACKLOG.md` en punkt i taget, en commit
+per punkt, sju commits `e088389` till `2cb21fd`. Fyra researchagenter gjorde
+faktakoll, poddsökning, händelseförslag och bildsökning; varje bild är öppnad
+och tittad på innan den togs in, varje ny länk HTTP-kontrollerad.
+
+**Städning.** 38 rader med tankstreck i `events.json` omskrivna per mening
+(komma, kolon, parentes eller ny mening, aldrig mekaniskt). Även ingressen i
+`App.jsx` och kommentarerna i `download-images.py`.
+
+**Funktioner.** Kortet visar varför det matchar sökningen när ordet inte syns i
+år, titel eller kort text: den mening i långtexten som innehåller ordet, annars
+taggen (`matchHint` i `src/search.js`, testad). SVG-ikoner för podd och video i
+`icons.jsx`; emojin var färgglad, olika stor per plattform och följde inte
+hover-färgen bredvid det svarta W:et. Bildkredit som `title`-tooltip på
+miniatyrerna.
+
+**Innehåll.** `1901-forlossning` blev `1900-barnsbord`: lagen om minderårigas
+och kvinnors arbete i industrin utfärdades 17 oktober 1900 (SFS 1900:75) och
+var ett förbud för arbetsgivaren att sysselsätta kvinnan fyra veckor efter
+barnsbörd, inte en rätt till ledighet. Belagt i Stjernstedt 1904 och motion
+1908:4; ikraftträdandet 1901 är troligt men obelagt. 13 nya händelser
+(1890 första maj, 1899 Åkarpslagen, 1902 politiska storstrejken, 1919 ILO,
+1928 kollektivavtalslagen, 1936 förenings- och förhandlingsrätt, 1938
+semesterlagen, 1944 TCO, 1971 Saco-konflikten, 1974 föräldraförsäkringen,
+1977 arbetsmiljölagen, 1997 Industriavtalet, 2022 nya LAS), varje sakuppgift
+kontrollerad mot källan i posten; obelagda detaljer ströks (Sveriges
+ILO-inträde, föräldrapenningens procentsats, riksdagens exakta beslutsdag
+2022). 15 poddavsnitt, bara avsnitt om just händelsen. Sakfel rättat:
+Saltsjöbadsavtalet innehöll ingen semester, det var 1938 års semesterlag.
+
+**Bilder.** `1963-4veckor` beskuren (ram och arkivnummer borta). Tre bildlösa
+fick bild: `1902-saf` (SAF-huset, tidigt 1900-tal), `1962-forskola` (daghem i
+Örebro 1968), `1929-arbetsdomstolen` (porten till Ryningska palatset). Åtta
+byten: `1890-folkets-hus` (Stockholm 1902 i stället för modernt möte),
+`1978-5veckor` (camping 1974 i färg), `1912-abf` (studiecirkel 1922),
+`1980-storlockout` (strejkaffisch daterad maj 1980), `1951-3veckor` (Båstad
+1950-tal), `1974-las-fml` (Palme 1974, vänd mot kameran), `2015-huvudentreprenad`
+(Lysekil 2022, utan reklam), `1906-december` (Herman Lindqvist 1906; von
+Sydow-urklippet var från 1890-talet trots filnamnets 1936). Skriptet tar nu
+källor utanför Commons (`url` plus egen `by` och `source` i `MANUAL`, licensen
+kontrollerad för hand på Digitalt museum) och reproducerbar beskärning
+(`crop` som andelar, hämtas i 2400 px).
+
+**Val tagna åt Patrik.** (1) 1900 i stället för 1901, eftersom bara
+utfärdandedatumet är belagt. (2) Semesterfelet i Saltsjöbadsposten rättat utan
+att fråga, det var ett sakfel i publicerad text. (3) `1976-mbl` lämnad utan
+bild: enda fria kandidaten var en andra Palmebild från 1974, bredvid LAS. (4)
+SVG-ikoner byggda, bedömningen var att emojin var otillräcklig. (5) Kredit på
+miniatyr som tooltip, inte synlig text. (6) De 13 nya händelserna spärrade i
+`NO_AUTO_IMAGE` tills någon valt bild för hand.
+
+**Verifierat 2026-09-08.** `npm test` grönt (69 händelser), `npm run build`
+grönt, sökledtråd och ikoner kontrollerade i Chromium mot `npm run preview`
+med noll konsolmeddelanden, alla 33 nya länkar svarar 200, licens läst på
+källsidan för alla elva nya bilder.
 
 ## Web Analytics i policyn, 2026-08-27
 
@@ -115,9 +173,9 @@ sin helhet med `caption or ""`, och en bildtext som bara stod i JSON vore borta.
 
 ## Läget
 
-Sajten är live och fungerar. Innehållsarbetet har tagit ett stort steg: 47 av 56
-händelser har bild (var 27), alla 56 har minst en källänk (var 50), och varje
-publicerad bild har numera en angiven upphovsman.
+Sajten är live och fungerar. 69 händelser, 50 med bild, alla med minst en
+källänk, 33 med poddavsnitt, och varje publicerad bild har angiven upphovsman
+och licens. Siffrorna gällde 2026-09-08.
 
 Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
 
@@ -164,8 +222,8 @@ Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
 
 ## Verification
 
-- `python scripts/test_helpers.py` — alla kontroller OK, 56 händelser.
-- `npm run build` — bygger utan fel.
+- `python scripts/test_helpers.py`: alla kontroller OK, 56 händelser.
+- `npm run build`: bygger utan fel.
 - Modalen granskad i webbläsare mot `npm run preview`: bildtext och klickbar
   kreditlänk renderas, noll fel eller varningar i konsolen.
 - Kreditens ursprung är belagt, inte gissat: för de 27 gamla bilderna kördes
@@ -174,34 +232,23 @@ Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
 
 ## Unresolved details
 
-- **Nio händelser saknar bild**, var och en med dokumenterat skäl i
-  `NO_AUTO_IMAGE`: `1902-saf`, `1929-arbetsdomstolen`, `1962-forskola`,
+- **Sex händelser saknar bild** med dokumenterat skäl i `NO_AUTO_IMAGE`:
   `1968-komvux`, `1976-mbl`, `1978-timbro`, `1983-jamlikt`, `1994-2dagar`,
-  `2000-medling`. Commons saknar helt enkelt fria, relevanta och tidsmässigt
-  rimliga bilder för dem. Tre av dem hade tidigare en bild som togs bort för
-  att den var direkt missvisande (Svenskt Näringslivs hus från 2012 för SAF
-  1902, ett USAID-foto av ett daghem i Afghanistan för svensk förskola).
-- **Tio bilder byttes ut** för att deras ursprung inte gick att belägga.
-  Wikipedia-artiklarna har bytt huvudbild sedan de laddades ner första gången.
-  De nya bilderna kommer från samma upplösning och är creditade.
-- ~~Två bilder saknar bildtext~~. Åtgärdat 2026-08-06; se avsnittet ovan. Båda
-  texterna är skrivna efter att någon tittat på bilderna, inte gissade ur
-  filnamnen.
-- **Bildtexten visas bara i modalen**, inte på kortens miniatyrbilder.
-- `1901-forlossning` är daterad till 1901, men lagen är från 17 oktober 1900 och
-  trädde i kraft året därpå. Källan säger 1900. Årtalet kan behöva justeras.
-- Hårdkodade strängar i `App.jsx` och `Modal.jsx` står fortfarande i konflikt med
-  vad dokumentationen påstår.
+  `2000-medling`. Commons, Digitalt museum, Stockholmskällan och
+  Arbetarrörelsens arkiv på Flickr är genomsökta 2026-09-08; det som fanns var
+  CC BY-NC eller fel årtionde.
+- **De 13 nya händelserna saknar bild** och är spärrade i `NO_AUTO_IMAGE` så
+  att skriptet inte hämtar en slumpad sidbild.
+- **Inget fritt foto av Folkets hus i Kristianstad** finns; posten visar
+  Stockholms Folkets hus 1902 med ärlig bildtext.
+- **Åtta händelsekandidater** med verifierade fakta men utan skriven text står
+  i `BACKLOG.md` under Innehåll.
 
 ## Resume here
 
-**Bildgranskningen är gjord.** Börja i stället med `1963-4veckor`: beskär bort
-negativramen och arkivnumret. Det är det enda bildfelet som får sajten att se
-trasig ut, och det kräver varken ny källa eller nytt beslut, bara ett bildverktyg.
-
-Därefter bilderna på `1978-5veckor` och `1912-abf`, och sedan de nio bildlösa
-händelserna. `1902-saf`, `1962-forskola` och
-`1976-mbl` är de som stör mest, eftersom de är centrala poster. Commons räckte
-inte, så det behövs en annan fri källa: Arbetarrörelsens arkiv och bibliotek,
-Digitalt museum eller Nordiska museet. Lägg in fyndet i `MANUAL` i
-`scripts/download-images.py` och kör `python scripts/download-images.py`.
+Vänta på Patriks ja eller nej till batchen 2026-09-08 (se "Val tagna åt Patrik"
+överst). Sedan: bild till de 13 nya händelserna, en i taget, samma metod som
+2026-09-08: leta på Commons och Digitalt museum, öppna bilden och titta,
+kontrollera licensen på källsidan, lägg posten i `MANUAL` (med `url`, `by` och
+`source` om den inte ligger på Commons), ta bort id:t ur `NO_AUTO_IMAGE` och
+kör `python scripts/download-images.py`.

@@ -61,7 +61,7 @@ MANUAL = {
         "file": "Case department at SvD.jpg",
         "caption": "Sättare i Svenska Dagbladets sätteri i Stockholm, 1904",
     },
-    "1901-forlossning": {
+    "1900-barnsbord": {
         "file": "Arbeterska Vänersborgs tändstickafabrik.jpg",
         "caption": "Arbeterska vid Vänersborgs tändsticksfabrik, omkring 1900",
     },
@@ -80,6 +80,11 @@ MANUAL = {
     "1890-folkets-hus": {
         "file": "1maj_085.jpg",
         "caption": "Förstamajmöte utanför Folkets Hus i Stockholm, långt senare än det första huset i Kristianstad 1890",
+    },
+    # Kom från wiki-automatiken med Commons engelska beskrivning som bildtext.
+    "1908-amalthea": {
+        "file": "Amalthea-1908.jpg",
+        "caption": "S/S Amalthea i Malmö hamn 1908, med hålet efter sprängningen",
     },
     "1931-adalen": {
         "file": "1led0513adalen.jpg",
@@ -212,6 +217,15 @@ NO_AUTO_IMAGE = {
     "1983-jamlikt":  "abstrakt händelse, enda kandidaterna var 25-40 år yngre än den",
     "1994-2dagar":   "skulle bli ett andra sommarstugemotiv, upprepning i tidslinjen",
     "2000-medling":  "Commons har bara grannfastigheterna till myndighetens adress",
+    # Nya händelser 2026-09-08. Spärrade tills bilden är vald för hand: utan
+    # spärr hämtar automatiken artikelns sidbild, och det var så en länskarta
+    # och ett daghem i Afghanistan hamnade i tidslinjen förra gången.
+    **{eid: "ny händelse, bild inte handplockad ännu" for eid in (
+        "1890-forsta-maj", "1899-akarpslagen", "1902-storstrejken", "1919-ilo",
+        "1928-kollektivavtalslagen", "1936-forhandlingsratt", "1938-semesterlagen",
+        "1944-tco", "1971-saco-konflikten", "1974-foraldraforsakring",
+        "1977-arbetsmiljolagen", "1997-industriavtalet", "2022-nya-las",
+    )},
 }
 
 # ── Alternativa engelska Wikipedia-artiklar för events med svag sv-wiki ───

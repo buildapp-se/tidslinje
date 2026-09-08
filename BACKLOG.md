@@ -69,10 +69,29 @@
 
 ## Innehåll
 
-- [ ] Kontrollera årtalet för `1901-forlossning`. Lagen är från 1900 och trädde i
-      kraft 1901.
-- [ ] Hitta fler poddavsnitt. Historiepodden om Seskaröupproret är redan inlagd.
-- [ ] Fler händelser i `events.json`.
+- [x] `1901-forlossning` rättad till `1900-barnsbord` (2026-09-08). Lagen om
+      minderårigas och kvinnors arbete i industrin utfärdades 17 oktober 1900
+      (SFS 1900:75) och var ett förbud för arbetsgivaren att sysselsätta kvinnan
+      fyra veckor efter barnsbörd, inte en rätt till ledighet. Belagt i
+      Stjernstedt 1904 (Gutenberg) och motion 1908:4; ikraftträdandet 1901 är
+      troligt men obelagt, därför året då lagen utfärdades.
+- [x] 15 poddavsnitt tillagda 2026-09-08 (Historiepodden, Vi bygger landet, P3
+      Dokumentär, Vetenskapsradion Historia, Dagens Arbete, Fack You, Förändra).
+      Bara avsnitt om just händelsen. Ingen träff hittades för 18 poster, bland
+      dem 1846, 1898, 1902-saf, 1912, 2007 (alla tre) och 2019.
+- [x] 13 händelser tillagda 2026-09-08, alla faktakontrollerade mot källorna i
+      posten: 1890 första maj, 1899 Åkarpslagen, 1902 politiska storstrejken,
+      1919 ILO, 1928 kollektivavtalslagen, 1936 förenings- och förhandlingsrätt,
+      1938 semesterlagen, 1944 TCO, 1971 Saco-konflikten, 1974
+      föräldraförsäkringen, 1977 arbetsmiljölagen, 1997 Industriavtalet, 2022
+      nya LAS. Sakfel rättat på vägen: Saltsjöbadsavtalet innehöll ingen
+      semester, det var 1938 års semesterlag.
+- [ ] Fler kandidater med verifierade fakta men utan skriven text: 1955 allmän
+      sjukförsäkring, 1913 folkpension, 1945 metallstrejken, 1979
+      jämställdhetslagen, 1995 EU-medlemskap, 2003 kommunalstrejken, 2009
+      diskrimineringslagen, 1973 styrelserepresentation.
+- [ ] Bild till de 13 nya händelserna. De står i `NO_AUTO_IMAGE` tills någon
+      valt bild för hand, så att skriptet inte hämtar en slumpad sidbild.
 
 ## Funktioner
 

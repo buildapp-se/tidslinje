@@ -10,7 +10,7 @@ en artikel.
 
 - React med Vite och Tailwind, byggs och serveras som statisk sajt via GitHub Pages
   under `buildapp.se/tidslinje/`.
-- Innehållet ligger i `src/data/events.json`. Där finns 56 händelser fördelade på
+- Innehållet ligger i `src/data/events.json`. Där finns 69 händelser fördelade på
   tre epoker.
 - Fyra komponenter: `Timeline` hämtar och sorterar, `EventCard` visar kortet i tre
   storlekar, `Modal` visar lång text och stor bild, `EpochGroup` grupperar per epok.

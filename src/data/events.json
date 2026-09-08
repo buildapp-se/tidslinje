@@ -152,6 +152,29 @@
     }
   },
   {
+    "id": "1890-forsta-maj",
+    "year": 1890,
+    "title": "Första första maj",
+    "epoch": "informera-och-agitera",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Första maj firas för första gången i Sverige. 50 000 samlas på Gärdet i Stockholm för åtta timmars arbetsdag.",
+    "long": "Andra internationalens kongress i Paris 1889 beslutar att arbetare i alla länder ska demonstrera den 1 maj 1890 för åtta timmars arbetsdag. I Sverige hålls demonstrationer på 18 orter, från Malmö till Östersund. I Stockholm samlas omkring 50 000 människor på Ladugårdsgärdet, där bland andra Hjalmar Branting och August Palm talar. Första maj blev arbetarrörelsens årliga manifestation och allmän helgdag 1939.",
+    "tags": [
+      "demonstration",
+      "kultur",
+      "arbetstid",
+      "organisation"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/F%C3%B6rsta_maj"
+      }
+    ]
+  },
+  {
     "id": "1898-lo",
     "year": 1898,
     "title": "LO bildas",
@@ -180,14 +203,36 @@
     }
   },
   {
-    "id": "1901-forlossning",
-    "year": 1901,
-    "title": "Rätt till förlossningsledighet, utan lön",
+    "id": "1899-akarpslagen",
+    "year": 1899,
+    "title": "Åkarpslagen",
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "small",
-    "short": "Kvinnor ges rätt till ledighet vid förlossning, men utan lönekompensation.",
-    "long": "Lagstiftning ger för första gången kvinnor rätt att vara lediga i samband med förlossning. Rättigheten är dock utan lön, vilket begränsade dess praktiska nytta för de flesta arbetarkvinnor. Det var ett litet men symboliskt steg mot den föräldraledighet vi känner i dag.",
+    "short": "Åkarpslagen gör det straffbart att hindra strejkbrytare. Lagen blir en symbol för klassjustis.",
+    "long": "Riksdagen antar 1899 ett tillägg till strafflagen som gör det straffbart att tvinga någon att delta i en arbetsnedläggelse eller att hindra någon från att återgå till arbetet eller ta ett erbjudet jobb. Lagen kallas Åkarpslagen efter förslagsställaren, riksdagsmannen Pehr Pehrsson i Åkarp. I praktiken skyddade den strejkbrytare och hindrade strejkvakter från att ens närma sig dem. Arbetarrörelsen såg lagen som riktad mot facket och krävde i decennier att den skulle avskaffas, vilket skedde 1938.",
+    "tags": [
+      "lag",
+      "strejk",
+      "konflikt"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/%C3%85karpslagen"
+      }
+    ]
+  },
+  {
+    "id": "1900-barnsbord",
+    "year": 1900,
+    "title": "Fyra veckors arbetsförbud efter förlossning, utan lön",
+    "epoch": "informera-och-agitera",
+    "country": "sverige",
+    "size": "small",
+    "short": "Industriarbeterskor får inte sättas i arbete de första fyra veckorna efter en förlossning. Ingen ersättning utgår.",
+    "long": "En ny lag om minderårigas och kvinnors arbete i industrin, utfärdad den 17 oktober 1900, förbjuder arbetsgivare att sysselsätta en kvinna de fyra första veckorna efter barnsbörd, om inte läkare intygar att hon kan börja tidigare. Det är ett skydd, inte en rättighet: kvinnan kan inte välja, och ingen lön eller ersättning betalas, vilket för många arbetarkvinnor betydde fyra veckor utan försörjning. 1912 förlängdes förbudet till sex veckor, och först 1931 kom en moderskapsförsäkring. Ett litet men symboliskt första steg mot dagens föräldraledighet.",
     "tags": [
       "lag",
       "jämställdhet",
@@ -198,9 +243,13 @@
       {
         "type": "wiki",
         "url": "https://arbetet.se/2024/07/17/foraldraforsakringen-fyller-50-ar-sverige-blev-forst-i-varlden/"
+      },
+      {
+        "type": "wiki",
+        "url": "https://www.gutenberg.org/files/52732/52732-h/52732-h.htm"
       }
     ],
-    "image": "images/1901-forlossning.webp",
+    "image": "images/1900-barnsbord.webp",
     "imageCredit": {
       "caption": "Arbeterska vid Vänersborgs tändsticksfabrik, omkring 1900",
       "by": "Okänd upphovsman, Public domain",
@@ -229,6 +278,30 @@
     ]
   },
   {
+    "id": "1902-storstrejken",
+    "year": 1902,
+    "title": "Politiska storstrejken för rösträtt",
+    "epoch": "informera-och-agitera",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Politisk storstrejk för allmän rösträtt: 120 000 arbetare lägger ner arbetet i tre dagar.",
+    "long": "Den 15 till 17 maj 1902 genomför arbetarrörelsen en politisk storstrejk med krav på allmän och lika rösträtt till riksdagens båda kamrar, samtidigt som riksdagen behandlar en rösträttsproposition. Omkring 120 000 arbetare deltar. Vid sekelskiftet hade bara knappt 30 procent av männen över 21 år rösträtt, och kvinnor saknade den helt. Ett argument var den nya värnplikten från 1901: den som ska riskera livet för landet ska också få rösta. Allmän rösträtt kom först 1919, men strejken visade att fack och parti kunde mobilisera i hela landet.",
+    "tags": [
+      "strejk",
+      "demonstration",
+      "rösträtt",
+      "demokrati",
+      "politisk"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Storstrejken_i_Sverige_1902"
+      }
+    ]
+  },
+  {
     "id": "1906-december",
     "year": 1906,
     "title": "Decemberkompromissen",
@@ -246,6 +319,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Decemberkompromissen"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/vi-bygger-landet/episodes/659407721235930016e37574"
       }
     ],
     "image": "images/1906-december.webp",
@@ -287,7 +364,7 @@
     ],
     "image": "images/1908-amalthea.webp",
     "imageCredit": {
-      "caption": "S/s Amalthea in the Port of Malmö with visible hole from bombing by anarchists",
+      "caption": "S/S Amalthea i Malmö hamn 1908, med hålet efter sprängningen",
       "by": "Unknown photographer, Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Amalthea-1908.jpg"
     }
@@ -370,6 +447,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/F%C3%B6rsta_v%C3%A4rldskriget"
+      },
+      {
+        "type": "podcast",
+        "url": "https://www.sverigesradio.se/avsnitt/1036485"
       }
     ],
     "image": "images/1914-ww1.webp",
@@ -436,6 +517,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Seskarö-upproret"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/vi-bygger-landet/episodes/63d27026f2253f0011e0b48b"
       }
     ],
     "image": "images/1917-seskaro.webp",
@@ -464,6 +549,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Ryska_revolutionen"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/historiepodden/episodes/147.-ryssland-i-revolutionstid"
       }
     ],
     "image": "images/1917-ryska-rev.webp",
@@ -492,6 +581,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Finska_inb%C3%B6rdeskriget"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/historiepodden/episodes/183-finska-inbordeskriget"
       }
     ],
     "image": "images/1918-finska-inb.webp",
@@ -561,6 +654,55 @@
     }
   },
   {
+    "id": "1919-ilo",
+    "year": 1919,
+    "title": "ILO grundas",
+    "epoch": "informera-och-agitera",
+    "country": "världen",
+    "size": "small",
+    "short": "ILO grundas genom Versaillesfreden. Första konventionen slår fast åtta timmars arbetsdag.",
+    "long": "Internationella arbetsorganisationen ILO bildas 1919 som en del av Versaillesfördraget, med utgångspunkten att anständiga arbetsvillkor är en förutsättning för varaktig fred. Organisationen är unik genom sitt trepartssystem, där regeringar, arbetsgivare och fackföreningar beslutar tillsammans. Vid den första arbetskonferensen i Washington 1919 antas konventionen om åtta timmars arbetsdag, samma år som Sverige lagstiftar om åttatimmarsdagen. ILO fick Nobels fredspris 1969.",
+    "tags": [
+      "världshändelse",
+      "organisation",
+      "arbetstid"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Internationella_arbetsorganisationen"
+      }
+    ]
+  },
+  {
+    "id": "1928-kollektivavtalslagen",
+    "year": 1928,
+    "title": "Kollektivavtalslagen och fredsplikten",
+    "epoch": "informera-och-agitera",
+    "country": "sverige",
+    "size": "large",
+    "short": "Riksdagen inför fredsplikt under avtalstiden. 360 000 arbetare proteststrejkar mot arbetsfredslagarna.",
+    "long": "Regeringen Ekman lägger den 17 februari 1928 fram förslag till lag om kollektivavtal och lag om arbetsdomstol. Kollektivavtalet blir juridiskt bindande och parter som är bundna av avtal får fredsplikt: strejk under löpande avtal blir olaglig och kan ge skadestånd. Den 22 maj 1928 genomför LO en proteststrejk med omkring 360 000 deltagare på över 100 orter. Riksdagen debatterar lagarna den 25 maj och antar dem, och Arbetsdomstolen börjar döma den 1 januari 1929. Fredsplikten är än i dag kärnan i den svenska modellen.",
+    "tags": [
+      "lag",
+      "kollektivavtal",
+      "strejk",
+      "konflikt"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Kollektivavtal_i_Sverige"
+      },
+      {
+        "type": "wiki",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/kungl-majts-proposition-nr-39_dp3039/html/"
+      }
+    ]
+  },
+  {
     "id": "1929-arbetsdomstolen",
     "year": 1929,
     "title": "Arbetsdomstolen inrättas",
@@ -568,7 +710,7 @@
     "country": "sverige",
     "size": "small",
     "short": "En specialdomstol för arbetsrättsliga tvister inrättas.",
-    "long": "Arbetsdomstolen (AD) tillkommer som en specialdomstol för att lösa tvister på arbetsmarknaden. AD behandlar mål om tolkning av kollektivavtal och andra arbetsrättsliga frågor och spelar en central roll i den svenska arbetsmarknadsmodellen.",
+    "long": "Arbetsdomstolen (AD) börjar döma den 1 januari 1929, inrättad genom 1928 års lag om arbetsdomstol som antogs tillsammans med kollektivavtalslagen. AD behandlar mål om tolkning av kollektivavtal och andra arbetsrättsliga frågor och spelar en central roll i den svenska arbetsmarknadsmodellen.",
     "tags": [
       "lag",
       "rättsväsende"
@@ -600,6 +742,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Wall_Street-kraschen_1929"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/historiepodden/episodes/274.borskraschen1929"
       }
     ],
     "image": "images/1929-borskrasch.webp",
@@ -665,6 +811,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Folkhemmet"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/vi-bygger-landet/episodes/6a7d80e0e37e4063e39c9214"
       }
     ],
     "image": "images/1932-sap-makten.webp",
@@ -675,6 +825,33 @@
     }
   },
   {
+    "id": "1936-forhandlingsratt",
+    "year": 1936,
+    "title": "Lagen om förenings- och förhandlingsrätt",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Rätten att organisera sig skyddas i lag, och arbetsgivare måste förhandla med facket.",
+    "long": "Lagen om förenings- och förhandlingsrätt utfärdas den 11 september 1936 och träder i kraft den 1 januari 1937. Föreningsrätten ska lämnas okränkt: en arbetsgivare får inte vidta åtgärder mot anställda för att de organiserar sig fackligt. Fackliga organisationer får en lagstadgad rätt till förhandling med motparten. Drivande bakom lagen var tjänstemännen i privat sektor, samlade i DACO sedan 1931, som ofta nekades förhandlingar. Reglerna lever vidare i medbestämmandelagen från 1976.",
+    "tags": [
+      "lag",
+      "förhandling",
+      "organisation",
+      "tjänstemän"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://svjt.se/svjt/1937/236"
+      },
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/De_Anst%C3%A4lldas_Centralorganisation"
+      }
+    ]
+  },
+  {
     "id": "1938-saltsjobad",
     "year": 1938,
     "title": "Saltsjöbadsavtalet",
@@ -682,11 +859,10 @@
     "country": "sverige",
     "size": "large",
     "short": "LO och SAF tecknar ett historiskt avtal som lägger grunden för den svenska modellen.",
-    "long": "LO och SAF träffas i Saltsjöbaden och tecknar ett huvudavtal som reglerar spelreglerna på den svenska arbetsmarknaden. Avtalet innehöll bestämmelser om strejkrätt med varseltid, förhandlingsordning och rätt till semester, bland annat två veckors betald semester. Saltsjöbadsavtalet ses som grundstenen i den svenska modellen av arbetsmarknadsrelationer.",
+    "long": "LO och SAF träffas i Saltsjöbaden och tecknar ett huvudavtal som reglerar spelreglerna på den svenska arbetsmarknaden. Avtalet innehöll bestämmelser om strejkrätt med varseltid, förhandlingsordning och hantering av samhällsfarliga konflikter. Saltsjöbadsavtalet ses som grundstenen i den svenska modellen av arbetsmarknadsrelationer.",
     "tags": [
       "avtal",
-      "förhandling",
-      "semester"
+      "förhandling"
     ],
     "persons": [],
     "links": [
@@ -711,6 +887,31 @@
     }
   },
   {
+    "id": "1938-semesterlagen",
+    "year": 1938,
+    "title": "Två veckors lagstadgad semester",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "small",
+    "short": "Sveriges första semesterlag ger alla anställda två veckors betald semester.",
+    "long": "Semesterlagen (SFS 1938:287) ger för första gången alla anställda rätt till två veckors betald semester per år. Lagen kom samma år som Saltsjöbadsavtalet och är startpunkten för den utbyggnad som gav tre veckor 1951, fyra 1963 och fem 1978.",
+    "tags": [
+      "lag",
+      "semester"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Semesterlagen"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/historiepodden/episodes/407-svenskarna-far-antligen-semester"
+      }
+    ]
+  },
+  {
     "id": "1939-ww2",
     "year": 1939,
     "title": "Andra världskriget",
@@ -728,6 +929,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Andra_v%C3%A4rldskriget"
+      },
+      {
+        "type": "podcast",
+        "url": "https://www.sverigesradio.se/avsnitt/66449"
       }
     ],
     "image": "images/1939-ww2.webp",
@@ -768,6 +973,33 @@
       "by": "Reportagebild, Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Norrskensflamman_1940.jpg"
     }
+  },
+  {
+    "id": "1944-tco",
+    "year": 1944,
+    "title": "TCO bildas",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Tjänstemännens centralorganisation TCO bildas när DACO och gamla TCO går samman.",
+    "long": "Den 11 juni 1944 slås privattjänstemännens DACO (bildat 1931) samman med den offentliga sektorns TCO (bildat 1937) till Tjänstemännens centralorganisation. Vid starten samlar TCO omkring 180 000 medlemmar i ett fyrtiotal förbund. Bildandet markerar att tjänstemännen blir en egen facklig kraft vid sidan av LO, med förhandlingsrätten från 1936 som grund. I dag har TCO:s tolv förbund drygt 1,2 miljoner medlemmar.",
+    "tags": [
+      "organisation",
+      "bildande",
+      "fackförbund",
+      "tjänstemän"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Tj%C3%A4nstem%C3%A4nnens_centralorganisation"
+      },
+      {
+        "type": "wiki",
+        "url": "https://tam-arkiv.se/tcos-historia/"
+      }
+    ]
   },
   {
     "id": "1945-statare",
@@ -1007,6 +1239,10 @@
       {
         "type": "podcast",
         "url": "https://www.sverigesradio.se/avsnitt/den-vilda-gruvstrejken-i-kiruna-malmberget-norrbotten-1969-1970"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/historiepodden/episodes/335-den-vilda-gruvstrejken-i-malmfalten"
       }
     ],
     "image": "images/1969-gruvstrejk.webp",
@@ -1034,6 +1270,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Arbetstidslagen"
+      },
+      {
+        "type": "podcast",
+        "url": "https://podcasters.spotify.com/pod/show/dagensarbeteverket/episodes/Vad-hnder-med-40-timmarsveckan-e2jmcdd"
       }
     ],
     "image": "images/1971-arbetstid.webp",
@@ -1042,6 +1282,30 @@
       "by": "Okänd upphovsman, Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Siroccoverkstaden_1966.jpg"
     }
+  },
+  {
+    "id": "1971-saco-konflikten",
+    "year": 1971,
+    "title": "Saco-konflikten och tjänstepliktslagen",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "small",
+    "short": "Saco strejkar, staten svarar med lockout och riksdagen tvingar akademikerna tillbaka med en tjänstepliktslag.",
+    "long": "I februari 1971 tar Saco ut omkring 3 000 medlemmar i strejk sedan lönebudet till akademiker och statstjänstemän underkänts. Staten svarar med lockout, och den 19 februari stängs gymnasier och yrkesskolor när 25 000 Saco-anslutna lärare utestängs. 700 000 elever står utan undervisning. Den 9 mars fryser regeringen alla stridsåtgärder i sex veckor och den 11 mars antar riksdagen en tjänstepliktslag som tvingar de strejkande tillbaka till arbetet. Konflikten visade att strejkrätten för offentliganställda från 1966 hade gränser när staten själv var motpart.",
+    "tags": [
+      "strejk",
+      "lockout",
+      "konflikt",
+      "lag",
+      "tjänstemän"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Saco%E2%80%93SR-konflikten"
+      }
+    ]
   },
   {
     "id": "1974-las-fml",
@@ -1071,6 +1335,33 @@
     }
   },
   {
+    "id": "1974-foraldraforsakring",
+    "year": 1974,
+    "title": "Föräldraförsäkringen införs",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Världens första föräldraförsäkring för både mammor och pappor: 180 dagar per barn att dela fritt.",
+    "long": "1974 ersätts moderskapsförsäkringen av en föräldraförsäkring som ger båda föräldrarna rätt till betald ledighet. Sverige blir därmed första land i världen med betald föräldraledighet även för pappor. Försäkringen omfattar 180 dagar per barn, och dagarna får fördelas fritt mellan föräldrarna. Det första året tar mammorna ut 99,5 procent av dagarna. Syftet var att göra det möjligt att kombinera förvärvsarbete med barn och öka kvinnors deltagande i arbetslivet.",
+    "tags": [
+      "lag",
+      "föräldraledighet",
+      "jämställdhet",
+      "välfärd"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://arbetet.se/2024/07/17/foraldraforsakringen-fyller-50-ar-sverige-blev-forst-i-varlden/"
+      },
+      {
+        "type": "wiki",
+        "url": "https://www.forsakringskassan.se/privatperson/foraldraforsakringen-50-ar"
+      }
+    ]
+  },
+  {
     "id": "1976-mbl",
     "year": 1976,
     "title": "Medbestämmandelagen (MBL)",
@@ -1089,6 +1380,35 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Medbest%C3%A4mmandelagen"
+      },
+      {
+        "type": "podcast",
+        "url": "https://fackyoupodcast.podbean.com/e/060-nationens-viktigaste-tillgang-proposition-197576105-mbl-medbestammandelagen/"
+      }
+    ]
+  },
+  {
+    "id": "1977-arbetsmiljolagen",
+    "year": 1977,
+    "title": "Arbetsmiljölagen",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "large",
+    "short": "Arbetsmiljölagen ger skyddsombud rätt att stoppa farligt arbete och breddar ansvaret till hela arbetsmiljön.",
+    "long": "Arbetsmiljölagen (SFS 1977:1160) utfärdas den 19 december 1977 och träder i kraft den 1 juli 1978, då den ersätter 1949 års arbetarskyddslag. Arbetsgivaren blir ansvarig för att förebygga ohälsa och olycksfall, och lagen omfattar inte bara maskiner och kemikalier utan också arbetsorganisation, arbetsbelastning och psykisk hälsa. Skyddsombudet får rätt att stoppa arbete som innebär omedelbar och allvarlig fara för liv eller hälsa, i väntan på Arbetsmiljöverkets beslut. Lagen är fortfarande grunden för det lokala arbetsmiljöarbetet.",
+    "tags": [
+      "lag",
+      "arbetsmiljö"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Arbetsmilj%C3%B6lagen"
+      },
+      {
+        "type": "wiki",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetsmiljolag-19771160_sfs-1977-1160/"
       }
     ]
   },
@@ -1158,6 +1478,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Storkonflikten_i_Sverige_1980"
+      },
+      {
+        "type": "podcast",
+        "url": "https://podcasters.spotify.com/pod/show/forandra/episodes/1--Storkonflikten-1980-e1e6skt"
       }
     ],
     "image": "images/1980-storlockout.webp",
@@ -1185,6 +1509,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Ojämlikhet_i_Sverige"
+      },
+      {
+        "type": "podcast",
+        "url": "https://www.sverigesradio.se/avsnitt/1569497"
       }
     ]
   },
@@ -1302,6 +1630,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Berlinmuren"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/historiepodden/episodes/276.berlinmurensfall"
       }
     ],
     "image": "images/1989-berlinmuren.webp",
@@ -1361,6 +1693,28 @@
       {
         "type": "podcast",
         "url": "https://podcasts.apple.com/se/podcast/90-talskrisen-del-2-det-nya-landet/id1665577095?i=1000745386655"
+      }
+    ]
+  },
+  {
+    "id": "1997-industriavtalet",
+    "year": 1997,
+    "title": "Industriavtalet",
+    "epoch": "forvaltande",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Industriavtalet tecknas: industrins löneökningar blir märket för hela arbetsmarknaden.",
+    "long": "Den 18 mars 1997 tecknar fack och arbetsgivare inom industrin Industriavtalet, med Metall, Sif och Civilingenjörsförbundet bland de fackliga parterna. Bakgrunden var 1995 års avtalsrörelse, där löneökningarna ansågs hota industrins konkurrenskraft. Avtalet reglerar förhandlingsordningen: förhandlingar inleds tre månader före avtalets utgång och opartiska ordförande kopplas in om parterna inte är klara en månad före. Den nivå industrin enas om, märket, har sedan dess styrt löneökningarna på hela den svenska arbetsmarknaden. Avtalet förnyades 2011.",
+    "tags": [
+      "avtal",
+      "förhandling",
+      "lön"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Industriavtalet"
       }
     ]
   },
@@ -1551,6 +1905,33 @@
       "by": "BugWarp, CC BY 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Assembly_hall_of_the_Riksdag_Tour_1_Wikimania_2019_02.jpg"
     }
+  },
+  {
+    "id": "2022-nya-las",
+    "year": 2022,
+    "title": "Nya LAS och det nya huvudavtalet",
+    "epoch": "forvaltande",
+    "country": "sverige",
+    "size": "large",
+    "short": "Nya LAS och nytt huvudavtal: sakliga skäl, tre undantag från turordningen och omställningsstudiestöd.",
+    "long": "Efter januariavtalet 2019 förhandlar Svenskt Näringsliv, PTK och senare LO fram en överenskommelse om trygghet, omställning och anställningsskydd. Riksdagen beslutar i juni 2022 om ändringar i LAS som börjar tillämpas den 1 oktober 2022: saklig grund ersätts av sakliga skäl, alla arbetsgivare får undanta tre personer från turordningen och allmän visstid ersätts av särskild visstidsanställning. Den 22 juni 2022 undertecknar parterna det första nya huvudavtalet sedan Saltsjöbadsavtalet 1938. Staten bidrar med ett omställningsstudiestöd för vidareutbildning mitt i arbetslivet. LO-förbunden fick ta ställning var för sig till huvudavtalet.",
+    "tags": [
+      "lag",
+      "anställningsskydd",
+      "avtal",
+      "kollektivavtal"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/flexibilitet-omstallningsformaga-och-trygghet-pa_h903176/html/"
+      },
+      {
+        "type": "wiki",
+        "url": "https://da.se/2022/09/det-nya-huvudavtalet-sa-funkar-det/"
+      }
+    ]
   },
   {
     "id": "2023-tesla",

@@ -50,18 +50,16 @@ assert.ok(filterEvents(events, { query: 'strejk', country: 'världen' }).every(
 ))
 
 // Träffledtråden: bara när sökordet inte redan syns på kortet, och då den
-// mening i den långa texten som innehåller det. Saltsjöbadsavtalet på "semester"
-// är fallet som startade det hela.
-const saltsjobad = events.find((e) => e.id === '1938-saltsjobad')
-const shownOnCard = `${saltsjobad.year} ${saltsjobad.title} ${saltsjobad.short}`
-const hint = matchHint(saltsjobad, 'semester', shownOnCard)
-assert.ok(hint && hint.includes('semester'), `ledtråd saknas: ${hint}`)
-assert.ok(hint.length < saltsjobad.long.length, 'ledtråden ska vara en mening, inte hela texten')
-assert.equal(matchHint(saltsjobad, 'saltsjöbadsavtalet', shownOnCard), null)
-assert.equal(matchHint(saltsjobad, '1938', shownOnCard), null)
-assert.equal(matchHint(saltsjobad, '', shownOnCard), null)
-// Å, ä, ö får inte krävas i ledtråden heller.
-assert.ok(matchHint(saltsjobad, 'forhandlingsordning', shownOnCard)?.includes('förhandlingsordning'))
+// mening i den långa texten som innehåller det. Valsegern 1932 dyker upp på
+// "adalen" för att långtexten nämner skotten, och det ska kortet kunna visa.
+const val1932 = events.find((e) => e.id === '1932-sap-makten')
+const shownOnCard = `${val1932.year} ${val1932.title} ${val1932.short}`
+const hint = matchHint(val1932, 'adalen', shownOnCard)
+assert.ok(hint && hint.includes('Ådalen'), `ledtråd saknas: ${hint}`)
+assert.ok(hint.length < val1932.long.length, 'ledtråden ska vara en mening, inte hela texten')
+assert.equal(matchHint(val1932, 'socialdemokraterna', shownOnCard), null)
+assert.equal(matchHint(val1932, '1932', shownOnCard), null)
+assert.equal(matchHint(val1932, '', shownOnCard), null)
 // Träff bara i taggarna ger taggen.
 const ad = events.find((e) => e.id === '1929-arbetsdomstolen')
 assert.equal(matchHint(ad, 'rattsvasende', `${ad.year} ${ad.title} ${ad.short}`), 'Ämne: rättsväsende')

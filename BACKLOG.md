@@ -33,35 +33,41 @@
 
 ## Bilder
 
-- [ ] Hitta bild till de nio händelser som saknar en. Commons är genomsökt utan
-      resultat, så det krävs en annan fri källa (Arbetarrörelsens arkiv,
-      Digitalt museum, Nordiska museet). Skälen står i `NO_AUTO_IMAGE` i
-      `scripts/download-images.py`. Viktigast: `1902-saf`, `1962-forskola`,
-      `1976-mbl`.
-- [ ] Ersätt bilden på `1890-folkets-hus`. Den föreställer ett modernt
-      förstamajmöte i Stockholm, medan posten handlar om invigningen i
-      Kristianstad 1890. Bildtexten säger nu rakt ut vad bilden är, men ett foto
-      på huset i Kristianstad vore rätt bild.
+- [x] Bild till `1902-saf` (SAF:s hus på Blasieholmen, tidigt 1900-tal),
+      `1962-forskola` (daghem i Örebro omkring 1968, Örebro läns museum) och
+      `1929-arbetsdomstolen` (porten till Ryningska palatset, AD:s säte).
+      Hittade 2026-09-08 på Commons och Digitalt museum, licens kontrollerad på
+      källsidan. Skriptet tar nu även bilder utanför Commons (`url` i `MANUAL`).
+- [ ] Sex händelser saknar fortfarande bild, skäl i `NO_AUTO_IMAGE`:
+      `1968-komvux` (allt periodmaterial är CC BY-NC-ND), `1976-mbl` (ingen fri
+      bild av Ingemund Bengtsson 1974-76), `1978-timbro` (inget foto av Sture
+      Eskilsson), `1983-jamlikt`, `1994-2dagar` (inget fritt krisfoto 1992-94),
+      `2000-medling` (enda bilden av adressen är SBAB-reklam). Genomsökt:
+      Commons, Digitalt museum, Stockholmskällan, Arbetarrörelsens arkiv på
+      Flickr.
+- [x] `1890-folkets-hus` bytt från det moderna förstamajmötet till Folkets hus
+      på Barnhusgatan i Stockholm 1902 (Stadsmuseet, PD). Inget fritt foto av
+      huset i Kristianstad finns; Halmstads Folkets hus 1905 (CC0) är det enda
+      andra periodfotot och sämre i miniatyr.
 - [x] `1963-4veckor` beskuren 2026-09-08: ram och arkivnummer borta, tältet
       centrerat. Beskärningen ligger som `crop` i `MANUAL` i nedladdningsskriptet
       och hämtas i högre upplösning, så en ny körning ger samma bild.
-- [ ] **Byt bild på `1978-5veckor`.** Den är mörk och lågkontrastig och läses som
-      ett uthus med en svart gapande öppning, inte som en sommarstuga. Kortets
-      kvadratiska beskärning träffar nästan bara skuggan.
-- [ ] **Byt bild på `1912-abf`.** Förgrunden är en kyrkogård med gravstenar och
-      ett stenkors; ABF-huset står i bakgrunden. En centrerad 64 px-beskärning
-      landar på en gul länga och träd, alltså inte på ABF alls.
-- [ ] **Byt bild eller bildtext på `1980-storlockout`.** Bildtexten lovar en
-      förstamajdemonstration utanför SAF, men bilden domineras av Grand Hôtel med
-      svenska flaggor och en tom asfaltsyta. Demonstrationen syns knappt.
-- [ ] Överväg `1951-3veckor`. Ett svartvitt flygfoto över sjö och skog utan
-      människor säger ingenting om semester och blir en mörk fläck vid 64 px.
-      Inte missvisande, bara innehållslöst.
-- [ ] Titta en gång till på tre till: `1974-las-fml` (Palme står i profil bortvänd
-      och är oigenkännlig i miniatyr, och inget i bilden säger demonstration),
-      `2015-huvudentreprenad` (spårvägsunderhåll snarare än byggarbetsplats, och en
-      korvreklam med pris syns tydligt i bild) och `1906-december` (fotot ser ut att
-      vara från sekelskiftet, inte 1936 som källfilnamnet påstår).
+- [x] `1978-5veckor`: campingplatsen vid Gustavsvik 1974 i färg (Örebro
+      stadsarkiv, CC BY), beskuren mot tält och bil.
+- [x] `1912-abf`: ABF:s studiecirkel i Västerås 1922 (Västmanlands läns museum,
+      PD). Rätt motiv och tio år efter bildandet, i stället för det moderna huset.
+- [x] `1980-storlockout`: strejkaffisch på grinden till Kvarnsvedens pappersbruk,
+      daterad maj 1980 av Dalarnas museum (CC BY). Enda fria konfliktfotot från
+      1980 som hittades.
+- [x] `1951-3veckor`: Gunnar Lundhs färgbild från stranden i Båstad, mitten av
+      1950-talet (Nordiska museet, CC BY 4.0), inbränd kreditrad bortbeskuren.
+- [x] `1974-las-fml`: Palme i september 1974 (Nationaal Archief, CC0), beskuren
+      så att han står i mitten och vänd mot kameran.
+- [x] `2015-huvudentreprenad`: byggnadsarbetare med tryckluftshammare i Lysekil
+      2022 (CC BY-SA 4.0), utan reklam i bild.
+- [x] `1906-december`: von Sydow-bilden var ett tidningsurklipp från 1890-talet
+      trots filnamnets 1936 (källan är Lindorms bok från 1936). Ersatt med LO:s
+      ordförande Herman Lindqvist i riksdagsporträtt från just 1906 (CC0).
 - [x] Bildkredit på kortens miniatyrer som `title`-tooltip (2026-09-08). Synlig
       text får inte plats vid 64 px, och den fulla krediten med källänk står i
       modalen ett klick bort.

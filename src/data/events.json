@@ -146,9 +146,9 @@
     ],
     "image": "images/1890-folkets-hus.webp",
     "imageCredit": {
-      "caption": "Förstamajmöte utanför Folkets Hus i Stockholm, långt senare än det första huset i Kristianstad 1890",
-      "by": "Vattkoppa, Public domain",
-      "source": "https://commons.wikimedia.org/wiki/File:1maj_085.jpg"
+      "caption": "Folkets hus på Barnhusgatan i Stockholm 1902, tolv år efter det första i Kristianstad",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Gamla_folkets_hus.jpg"
     }
   },
   {
@@ -275,7 +275,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Svenskt_N%C3%A4ringsliv"
       }
-    ]
+    ],
+    "image": "images/1902-saf.webp",
+    "imageCredit": {
+      "caption": "SAF:s hus på Blasieholmen i Stockholm, tidigt 1900-tal",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Saf-huset.jpg"
+    }
   },
   {
     "id": "1902-storstrejken",
@@ -327,9 +333,9 @@
     ],
     "image": "images/1906-december.webp",
     "imageCredit": {
-      "caption": "Hjalmar von Sydow, SAF:s verkställande direktör från 1907",
-      "by": "Fotograf okänd, Public domain",
-      "source": "https://commons.wikimedia.org/wiki/File:Hjalmar_von_Sydow_1936.JPG"
+      "caption": "Herman Lindqvist, LO:s ordförande 1900 till 1912, i riksdagsporträtt från 1906",
+      "by": "Okänd upphovsman, CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Riksdagsm%C3%A4n_1906_Lindqvist_Herman_18630709-.jpg"
     }
   },
   {
@@ -424,9 +430,9 @@
     ],
     "image": "images/1912-abf.webp",
     "imageCredit": {
-      "caption": "ABF-huset på Sveavägen i Stockholm",
-      "by": "Ankara, CC BY-SA 3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:ABF-huset.jpg"
+      "caption": "ABF:s studiecirkel på Arosgården i Västerås 1922",
+      "by": "E. Wijgård, Västmanlands läns museum, Public domain",
+      "source": "https://digitaltmuseum.se/0210111931767"
     }
   },
   {
@@ -721,7 +727,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Arbetsdomstolen"
       }
-    ]
+    ],
+    "image": "images/1929-arbetsdomstolen.webp",
+    "imageCredit": {
+      "caption": "Porten till Ryningska palatset på Stora Nygatan i Stockholm, där Arbetsdomstolen har sitt säte",
+      "by": "Fanny Schertzer, CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stora_Nygatan_2b%2C_Gamla_Stan%2C_Stockholm.jpg"
+    }
   },
   {
     "id": "1929-borskrasch",
@@ -1055,9 +1067,9 @@
     ],
     "image": "images/1951-3veckor.webp",
     "imageCredit": {
-      "caption": "Badplatsen vid Axamosjön utanför Jönköping, 1956",
-      "by": "AB Flygtrafik, Public domain",
-      "source": "https://commons.wikimedia.org/wiki/File:Axamosj%C3%B6n_1956.jpg"
+      "caption": "Badgäster på stranden vid Malen i Båstad, mitten av 1950-talet",
+      "by": "Gunnar Herbert Lundh, CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tv%C3%A5_unga_kvinnor_i_baddr%C3%A4kt_p%C3%A5_strand._Malen%2C_B%C3%A5stad%2C_Sk%C3%A5ne_-_Nordiska_museet_-_NMA.0034002.jpg"
     }
   },
   {
@@ -1140,7 +1152,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/F%C3%B6rskola"
       }
-    ]
+    ],
+    "image": "images/1962-forskola.webp",
+    "imageCredit": {
+      "caption": "Barndaghem i Örebro, omkring 1968",
+      "by": "Örebro Kuriren, Örebro läns museum, Public domain",
+      "source": "https://digitaltmuseum.se/021016194818"
+    }
   },
   {
     "id": "1963-4veckor",
@@ -1329,9 +1347,9 @@
     ],
     "image": "images/1974-las-fml.webp",
     "imageCredit": {
-      "caption": "Olof Palme vid förstamajdemonstrationen på Norra Bantorget 1973",
-      "by": "Oiving, CC BY-SA 3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Palme_1973.jpg"
+      "caption": "Statsminister Olof Palme i september 1974, året LAS trädde i kraft",
+      "by": "Bert Verhoeff / Anefo, CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Premier_Den_Uyl_%28links%29_spreekt_met_premier_Palme_van_Zweden_op_ambassade_in_Den%2C_Bestanddeelnr_927-4474.jpg"
     }
   },
   {
@@ -1434,9 +1452,9 @@
     ],
     "image": "images/1978-5veckor.webp",
     "imageCredit": {
-      "caption": "Svensk sommarstuga fotograferad på 1970-talet",
-      "by": "Andersreilund, CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Stora_byg%C3%A4rde%2C_sommarstuga%2C_byggd_1962.jpg"
+      "caption": "Campingplatsen vid Gustavsvik i Örebro 1974",
+      "by": "Gunlög Enhörning, Örebro stadsarkiv, CC BY 4.0",
+      "source": "https://digitaltmuseum.se/0210112512517"
     }
   },
   {
@@ -1486,9 +1504,9 @@
     ],
     "image": "images/1980-storlockout.webp",
     "imageCredit": {
-      "caption": "Förstamajdemonstration utanför SAF:s huvudkontor under storkonflikten 1980",
-      "by": "Hans-Göran Öhlin, CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Storkonflikten_1980%2C_demonstration_1_maj.jpg"
+      "caption": "Strejkaffisch på grinden till Kvarnsvedens pappersbruk i Borlänge under storkonflikten i maj 1980",
+      "by": "Sven-Erik Gren, Dalarnas museum, CC BY 4.0",
+      "source": "https://digitaltmuseum.se/0210114809710"
     }
   },
   {
@@ -1845,9 +1863,9 @@
     ],
     "image": "images/2015-huvudentreprenad.webp",
     "imageCredit": {
-      "caption": "Byggarbetsplats i centrala Göteborg 2023",
+      "caption": "Byggnadsarbetare med tryckluftshammare i Lysekil 2022",
       "by": "W.carter, CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Construction_workers_at_a_site_on_S%C3%B6dra_Hamngatan%2C_Gothenburg.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Man_working_with_a_jackhammer_in_Lysekil.jpg"
     }
   },
   {

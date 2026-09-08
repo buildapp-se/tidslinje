@@ -5,14 +5,14 @@ Kräver:  pip install Pillow requests
 
 Hämtar bilder för varje händelse via flera strategier, i tur och ordning:
   1. Manuell Commons-fil (bara för fall där automatiken väljer fel bild)
-  2. sv.wikipedia pageimages-API — Wikipedias egen "huvudbild" för artikeln
-  3. sv.wikipedia — alla bilder som faktiskt förekommer i artikeln (prop=images),
+  2. sv.wikipedia pageimages-API, Wikipedias egen "huvudbild" för artikeln
+  3. sv.wikipedia, alla bilder som faktiskt förekommer i artikeln (prop=images),
      i den ordning de nämns, med ikoner/loggor/kartor/små bilder bortfiltrerade
   4. Samma två steg (2+3) mot en.wikipedia, för händelser med en EN_WIKI-post
 
 Steg 3 är den nya, smartare delen: istället för att bara lita på Wikipedias
 auto-vald "sidbild" (som ofta saknas) letar den upp riktiga foton som redan
-ligger inbäddade i artikeln — samma sätt som att öppna artikeln och ta första
+ligger inbäddade i artikeln, samma sätt som att öppna artikeln och ta första
 rimliga bilden, fast automatiskt.
 
 Konverterar till WebP (max 800 px bred) och sparar i public/images/.
@@ -36,7 +36,7 @@ IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
 HEADERS = {"User-Agent": "ArbetrorrelseTidslinje/1.0 (educational, non-commercial)"}
 
-# Filnamnsmönster som nästan alltid är ikoner/loggor/kartor/vapen — inte foton.
+# Filnamnsmönster som nästan alltid är ikoner/loggor/kartor/vapen, inte foton.
 SKIP_PATTERNS = [
     "logo", "icon", "symbol", "flag_of", "ambox", "nuvola", "crystal",
     "disambig", "edit-icon", "padlock", "question_book", "oojs",
@@ -47,7 +47,7 @@ SKIP_PATTERNS = [
 ]
 MIN_WIDTH = 200
 
-# ── Manuella overrides — handplockade Commons-filer ───────────────────────
+# ── Manuella overrides, handplockade Commons-filer ───────────────────────
 # Används när automatiken väljer fel bild eller inte hittar någon alls. De
 # flesta av dessa händelser är lagar, och lagartiklar på Wikipedia saknar
 # nästan alltid foton, så bilden måste väljas för hand.
@@ -56,6 +56,11 @@ MIN_WIDTH = 200
 # bilden faktiskt föreställer}. Bildtexten är obligatorisk: flera av bilderna
 # är tidstypiska illustrationer snarare än foton av själva händelsen, och då
 # måste läsaren kunna se vad hen tittar på.
+#
+# Alternativt "url" i stället för "file", för bilder som inte ligger på Commons
+# (Digitalt museum, Stockholmskällan). Då finns ingen metadata att slå upp, så
+# posten måste själv bära "by" (upphovsman och licens) och "source" (objektets
+# sida). Licensen är kontrollerad för hand på källsidan innan posten skrevs.
 #
 # Valfritt "crop": (vänster, topp, höger, botten) som andelar av bildens bredd
 # och höjd. Används när Commons-filen är en oputsad skanning med negativram och
@@ -82,14 +87,33 @@ MANUAL = {
     # den av bildtexten i stället för att tas bort, eftersom den långa texten
     # faktiskt handlar om rörelsen som växte och inte bara om invigningen.
     # Byt ut den om ett foto på huset i Kristianstad dyker upp.
+    # Bytt 2026-09-08 från ett modernt förstamajmöte till ett periodfoto. Inget
+    # fritt foto av huset i Kristianstad finns; Stockholms Folkets hus från 1902
+    # är samma rörelse och samma tid.
     "1890-folkets-hus": {
-        "file": "1maj_085.jpg",
-        "caption": "Förstamajmöte utanför Folkets Hus i Stockholm, långt senare än det första huset i Kristianstad 1890",
+        "file": "Gamla folkets hus.jpg",
+        "caption": "Folkets hus på Barnhusgatan i Stockholm 1902, tolv år efter det första i Kristianstad",
     },
     # Kom från wiki-automatiken med Commons engelska beskrivning som bildtext.
     "1908-amalthea": {
         "file": "Amalthea-1908.jpg",
         "caption": "S/S Amalthea i Malmö hamn 1908, med hålet efter sprängningen",
+    },
+    "1902-saf": {
+        "file": "Saf-huset.jpg",
+        "caption": "SAF:s hus på Blasieholmen i Stockholm, tidigt 1900-tal",
+    },
+    # Arbetsdomstolen har sitt säte i Ryningska palatset, Stora Nygatan 2 A.
+    "1929-arbetsdomstolen": {
+        "file": "Stora Nygatan 2b, Gamla Stan, Stockholm.jpg",
+        "caption": "Porten till Ryningska palatset på Stora Nygatan i Stockholm, där Arbetsdomstolen har sitt säte",
+        "crop": (0.0, 0.2, 1.0, 0.95),
+    },
+    "1962-forskola": {
+        "url": "https://dms-cf-01.dimu.org/image/032wYWGgDX7s?dimension=1200x1200",
+        "by": "Örebro Kuriren, Örebro läns museum, Public domain",
+        "source": "https://digitaltmuseum.se/021016194818",
+        "caption": "Barndaghem i Örebro, omkring 1968",
     },
     "1931-adalen": {
         "file": "1led0513adalen.jpg",
@@ -105,11 +129,14 @@ MANUAL = {
         "file": "TM.ETB 849 Rösträttsdemonstration i Trelleborg(?).jpg",
         "caption": "Demonstration i Trelleborg för rösträtt och åtta timmars arbetsdag, före 1918",
     },
-    # Artikelbilden blev en länskarta innan mönsterfiltret lagade sig. Huset är
-    # modernt men det är faktiskt ABF:s, till skillnad från kartan.
+    # ABF-huset på Sveavägen låg bakom en kyrkogård i bild; en studiecirkel tio
+    # år efter bildandet är både rätt motiv och rätt tid. Ramen beskärs bort.
     "1912-abf": {
-        "file": "ABF-huset.jpg",
-        "caption": "ABF-huset på Sveavägen i Stockholm",
+        "url": "https://dms-cf-01.dimu.org/image/019EBsm2Kg5pg?dimension=1200x1200",
+        "by": "E. Wijgård, Västmanlands läns museum, Public domain",
+        "source": "https://digitaltmuseum.se/0210111931767",
+        "caption": "ABF:s studiecirkel på Arosgården i Västerås 1922",
+        "crop": (0.03, 0.04, 0.97, 0.96),
     },
     # sv-wiki-artikeln om Socialdemokraterna har regeringen Andersson 2021 som
     # sidbild, vilket blir absurt på en post om partiets bildande 1889.
@@ -118,15 +145,20 @@ MANUAL = {
         "caption": "Hjalmar Branting, en av grundarna och partiets förste ledare",
     },
     # Decemberkompromissen slöts mellan LO och SAF. Inget foto från själva
-    # uppgörelsen finns fritt, så arbetsgivarsidans ledande man får stå för
-    # den — bildtexten säger vem han är så att det inte läses som en LO-bild.
+    # uppgörelsen finns fritt. LO:s ordförande i ett riksdagsporträtt från just
+    # 1906 ersatte 2026-09-08 ett urklipp av SAF:s von Sydow som visade sig vara
+    # från 1890-talet trots filnamnets "1936". Beskärs till porträttet.
     "1906-december": {
-        "file": "Hjalmar von Sydow 1936.JPG",
-        "caption": "Hjalmar von Sydow, SAF:s verkställande direktör från 1907",
+        "file": "Riksdagsmän 1906 Lindqvist Herman 18630709-.jpg",
+        "caption": "Herman Lindqvist, LO:s ordförande 1900 till 1912, i riksdagsporträtt från 1906",
+        "crop": (0.19, 0.29, 0.84, 0.72),
     },
+    # Flygfotot över Axamosjön var innehållslöst vid 64 px. Nordiska museets
+    # färgbild har en inbränd kreditrad nederst som beskärs bort.
     "1951-3veckor": {
-        "file": "Axamosjön 1956.jpg",
-        "caption": "Badplatsen vid Axamosjön utanför Jönköping, 1956",
+        "file": "Två unga kvinnor i baddräkt på strand. Malen, Båstad, Skåne - Nordiska museet - NMA.0034002.jpg",
+        "caption": "Badgäster på stranden vid Malen i Båstad, mitten av 1950-talet",
+        "crop": (0.0, 0.0, 1.0, 0.965),
     },
     "1959-atp": {
         "file": "Tage Erlander, Olof Palme och Ingvar Carlsson på Studentafton i Lund.jpg",
@@ -151,20 +183,31 @@ MANUAL = {
         "file": "Siroccoverkstaden 1966.jpg",
         "caption": "Verkstadsgolvet i Atlas Copcos Siroccoverkstad i Nacka, 1966",
     },
+    # Förstamajbilden från 1973 visade Palme i profil, oigenkännlig i miniatyr.
+    # Nederländska Nationaal Archief har ett CC0-foto från september 1974, samma
+    # år som LAS trädde i kraft. Beskärs så att Palme hamnar i mitten.
     "1974-las-fml": {
-        "file": "Palme 1973.jpg",
-        "caption": "Olof Palme vid förstamajdemonstrationen på Norra Bantorget 1973",
+        "file": "Premier Den Uyl (links) spreekt met premier Palme van Zweden op ambassade in Den, Bestanddeelnr 927-4474.jpg",
+        "caption": "Statsminister Olof Palme i september 1974, året LAS trädde i kraft",
+        "crop": (0.42, 0.0, 0.92, 1.0),
     },
     # Semesterårens bilder är illustrationer, inte dokumentation, och måste
-    # skilja sig från varandra — annars ser tidslinjen ut att upprepa sig.
+    # skilja sig från varandra, annars ser tidslinjen ut att upprepa sig.
     # Därför bara ett stugmotiv: 1978 får det tidstypiska 70-talsfotot.
     "1978-5veckor": {
-        "file": "Stora bygärde, sommarstuga, byggd 1962.jpg",
-        "caption": "Svensk sommarstuga fotograferad på 1970-talet",
+        "url": "https://dms-cf-01.dimu.org/image/019EBtjzmCe4z?dimension=1600x1600",
+        "by": "Gunlög Enhörning, Örebro stadsarkiv, CC BY 4.0",
+        "source": "https://digitaltmuseum.se/0210112512517",
+        "caption": "Campingplatsen vid Gustavsvik i Örebro 1974",
+        "crop": (0.0, 0.2, 0.62, 0.93),
     },
+    # Commons enda bild dominerades av Grand Hôtel. Museets arkivpost daterar
+    # fotot till maj 1980, alltså mitt i konflikten.
     "1980-storlockout": {
-        "file": "Storkonflikten 1980, demonstration 1 maj.jpg",
-        "caption": "Förstamajdemonstration utanför SAF:s huvudkontor under storkonflikten 1980",
+        "url": "https://dms-cf-01.dimu.org/image/019EGLCGG8gY9?dimension=1600x1600",
+        "by": "Sven-Erik Gren, Dalarnas museum, CC BY 4.0",
+        "source": "https://digitaltmuseum.se/0210114809710",
+        "caption": "Strejkaffisch på grinden till Kvarnsvedens pappersbruk i Borlänge under storkonflikten i maj 1980",
     },
     "1983-lontagarfonder": {
         "file": "Rudolf-Meidner-143458166346.jpg",
@@ -191,8 +234,8 @@ MANUAL = {
         "caption": "Sven Otto Littorin, arbetsmarknadsminister när allmän visstid infördes",
     },
     "2015-huvudentreprenad": {
-        "file": "Construction workers at a site on Södra Hamngatan, Gothenburg.jpg",
-        "caption": "Byggarbetsplats i centrala Göteborg 2023",
+        "file": "Man working with a jackhammer in Lysekil.jpg",
+        "caption": "Byggnadsarbetare med tryckluftshammare i Lysekil 2022",
     },
     "2016-hamnkonflikten": {
         "file": "2015-07-02 ANNA SIRKKA im Hafen von Göteborg RB1507.jpg",
@@ -216,15 +259,14 @@ MANUAL = {
 # av John Locke, och "världens mest jämlika land" gav en Gini-karta från 2014.
 # En felaktig bild är sämre än ingen bild alls.
 NO_AUTO_IMAGE = {
-    "1902-saf":      "sidbilden är Näringslivets hus 2012, men Svenskt Näringsliv bildades 2001, inte SAF 1902",
-    "1962-forskola": "sv-wiki gav ett USAID-foto av ett daghem i Afghanistan, inget svenskt periodfoto finns",
-    "1929-arbetsdomstolen": "Commons har bara utländska arbetsdomstolar, inte den svenska",
-    "1968-komvux":   "inget periodfoto av svensk vuxenutbildning finns fritt",
-    "1976-mbl":      "inga svenska politik- eller arbetsplatsfoton från mitten av 70-talet",
-    "1978-timbro":   "bara logotyper och bilder på Svenskt Näringsliv, som bildades först 2001",
-    "1983-jamlikt":  "abstrakt händelse, enda kandidaterna var 25-40 år yngre än den",
-    "1994-2dagar":   "skulle bli ett andra sommarstugemotiv, upprepning i tidslinjen",
-    "2000-medling":  "Commons har bara grannfastigheterna till myndighetens adress",
+    # Genomsökt igen 2026-09-08 (Commons, Digitalt museum, Stockholmskällan,
+    # Arbetarrörelsens arkiv på Flickr). Det som fanns var CC BY-NC eller fel tid.
+    "1968-komvux":   "Uppsala-Bild har periodfoton av vuxenutbildning, alla CC BY-NC-ND; Commons har bara moderna skolhus",
+    "1976-mbl":      "ingen fri bild av Ingemund Bengtsson från 1974-76; en andra Palmebild bredvid LAS 1974 vore upprepning",
+    "1978-timbro":   "inget foto av Sture Eskilsson finns fritt, Commons Timbro-kategori är debattbilder från 2014",
+    "1983-jamlikt":  "abstrakt händelse, varje bild vore godtycklig",
+    "1994-2dagar":   "inget fritt foto från krisåren 1992-94 (Bildt, Carlsson, Dennis); Riksbankshuset är redan använt på 1985",
+    "2000-medling":  "enda Commons-bilden av Drottninggatan 89 domineras av SBAB:s och Boolis logotyper",
     # Nya händelser 2026-09-08. Spärrade tills bilden är vald för hand: utan
     # spärr hämtar automatiken artikelns sidbild, och det var så en länskarta
     # och ett daghem i Afghanistan hamnade i tidslinjen förra gången.
@@ -272,7 +314,7 @@ def commons_url(filename, width=800):
     """Direktlänk till en Commons-fil, via API:et.
 
     Den självklara vägen, Special:FilePath, är en wikisida som redirectar till
-    mediaservern — och wikifronten stryps betydligt hårdare än
+    mediaservern, och wikifronten stryps betydligt hårdare än
     upload.wikimedia.org. Vid en skur av hämtningar svarade FilePath 429 på
     varenda bild medan API-anropen gick igenom som vanligt. Därför slås den
     riktiga mediaadressen upp via API:et istället, och nedladdningen sker
@@ -297,14 +339,14 @@ def is_probably_icon(filename):
     # Filnamn kommer hit i två former: med mellanslag från artikellistan
     # (prop=images ger wikititlar) och med understreck från URL:er. Mönstren
     # nedan är skrivna med understreck, så utan den här normaliseringen slog
-    # hälften av dem aldrig till — det var så en länskarta hamnade på ABF.
+    # hälften av dem aldrig till, det var så en länskarta hamnade på ABF.
     lower = filename.lower().replace(" ", "_")
     if lower.endswith(".svg") or lower.endswith(".gif"):
         return True
     return any(p in lower for p in SKIP_PATTERNS)
 
 def api_get(url, params, retries=5):
-    """GET med enkel backoff mot 429/5xx — MediaWiki-API:et är flaggigt
+    """GET med enkel backoff mot 429/5xx, MediaWiki-API:et är flaggigt
     under skurar av förfrågningar, men brukar svara normalt efter en paus.
 
     Backoffen börjar på 5s och dubblas: en hel körning tar runt en minut i
@@ -321,7 +363,7 @@ def api_get(url, params, retries=5):
         if r.status_code == 200:
             return r
         if r.status_code in (429, 500, 502, 503) and attempt < retries - 1:
-            print(f"    HTTP {r.status_code} — väntar {wait}s och försöker igen")
+            print(f"    HTTP {r.status_code}, väntar {wait}s och försöker igen")
             time.sleep(wait)
             wait *= 2
             continue
@@ -427,7 +469,7 @@ def commons_credit(img_url, caption=None):
         license_ = html_to_text(meta.get("LicenseShortName", {}).get("value", ""))
 
         # Commons-beskrivningen skrivs nästan alltid på engelska och sajten är
-        # på svenska, så den sparas inte — den skrivs bara ut som stöd när en
+        # på svenska, så den sparas inte, den skrivs bara ut som stöd när en
         # svensk bildtext ska formuleras för hand.
         desc = html_to_text(meta.get("ImageDescription", {}).get("value", ""))
         if desc and not caption:
@@ -464,7 +506,7 @@ def find_image(lang, article):
     """Steg 2+3 för ett givet språk: pageimage, annars bästa artikelbild."""
     url = wiki_pageimage(lang, article)
     # Wikipedias auto-valda sidbild gick tidigare rakt igenom utan att passera
-    # ikonfiltret — alla kontroller låg i den andra grenen. Då hämtades en
+    # ikonfiltret, alla kontroller låg i den andra grenen. Då hämtades en
     # världskarta över Gini-index till "Sverige, världens mest jämlika land":
     # pageimages levererar en färdigrenderad PNG av en SVG, så varken
     # SVG-spärren eller "_map"-mönstret fick något att bita i.
@@ -482,7 +524,7 @@ def find_image(lang, article):
 def sv_article(wiki_url):
     if "sv.wikipedia.org/wiki/" in wiki_url:
         # Wiki-URL:er i events.json är ofta procentkodade (Ådalen → %C3%85dalen).
-        # Måste avkodas innan de skickas som titles= — annars dubbelkodas de.
+        # Måste avkodas innan de skickas som titles=, annars dubbelkodas de.
         return urllib.parse.unquote(wiki_url.split("/wiki/")[-1])
     return None
 
@@ -495,7 +537,7 @@ def save_webp(img_url, out_path, max_w=800, crop=None):
             if r.status_code == 200:
                 break
             if r.status_code in (429, 500, 502, 503) and attempt < attempts - 1:
-                print(f"    HTTP {r.status_code} — väntar {wait}s och försöker igen")
+                print(f"    HTTP {r.status_code}, väntar {wait}s och försöker igen")
                 time.sleep(wait)
                 wait *= 2
                 continue
@@ -534,7 +576,7 @@ def save_webp(img_url, out_path, max_w=800, crop=None):
 
 def resolve_image(ev):
     """Alla fyra strategierna i tur och ordning. Returnerar (url, bildtext).
-    Bildtexten finns bara för handplockade bilder — för de automatiskt hittade
+    Bildtexten finns bara för handplockade bilder, för de automatiskt hittade
     hämtas den ur Commons-beskrivningen istället.
 
     Egen funktion för att backfill-skriptet ska kunna köra exakt samma
@@ -549,11 +591,14 @@ def resolve_image(ev):
     # 1. Manuell Commons-fil. En bild som ska beskäras hämtas i högre upplösning,
     # annars blir utsnittet uppskalat och suddigt.
     if eid in MANUAL:
+        if "url" in MANUAL[eid]:
+            print(f"    MANUAL (extern källa): {MANUAL[eid]['source']}")
+            return MANUAL[eid]["url"], MANUAL[eid]["caption"]
         print(f"    MANUAL: {MANUAL[eid]['file']}")
         width = 2400 if MANUAL[eid].get("crop") else 800
         return commons_url(MANUAL[eid]["file"], width), MANUAL[eid]["caption"]
 
-    # 2+3. sv.wikipedia — pageimage, sedan artikelns egna bilder
+    # 2+3. sv.wikipedia, pageimage, sedan artikelns egna bilder
     wiki_url = next(
         (l["url"] for l in ev.get("links", [])
          if l["type"] == "wiki" and "sv.wikipedia.org/wiki/" in l["url"]),
@@ -565,7 +610,7 @@ def resolve_image(ev):
             print(f"    sv-wiki ({method}): {url[:70]}...")
             return url, None
 
-    # 4. en.wikipedia — samma två steg
+    # 4. en.wikipedia, samma två steg
     if eid in EN_WIKI:
         url, method = find_image("en", EN_WIKI[eid])
         if url:
@@ -605,11 +650,16 @@ def main():
             fail += 1
             continue
 
-        credit = commons_credit(img_url, caption)
+        manual = MANUAL.get(eid, {})
+        if "url" in manual:
+            # Ingen Commons-metadata att hämta: posten bär sin egen credit.
+            credit = {"caption": caption, "by": manual["by"], "source": manual["source"]}
+        else:
+            credit = commons_credit(img_url, caption)
         if not credit:
             # Licensen kräver namngivning. Kan vi inte belägga upphovsmannen
-            # publicerar vi inte bilden — filen flyttas undan för manuell koll.
-            print("    INGEN CREDIT — bilden används inte")
+            # publicerar vi inte bilden, filen flyttas undan för manuell koll.
+            print("    INGEN CREDIT, bilden används inte")
             out.rename(out.with_suffix(".webp.orphan"))
             fail += 1
             continue

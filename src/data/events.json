@@ -6,7 +6,7 @@
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "medium",
-    "short": "Typografernas förening i Stockholm grundas — Sveriges äldsta kända fackförening.",
+    "short": "Typografernas förening i Stockholm grundas, Sveriges äldsta kända fackförening.",
     "long": "Typografernas förening i Stockholm bildas 1846 och är den äldsta kända fackföreningen i Sverige. Tryckeribranschen var tidig med att organisera sig, bland annat tack vare traditionerna från hantverksskrån. Föreningen lade grunden för den fackliga tradition som snart skulle spridas till hela arbetsmarknaden.",
     "tags": [
       "organisation",
@@ -33,7 +33,7 @@
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "large",
-    "short": "Sågverksarbetare strejkar mot lönesänkningar — en av de första stora svenska arbetskonflikterna.",
+    "short": "Sågverksarbetare strejkar mot lönesänkningar, en av de första stora svenska arbetskonflikterna.",
     "long": "Sågverksarbetare i Sundsvallsregionen protesterar mot drastiska lönesänkningar. Strejken sprids snabbt och samlar tusentals arbetare, men krossas av statsmakten med hjälp av militär. Händelsen anses vara startskottet för den organiserade svenska fackföreningsrörelsen och fick stor symbolisk betydelse för kommande generationer.",
     "tags": [
       "strejk",
@@ -95,7 +95,7 @@
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "large",
-    "short": "Socialdemokratiska Arbetarepartiet grundas — partiet som formade Sverige under 1900-talet.",
+    "short": "Socialdemokratiska Arbetarepartiet grundas, partiet som formade Sverige under 1900-talet.",
     "long": "Socialdemokratiska Arbetarepartiet (SAP) grundas vid ett möte i Stockholm. Partiet knöts tätt samman med fackföreningsrörelsen och LO och kom att dominera svensk politik under stora delar av 1900-talet. SAP var den drivande kraften bakom den svenska välfärdsstatens framväxt.",
     "tags": [
       "organisation",
@@ -127,7 +127,7 @@
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "small",
-    "short": "Folkets hus i Kristianstad invigs — det första i en rörelse av lokaler för arbetare.",
+    "short": "Folkets hus i Kristianstad invigs, det första i en rörelse av lokaler för arbetare.",
     "long": "I Kristianstad öppnar det som räknas som Sveriges första Folkets hus. Folkets hus-rörelsen växte sig stark och gav arbetarna egna möteslokaler, kulturarenor och samlingspunkter runt om i landet.",
     "tags": [
       "organisation",
@@ -182,7 +182,7 @@
   {
     "id": "1901-forlossning",
     "year": 1901,
-    "title": "Rätt till förlossningsledighet — utan lön",
+    "title": "Rätt till förlossningsledighet, utan lön",
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "small",
@@ -236,7 +236,7 @@
     "country": "sverige",
     "size": "large",
     "short": "LO erkänner arbetsgivarnas rätt att leda arbetet. SAF erkänner fackets förhandlingsrätt.",
-    "long": "Decemberkompromissen 1906 är ett av de mest grundläggande avtalen i svensk arbetsmarknadshistoria. LO accepterade paragraf 23 — arbetsgivarnas rätt att leda och fördela arbetet och att fritt anställa och avskeda — i utbyte mot att SAF erkände fackens existens och förhandlingsrätt. Kompromissen lade grunden för de spelregler som präglade den svenska arbetsmarknaden under decennier.",
+    "long": "Decemberkompromissen 1906 är ett av de mest grundläggande avtalen i svensk arbetsmarknadshistoria. LO accepterade paragraf 23 (arbetsgivarnas rätt att leda och fördela arbetet och att fritt anställa och avskeda) i utbyte mot att SAF erkände fackens existens och förhandlingsrätt. Kompromissen lade grunden för de spelregler som präglade den svenska arbetsmarknaden under decennier.",
     "tags": [
       "avtal",
       "förhandling"
@@ -387,7 +387,7 @@
     "country": "världen",
     "size": "medium",
     "short": "Svenskfödde arbetarsångaren Joe Hill avrättas i Utah efter en starkt ifrågasatt rättegång.",
-    "long": "Joel Hägglund, född i Gävle 1879 och utvandrad till USA 1902, blir under namnet Joe Hill en av den amerikanska fackföreningsrörelsens mest kända sångare och agitatorer inom IWW (Industrial Workers of the World). Han döms för mord i en rättegång som ifrågasattes hårt både i USA och internationellt, och avrättas genom arkebusering i Salt Lake City den 19 november 1915. Hans sista ord — \"Sörj inte, organisera!\" — och hans sånger blev en del av arbetarrörelsens internationella kulturarv.",
+    "long": "Joel Hägglund, född i Gävle 1879 och utvandrad till USA 1902, blir under namnet Joe Hill en av den amerikanska fackföreningsrörelsens mest kända sångare och agitatorer inom IWW (Industrial Workers of the World). Han döms för mord i en rättegång som ifrågasattes hårt både i USA och internationellt, och avrättas genom arkebusering i Salt Lake City den 19 november 1915. Hans sista ord, \"Sörj inte, organisera!\", och hans sånger blev en del av arbetarrörelsens internationella kulturarv.",
     "tags": [
       "kultur",
       "fackförening",
@@ -420,7 +420,7 @@
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "small",
-    "short": "Arbetare på ön Seskarö bryter mot brödransoneringen — ön ockuperas av militär.",
+    "short": "Arbetare på ön Seskarö bryter mot brödransoneringen. Ön ockuperas av militär.",
     "long": "Våren 1917, mitt under första världskrigets livsmedelsbrist och stränga ransonering, bryter arbetarna på ön Seskarö i Bottenviken mot brödransoneringen. Myndigheterna svarar med att låta militären ockupera ön. Händelsen är en av flera så kallade hungerkravaller som skakade Sverige under krigsåren och som bidrog till trycket för sociala reformer och utökad rösträtt.",
     "tags": [
       "hungerkravall",
@@ -452,8 +452,8 @@
     "epoch": "informera-och-agitera",
     "country": "världen",
     "size": "large",
-    "short": "Bolsjevikerna tar makten i Ryssland — ett jordskred som påverkar arbetarrörelser världen över.",
-    "long": "Bolsjevikpartiet under Lenin tar makten i Ryssland i oktober 1917. Revolutionen fick enorm symbolisk kraft för delar av den internationella arbetarrörelsen, medan den samtidigt skapade djupa splittningar mellan kommunister och socialdemokrater — en spricka som präglat rörelsen sedan dess.",
+    "short": "Bolsjevikerna tar makten i Ryssland, ett jordskred som påverkar arbetarrörelser världen över.",
+    "long": "Bolsjevikpartiet under Lenin tar makten i Ryssland i oktober 1917. Revolutionen fick enorm symbolisk kraft för delar av den internationella arbetarrörelsen, medan den samtidigt skapade djupa splittningar mellan kommunister och socialdemokrater, en spricka som präglat rörelsen sedan dess.",
     "tags": [
       "världshändelse",
       "revolution",
@@ -481,7 +481,7 @@
     "country": "världen",
     "size": "medium",
     "short": "Kort men blodigt inbördeskrig i Finland mellan röda och vita garde.",
-    "long": "Direkt efter Rysslands revolution bryter inbördeskriget ut i Finland. Röda gardet — som representerade arbetare och torpare — slåss mot det vita gardet som stöddes av tyska trupper. De vita vann och de röda led enorma förluster. Kriget satte djupa spår i Finlands politiska och sociala historia.",
+    "long": "Direkt efter Rysslands revolution bryter inbördeskriget ut i Finland. Röda gardet, som representerade arbetare och torpare, slåss mot det vita gardet som stöddes av tyska trupper. De vita vann och de röda led enorma förluster. Kriget satte djupa spår i Finlands politiska och sociala historia.",
     "tags": [
       "världshändelse",
       "krig",
@@ -508,8 +508,8 @@
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "large",
-    "short": "Sverige inför allmän rösträtt — utnyttjad för första gången i valet 1921.",
-    "long": "Riksdagen beslutar om allmän och lika rösträtt för alla svenska medborgare oavsett kön, stånd eller egendom. Det var resultatet av decennier av kamp från arbetarrörelsen och rösträttsrörelsen. Rättigheten utnyttjades för första gången i riksdagsvalet 1921 — det första val där kvinnor fick rösta.",
+    "short": "Sverige inför allmän rösträtt, utnyttjad för första gången i valet 1921.",
+    "long": "Riksdagen beslutar om allmän och lika rösträtt för alla svenska medborgare oavsett kön, stånd eller egendom. Det var resultatet av decennier av kamp från arbetarrörelsen och rösträttsrörelsen. Rättigheten utnyttjades för första gången i riksdagsvalet 1921, det första val där kvinnor fick rösta.",
     "tags": [
       "demokrati",
       "rösträtt",
@@ -540,7 +540,7 @@
     "epoch": "informera-och-agitera",
     "country": "sverige",
     "size": "large",
-    "short": "8-timmarsdagen blir lag — men lantarbetarna undantogs till 1930-talet.",
+    "short": "8-timmarsdagen blir lag, men lantarbetarna undantogs till 1930-talet.",
     "long": "Arbetstiden lagbegränsas till åtta timmar per dag. Det är en milstolpe i en lång internationell kamp för kortare arbetsdag. Lantarbetarna undantogs dock från reformen och fick vänta ända till 1930-talet på att även de skulle omfattas av lagen.",
     "tags": [
       "lag",
@@ -589,7 +589,7 @@
     "country": "världen",
     "size": "large",
     "short": "Wall Street kraschar. Den stora depressionen slår hårt mot arbetare världen över.",
-    "long": "Börsen på Wall Street kraschar i oktober 1929 och utlöser en global ekonomisk kris — den stora depressionen. Massarbetslöshet, lönesänkningar och social nöd drabbar miljoner. Krisen bidrog till politisk radikalisering och banade i Sverige bland annat vägen för den socialdemokratiska valsegern 1932.",
+    "long": "Börsen på Wall Street kraschar i oktober 1929 och utlöser en global ekonomisk kris: den stora depressionen. Massarbetslöshet, lönesänkningar och social nöd drabbar miljoner. Krisen bidrog till politisk radikalisering och banade i Sverige bland annat vägen för den socialdemokratiska valsegern 1932.",
     "tags": [
       "världshändelse",
       "ekonomi",
@@ -652,7 +652,7 @@
     "epoch": "folkhemmet-och-valfardsstaten",
     "country": "sverige",
     "size": "large",
-    "short": "Per-Albin Hanssons SAP vinner valet — inleder decennier av socialdemokratiskt styre.",
+    "short": "Per-Albin Hanssons SAP vinner valet och inleder decennier av socialdemokratiskt styre.",
     "long": "Socialdemokraterna under Per-Albin Hansson vinner riksdagsvalet 1932 och inleder en period av socialdemokratiskt styre som i nästan oavbruten följd sträcker sig till 1976. Det är under dessa år som folkhemsbygget och välfärdsstaten tar form. Valsegern kom i kölvattnet av den ekonomiska krisen och skotten i Ådalen 1931.",
     "tags": [
       "politisk",
@@ -682,7 +682,7 @@
     "country": "sverige",
     "size": "large",
     "short": "LO och SAF tecknar ett historiskt avtal som lägger grunden för den svenska modellen.",
-    "long": "LO och SAF träffas i Saltsjöbaden och tecknar ett huvudavtal som reglerar spelreglerna på den svenska arbetsmarknaden. Avtalet innehöll bestämmelser om strejkrätt med varseltid, förhandlingsordning och rätt till semester — bland annat två veckors betald semester. Saltsjöbadsavtalet ses som grundstenen i den svenska modellen av arbetsmarknadsrelationer.",
+    "long": "LO och SAF träffas i Saltsjöbaden och tecknar ett huvudavtal som reglerar spelreglerna på den svenska arbetsmarknaden. Avtalet innehöll bestämmelser om strejkrätt med varseltid, förhandlingsordning och rätt till semester, bland annat två veckors betald semester. Saltsjöbadsavtalet ses som grundstenen i den svenska modellen av arbetsmarknadsrelationer.",
     "tags": [
       "avtal",
       "förhandling",
@@ -744,7 +744,7 @@
     "epoch": "folkhemmet-och-valfardsstaten",
     "country": "sverige",
     "size": "large",
-    "short": "Bomb spränger den kommunistiska tidningen Norrskensflammans lokaler i Luleå — fem dör.",
+    "short": "Bomb spränger den kommunistiska tidningen Norrskensflammans lokaler i Luleå. Fem dör.",
     "long": "Natten mot den 3 mars 1940 exploderar en bomb i den kommunistiska tidningen Norrskensflammans lokaler i Luleå. Fem personer, däribland barn, dödas. Dådet sker under en tid då kommunister sågs som ett hot mot den svenska neutralitetspolitiken och utsattes för övervakning och repression. Attentatet räknas som ett av 1900-talets värsta politiska terrordåd i Sverige och förblev under lång tid ouppklarat.",
     "tags": [
       "terrordåd",
@@ -776,8 +776,8 @@
     "epoch": "folkhemmet-och-valfardsstaten",
     "country": "sverige",
     "size": "medium",
-    "short": "Sista statarna slutar — den gamla naturaformen av lantarbetarlön avvecklas.",
-    "long": "Statarsystemet innebar att lantarbetare fick en stor del av lönen i natura — bostad, mjölk, spannmål — snarare än kontant lön, vilket band dem hårt till godsen. Efter decennier av facklig kamp, inte minst från Svenska Lantarbetareförbundet, avtalas systemet bort och 1945 lämnar den sista generationen statare sina anställningar. Avskaffandet blev en viktig symbolfråga för arbetarrörelsen och skildrades av flera av Sveriges mest lästa författare, bland dem Ivar Lo-Johansson och Moa Martinson.",
+    "short": "Sista statarna slutar. Den gamla naturaformen av lantarbetarlön avvecklas.",
+    "long": "Statarsystemet innebar att lantarbetare fick en stor del av lönen i natura (bostad, mjölk, spannmål) snarare än kontant lön, vilket band dem hårt till godsen. Efter decennier av facklig kamp, inte minst från Svenska Lantarbetareförbundet, avtalas systemet bort och 1945 lämnar den sista generationen statare sina anställningar. Avskaffandet blev en viktig symbolfråga för arbetarrörelsen och skildrades av flera av Sveriges mest lästa författare, bland dem Ivar Lo-Johansson och Moa Martinson.",
     "tags": [
       "lantarbetare",
       "avtal",
@@ -831,11 +831,11 @@
   {
     "id": "1959-atp",
     "year": 1959,
-    "title": "ATP — Allmän tilläggspension beslutas",
+    "title": "Allmän tilläggspension (ATP) beslutas",
     "epoch": "folkhemmet-och-valfardsstaten",
     "country": "sverige",
     "size": "large",
-    "short": "Riksdagen beslutar om ATP — en avgörande seger för LO och socialdemokratin.",
+    "short": "Riksdagen beslutar om ATP, en avgörande seger för LO och socialdemokratin.",
     "long": "Efter en av 1900-talets hetaste politiska debatter beslutar riksdagen att genomföra Allmän tilläggspension (ATP). LO och SAP kämpade hårt för reformen mot hårt motstånd. ATP-frågan ledde till extra val 1958 och till att Folkpartiet sprack. Reformen lade grunden för det svenska pensionssystemet och ses som en av socialdemokratins viktigaste segrar.",
     "tags": [
       "lag",
@@ -945,7 +945,7 @@
     "country": "sverige",
     "size": "large",
     "short": "Stats- och kommunalanställda ges rätt att strejka och förhandla kollektivt.",
-    "long": "En lagändring ger offentliganställda — statliga och kommunala — rätt till kollektivavtal, förhandling och stridsåtgärder. Det var en stor förändring som öppnade vägen för starka fackliga organisationer inom offentlig sektor. Reformen förändrade styrkeförhållandena på hela arbetsmarknaden.",
+    "long": "En lagändring ger offentliganställda, statliga och kommunala, rätt till kollektivavtal, förhandling och stridsåtgärder. Det var en stor förändring som öppnade vägen för starka fackliga organisationer inom offentlig sektor. Reformen förändrade styrkeförhållandena på hela arbetsmarknaden.",
     "tags": [
       "lag",
       "förhandling",
@@ -972,7 +972,7 @@
     "epoch": "folkhemmet-och-valfardsstaten",
     "country": "sverige",
     "size": "small",
-    "short": "Kommunal vuxenutbildning inrättas — möjliggör för vuxna att komplettera sin utbildning.",
+    "short": "Kommunal vuxenutbildning inrättas och gör det möjligt för vuxna att komplettera sin utbildning.",
     "long": "KOMVUX (kommunal vuxenutbildning) inrättas och ger vuxna möjlighet att gå tillbaka till skolan för att komplettera eller höja sin utbildningsnivå. Det var ett viktigt steg för rörlighet och likvärdighet i utbildningssystemet.",
     "tags": [
       "utbildning"
@@ -1051,7 +1051,7 @@
     "country": "sverige",
     "size": "large",
     "short": "Lagen om anställningsskydd och förtroendemannalagen stärker tryggheten för löntagare.",
-    "long": "Lagen om anställningsskydd (LAS) ger arbetstagare skydd mot godtyckliga uppsägningar — arbetsgivaren måste ha sakliga skäl. Lagen om facklig förtroendemans ställning på arbetsplatsen (FML) ger fackliga förtroendevalda rätt till ledighet för fackligt arbete och skydd mot negativ behandling. Dessa lagar är grundläggande i det svenska anställningsskyddet.",
+    "long": "Lagen om anställningsskydd (LAS) ger arbetstagare skydd mot godtyckliga uppsägningar: arbetsgivaren måste ha sakliga skäl. Lagen om facklig förtroendemans ställning på arbetsplatsen (FML) ger fackliga förtroendevalda rätt till ledighet för fackligt arbete och skydd mot negativ behandling. Dessa lagar är grundläggande i det svenska anställningsskyddet.",
     "tags": [
       "lag",
       "anställningsskydd"
@@ -1170,12 +1170,12 @@
   {
     "id": "1983-jamlikt",
     "year": 1983,
-    "title": "Sverige — världens mest jämlika land",
+    "title": "Sverige, världens mest jämlika land",
     "epoch": "folkhemmet-och-valfardsstaten",
     "country": "sverige",
     "size": "medium",
     "short": "Sverige uppmäts som världens mest inkomstjämlika land.",
-    "long": "Mätningar visar att Sverige vid denna tidpunkt har den mest jämlika inkomstfördelningen av alla länder i världen. Det är en kulmen på decennier av aktiv omfördelningspolitik, solidarisk lönepolitik och välfärdsutbyggnad. Perioden markerar toppen av det jämlika Sverige — sedan dess har ojämlikheten successivt ökat.",
+    "long": "Mätningar visar att Sverige vid denna tidpunkt har den mest jämlika inkomstfördelningen av alla länder i världen. Det är en kulmen på decennier av aktiv omfördelningspolitik, solidarisk lönepolitik och välfärdsutbyggnad. Perioden markerar toppen av det jämlika Sverige. Sedan dess har ojämlikheten successivt ökat.",
     "tags": [
       "jämlikhet",
       "ekonomi"
@@ -1196,7 +1196,7 @@
     "country": "sverige",
     "size": "large",
     "short": "LO:s förslag om löntagarfonder antas av SAP i starkt beskuren version.",
-    "long": "Rudolf Meidners ursprungliga förslag om löntagarfonder — där en del av företagens vinster successivt skulle övergå i kollektivt ägande via fackförbunden — mötte hårt motstånd från arbetsgivarna och högerpartierna. Det SAP slutligen antog 1983 var ett kraftigt nedbantad kompromissförslag. Löntagarfonderna avvecklades 1990 av en borgerlig regering. Frågan är en av de mest kontroversiella i modern svensk politisk historia.",
+    "long": "Rudolf Meidners ursprungliga förslag om löntagarfonder, där en del av företagens vinster successivt skulle övergå i kollektivt ägande via fackförbunden, mötte hårt motstånd från arbetsgivarna och högerpartierna. Det SAP slutligen antog 1983 var ett kraftigt nedbantad kompromissförslag. Löntagarfonderna avvecklades 1990 av en borgerlig regering. Frågan är en av de mest kontroversiella i modern svensk politisk historia.",
     "tags": [
       "politisk",
       "ekonomi",
@@ -1260,7 +1260,7 @@
     "country": "sverige",
     "size": "large",
     "short": "Statsminister Olof Palme skjuts till döds på Sveavägen i Stockholm.",
-    "long": "Den 28 februari 1986 skjuts statsminister Olof Palme till döds på Sveavägen i Stockholm. Det är ett attentat utan motstycke i modern svensk historia. Palme var en av socialdemokratins och den internationella vänsterns mest inflytelserika och kontroversiella figurer. Hans mord lämnade ett djupt sår i Sverige och i rörelsen — och mordet är alltjämt officiellt olöst.",
+    "long": "Den 28 februari 1986 skjuts statsminister Olof Palme till döds på Sveavägen i Stockholm. Det är ett attentat utan motstycke i modern svensk historia. Palme var en av socialdemokratins och den internationella vänsterns mest inflytelserika och kontroversiella figurer. Hans mord lämnade ett djupt sår i Sverige och i rörelsen. Mordet är alltjämt officiellt olöst.",
     "tags": [
       "politisk"
     ],
@@ -1319,7 +1319,7 @@
     "country": "sverige",
     "size": "small",
     "short": "Semestern utökas temporärt till 27 dagar.",
-    "long": "Semesterlagen ändras och löntagare ges rätt till 27 dagars semester (5 veckor + 2 dagar). Ändringen visade sig vara kortlivad — dagarna skulle komma att tas bort bara tre år senare.",
+    "long": "Semesterlagen ändras och löntagare ges rätt till 27 dagars semester (5 veckor + 2 dagar). Ändringen visade sig vara kortlivad: dagarna skulle komma att tas bort bara tre år senare.",
     "tags": [
       "lag",
       "semester"
@@ -1417,12 +1417,12 @@
   {
     "id": "2007-a-kassa",
     "year": 2007,
-    "title": "Försämrad a-kassa — kraftigt medlemsfall",
+    "title": "Försämrad a-kassa ger kraftigt medlemsfall",
     "epoch": "forvaltande",
     "country": "sverige",
     "size": "large",
     "short": "Alliansen höjer avgifter och sänker ersättning. Fackens medlemsantal faller kraftigt.",
-    "long": "Alliansregeringen höjer avgifterna till a-kassan och sänker ersättningsgraden. Resultatet är att hundratusentals löntagare väljer att lämna a-kassan — och i förlängningen sina fackförbund, eftersom a-kassan administreras av fackföreningarna. Det är det kraftigaste fallet i facklig anslutningsgrad sedan storstrejken 1909.",
+    "long": "Alliansregeringen höjer avgifterna till a-kassan och sänker ersättningsgraden. Resultatet är att hundratusentals löntagare väljer att lämna a-kassan, och i förlängningen sina fackförbund, eftersom a-kassan administreras av fackföreningarna. Det är det kraftigaste fallet i facklig anslutningsgrad sedan storstrejken 1909.",
     "tags": [
       "lag",
       "a-kassa",
@@ -1503,8 +1503,8 @@
     "epoch": "forvaltande",
     "country": "sverige",
     "size": "large",
-    "short": "Hamnarbetarförbundet i öppen konflikt med APM Terminals — en av tidens mest uppmärksammade arbetsmarknadskonflikter.",
-    "long": "Hamnarbetarförbundets avdelning 4 — \"Hamnfyran\" — i Göteborgs containerhamn hamnar i öppen konflikt med arbetsgivaren APM Terminals. Förbundet har inget eget kollektivavtal på arbetsplatsen men vill ändå påverka villkoren, och strejker, blockader och lockouter avlöser varandra 2016–2017. Bara första halvåret 2017 går över 2 400 arbetsdagar förlorade. Konflikten blir riksbekant och sätter fart på en politisk process om vilka fackförbund som ska ha rätt att vidta stridsåtgärder på en arbetsplats. Den 5 mars 2019 tecknar Hamnarbetarförbundet för första gången i sin historia ett kollektivavtal, och konflikten läggs ned.",
+    "short": "Hamnarbetarförbundet i öppen konflikt med APM Terminals, en av tidens mest uppmärksammade arbetsmarknadskonflikter.",
+    "long": "Hamnarbetarförbundets avdelning 4, \"Hamnfyran\", i Göteborgs containerhamn hamnar i öppen konflikt med arbetsgivaren APM Terminals. Förbundet har inget eget kollektivavtal på arbetsplatsen men vill ändå påverka villkoren, och strejker, blockader och lockouter avlöser varandra 2016–2017. Bara första halvåret 2017 går över 2 400 arbetsdagar förlorade. Konflikten blir riksbekant och sätter fart på en politisk process om vilka fackförbund som ska ha rätt att vidta stridsåtgärder på en arbetsplats. Den 5 mars 2019 tecknar Hamnarbetarförbundet för första gången i sin historia ett kollektivavtal, och konflikten läggs ned.",
     "tags": [
       "strejk",
       "konflikt",
@@ -1531,8 +1531,8 @@
     "epoch": "forvaltande",
     "country": "sverige",
     "size": "large",
-    "short": "Riksdagen inskränker strejkrätten — fredsplikt vid kollektivavtal gäller nu alla fack på arbetsplatsen.",
-    "long": "Delvis som en reaktion på hamnkonflikten i Göteborg kommer LO, TCO och Saco 2018 överens med Svenskt Näringsliv och Transportföretagen om ett förslag till inskränkt strejkrätt. Riksdagen röstar igenom lagändringen i juni 2019 och den träder i kraft den 1 augusti samma år. Fredsplikten vid kollektivavtal utökas till att omfatta alla fackförbund på arbetsplatsen, inte bara det förbund som tecknat avtalet — vilket gör det svårare för förbund utan eget avtal att vidta stridsåtgärder. Det är den mest omfattande inskränkningen av strejkrätten sedan 1928 års lagstiftning.",
+    "short": "Riksdagen inskränker strejkrätten: fredsplikt vid kollektivavtal gäller nu alla fack på arbetsplatsen.",
+    "long": "Delvis som en reaktion på hamnkonflikten i Göteborg kommer LO, TCO och Saco 2018 överens med Svenskt Näringsliv och Transportföretagen om ett förslag till inskränkt strejkrätt. Riksdagen röstar igenom lagändringen i juni 2019 och den träder i kraft den 1 augusti samma år. Fredsplikten vid kollektivavtal utökas till att omfatta alla fackförbund på arbetsplatsen, inte bara det förbund som tecknat avtalet, vilket gör det svårare för förbund utan eget avtal att vidta stridsåtgärder. Det är den mest omfattande inskränkningen av strejkrätten sedan 1928 års lagstiftning.",
     "tags": [
       "lag",
       "strejk",
@@ -1559,8 +1559,8 @@
     "epoch": "forvaltande",
     "country": "sverige",
     "size": "large",
-    "short": "IF Metall strejkar mot Tesla för kollektivavtal — en av de längsta konflikterna i svensk historia.",
-    "long": "IF Metall inleder strejk mot Teslas svenska bolag TM Sweden den 27 oktober 2023, sedan företaget vägrat teckna kollektivavtal. Konflikten trappas snabbt upp med sympatiåtgärder från en rad andra fackförbund — Transport blockerar Teslabilar i hamnarna, Seko stoppar postleveranser av nummerplåtar, Fastighets blockerar sophämtning och Elektrikerna blockerar laddstolpar. Trots flera års stridsåtgärder vägrar Tesla att teckna avtal. Konflikten blir en av de längsta i svensk arbetsmarknadshistoria och jämförs ofta med tiden före Saltsjöbadsavtalet 1938.",
+    "short": "IF Metall strejkar mot Tesla för kollektivavtal, en av de längsta konflikterna i svensk historia.",
+    "long": "IF Metall inleder strejk mot Teslas svenska bolag TM Sweden den 27 oktober 2023, sedan företaget vägrat teckna kollektivavtal. Konflikten trappas snabbt upp med sympatiåtgärder från en rad andra fackförbund: Transport blockerar Teslabilar i hamnarna, Seko stoppar postleveranser av nummerplåtar, Fastighets blockerar sophämtning och Elektrikerna blockerar laddstolpar. Trots flera års stridsåtgärder vägrar Tesla att teckna avtal. Konflikten blir en av de längsta i svensk arbetsmarknadshistoria och jämförs ofta med tiden före Saltsjöbadsavtalet 1938.",
     "tags": [
       "strejk",
       "kollektivavtal",

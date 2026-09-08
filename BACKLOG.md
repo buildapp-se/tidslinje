@@ -82,10 +82,9 @@
 
 ## Städning
 
-- [ ] Händelsetexterna i `events.json` använder tankstreck genomgående, till
-      exempel "Typografernas förening i Stockholm grundas — Sveriges äldsta
-      kända fackförening". Husregeln för svensk text är komma, kolon eller ny
-      mening i stället. Ändringen rör 56 poster och är ren redigering, inte kod.
+- [x] Tankstrecken i `events.json` (38 rader, 45 tecken) ersatta med komma,
+      kolon, parentes eller ny mening, bedömda per mening 2026-09-08. Även
+      ingressen i `App.jsx`. Kvar finns bara bindestreck i intervall (1914–1918).
 
 ## Captured
 

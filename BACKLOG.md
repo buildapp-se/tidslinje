@@ -42,10 +42,9 @@
       förstamajmöte i Stockholm, medan posten handlar om invigningen i
       Kristianstad 1890. Bildtexten säger nu rakt ut vad bilden är, men ett foto
       på huset i Kristianstad vore rätt bild.
-- [ ] **Beskär bort negativramen på `1963-4veckor`.** Filen är en oputsad
-      negativskanning: tjock svart ram och ett handskrivet arkivnummer `1-2886`
-      tvärs över överkanten. Det ser ut som en trasig bild, inte som ett foto.
-      Beskärningen räcker; motivet i sig är rätt, om än litet.
+- [x] `1963-4veckor` beskuren 2026-09-08: ram och arkivnummer borta, tältet
+      centrerat. Beskärningen ligger som `crop` i `MANUAL` i nedladdningsskriptet
+      och hämtas i högre upplösning, så en ny körning ger samma bild.
 - [ ] **Byt bild på `1978-5veckor`.** Den är mörk och lågkontrastig och läses som
       ett uthus med en svart gapande öppning, inte som en sommarstuga. Kortets
       kvadratiska beskärning träffar nästan bara skuggan.

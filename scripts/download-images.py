@@ -56,6 +56,11 @@ MIN_WIDTH = 200
 # bilden faktiskt föreställer}. Bildtexten är obligatorisk: flera av bilderna
 # är tidstypiska illustrationer snarare än foton av själva händelsen, och då
 # måste läsaren kunna se vad hen tittar på.
+#
+# Valfritt "crop": (vänster, topp, höger, botten) som andelar av bildens bredd
+# och höjd. Används när Commons-filen är en oputsad skanning med negativram och
+# arkivnummer, eller när motivet är litet i en stor bild. Beskärningen ligger
+# här och inte som en handredigerad fil, så att en ny körning ger samma resultat.
 MANUAL = {
     "1846-typograferna": {
         "file": "Case department at SvD.jpg",
@@ -131,9 +136,12 @@ MANUAL = {
         "file": "Tekoindustri. Kvinnor syr handskar i Laholm - Nordiska museet - NMA.0029900.jpg",
         "caption": "Kvinnor syr handskar i tekoindustrin i Laholm, omkring 1955 till 1960",
     },
+    # Negativskanning med svart ram och handskrivet arkivnummer i överkanten.
+    # Beskärningen tar bort ramen och centrerar tältet, som annars är litet.
     "1963-4veckor": {
         "file": "NMAx.0087186.jpg",
         "caption": "Tältcamping på en klippäng i Sverige 1957",
+        "crop": (0.166, 0.358, 0.791, 0.755),
     },
     "1966-offentliga": {
         "file": "Agreement-between-TCO-and-SACO-352106734844.jpg",
@@ -260,7 +268,7 @@ EN_WIKI = {
 
 # ─────────────────────────────────────────────────────────────────────────
 
-def commons_url(filename):
+def commons_url(filename, width=800):
     """Direktlänk till en Commons-fil, via API:et.
 
     Den självklara vägen, Special:FilePath, är en wikisida som redirectar till
@@ -273,7 +281,7 @@ def commons_url(filename):
     r = api_get(
         "https://commons.wikimedia.org/w/api.php",
         {"action": "query", "titles": f"File:{fn}", "prop": "imageinfo",
-         "iiprop": "url", "iiurlwidth": 800, "format": "json"},
+         "iiprop": "url", "iiurlwidth": width, "format": "json"},
     )
     if r is not None:
         for page in r.json().get("query", {}).get("pages", {}).values():
@@ -478,7 +486,7 @@ def sv_article(wiki_url):
         return urllib.parse.unquote(wiki_url.split("/wiki/")[-1])
     return None
 
-def save_webp(img_url, out_path, max_w=800):
+def save_webp(img_url, out_path, max_w=800, crop=None):
     try:
         wait = 5
         attempts = 5
@@ -506,6 +514,10 @@ def save_webp(img_url, out_path, max_w=800):
             img = bg
         elif img.mode not in ("RGB",):
             img = img.convert("RGB")
+        if crop:
+            l, t, r, b = crop
+            img = img.crop((int(l * img.width), int(t * img.height),
+                            int(r * img.width), int(b * img.height)))
         if img.width > max_w:
             img = img.resize(
                 (max_w, int(img.height * max_w / img.width)), Image.LANCZOS
@@ -534,10 +546,12 @@ def resolve_image(ev):
         print(f"    lämnas utan bild: {NO_AUTO_IMAGE[eid]}")
         return None, None
 
-    # 1. Manuell Commons-fil
+    # 1. Manuell Commons-fil. En bild som ska beskäras hämtas i högre upplösning,
+    # annars blir utsnittet uppskalat och suddigt.
     if eid in MANUAL:
         print(f"    MANUAL: {MANUAL[eid]['file']}")
-        return commons_url(MANUAL[eid]["file"]), MANUAL[eid]["caption"]
+        width = 2400 if MANUAL[eid].get("crop") else 800
+        return commons_url(MANUAL[eid]["file"], width), MANUAL[eid]["caption"]
 
     # 2+3. sv.wikipedia — pageimage, sedan artikelns egna bilder
     wiki_url = next(
@@ -587,7 +601,7 @@ def main():
             fail += 1
             continue
 
-        if not save_webp(img_url, out):
+        if not save_webp(img_url, out, crop=MANUAL.get(eid, {}).get("crop")):
             fail += 1
             continue
 

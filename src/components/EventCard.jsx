@@ -45,11 +45,14 @@ export default function EventCard({ event, query = '', onOpen }) {
           </h3>
         </div>
 
-        {/* Thumbnail — visas på large och medium om bild finns */}
+        {/* Thumbnail, visas på large och medium om bild finns. Krediten får
+            inte plats synligt vid 64 px, så den ligger som tooltip; den fulla
+            bildtexten med källänk står i modalen ett klick bort. */}
         {thumb && event.size !== 'small' && (
           <img
             src={thumb}
             alt=""
+            title={event.imageCredit && [event.imageCredit.caption, event.imageCredit.by].filter(Boolean).join('. ')}
             className="w-16 h-16 object-cover rounded flex-none"
             loading="lazy"
           />

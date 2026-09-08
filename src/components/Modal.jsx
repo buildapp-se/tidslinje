@@ -31,7 +31,7 @@ export default function Modal({ event, onClose }) {
         className="bg-white max-w-xl w-full rounded-xl shadow-2xl max-h-[85vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Stor bild högst upp — visas bara om bild finns.
+        {/* Stor bild högst upp, visas bara om bild finns.
             Bildtexten är inte pynt: bilderna är hämtade från Wikimedia
             Commons och licenserna kräver att upphovsmannen namnges. Flera av
             bilderna är dessutom tidstypiska illustrationer snarare än foton
@@ -94,7 +94,7 @@ export default function Modal({ event, onClose }) {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-accent transition-colors"
                 >
-                  <span className="text-lg">{linkIcon(link.type, 'w-[18px] h-[18px]')}</span>
+                  {linkIcon(link.type, 'w-[18px] h-[18px]')}
                   <span>{LINK_LABEL[link.type] || link.type}</span>
                 </a>
               ))}

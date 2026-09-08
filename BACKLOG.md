@@ -63,8 +63,9 @@
       `2015-huvudentreprenad` (spårvägsunderhåll snarare än byggarbetsplats, och en
       korvreklam med pris syns tydligt i bild) och `1906-december` (fotot ser ut att
       vara från sekelskiftet, inte 1936 som källfilnamnet påstår).
-- [ ] Överväg att visa bildkredit även vid kortens miniatyrbilder, inte bara i
-      modalen.
+- [x] Bildkredit på kortens miniatyrer som `title`-tooltip (2026-09-08). Synlig
+      text får inte plats vid 64 px, och den fulla krediten med källänk står i
+      modalen ett klick bort.
 
 ## Innehåll
 
@@ -75,7 +76,9 @@
 
 ## Funktioner
 
-- [ ] SVG-ikoner om emojin visar sig otillräcklig.
+- [x] SVG-ikoner för podcast och video i `icons.jsx` (2026-09-08). Emojin var
+      otillräcklig: färgglad och olika stor per plattform bredvid den svarta
+      W-ikonen, och den följde inte länkens hover-färg.
 - [x] Sökträffar visar varför kortet är med: när sökordet inte syns i år, titel
       eller kort text visar kortet den mening ur den långa texten som innehåller
       det, annars taggen (`matchHint` i `src/search.js`, kontrollerad i

@@ -41,7 +41,7 @@ export default function EpochGroup({ epoch, events, query, onOpen }) {
                 {goLeft && <EventCard event={event} query={query} onOpen={onOpen} />}
               </div>
 
-              {/* Dot — alltid synlig, centrerad i sin kolumn */}
+              {/* Dot, alltid synlig, centrerad i sin kolumn */}
               <div className="flex flex-col items-center pt-4">
                 <div className="w-3 h-3 rounded-full bg-accent border-2 border-white shadow relative z-10" />
               </div>

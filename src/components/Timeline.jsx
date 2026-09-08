@@ -4,7 +4,7 @@ import { filterEvents, ALL_COUNTRIES } from '../search'
 import EpochGroup from './EpochGroup'
 import Modal from './Modal'
 
-// Epoker definierade här — lätt att uppdatera titlar och år
+// Epoker definierade här, lätt att uppdatera titlar och år
 const EPOCHS = [
   {
     id: 'informera-och-agitera',

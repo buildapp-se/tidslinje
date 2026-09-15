@@ -150,3 +150,10 @@ testramverk är installerat, och behövs inte för två filer med `assert`.
 
 Sajten ligger på `buildapp.se/tidslinje/`. Ingen backend, inga hemligheter, inga
 migreringar. Arbetslistan står i `BACKLOG.md` och läget i `HANDOFF.md`.
+
+## Audits
+
+Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; conventions in elwyn-dash `docs/security.md`.
+
+- OWASP Top 10: 2026-07-25, clean, no backend
+- Headers: 2026-08-04, 0 of 6 on buildapp.se/tidslinje (GitHub Pages)

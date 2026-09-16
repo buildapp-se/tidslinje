@@ -152,13 +152,12 @@ Sajten ligger på `buildapp.se/tidslinje/`. Ingen backend, inga hemligheter, ing
 migreringar. Arbetslistan står i `BACKLOG.md` och läget i `HANDOFF.md`.
 
 ## Audits
-
 Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; conventions in elwyn-dash `docs/security.md`.
 
 - OWASP Top 10: 2026-07-25, clean, no backend
-- Headers: 2026-09-16, fail, 0 of 6 on buildapp.se (GitHub Pages), one hostname-scoped Transform Rule on the zone fixes every buildapp.se path
+- Headers: 2026-09-16, pass, 6 of 6 on buildapp.se via a host-scoped Transform Rule on the zone, measured after the change
 - Search Console: 2026-09-15, warn, unknown to Google, now in submitted buildapp.se sitemap
-- TLS: 2026-09-16, warn, SSL Labs B on buildapp.se, TLS 1.0 and 1.1 still enabled on the zone, no HSTS
+- TLS: 2026-09-16, pass, SSL Labs A+ on buildapp.se, TLS 1.2 minimum and HSTS since today
 - Lighthouse: 2026-09-16, warn, a11y 96 (colour contrast), best practices 100, SEO 100 (mobile, no perf)
 - Markup: 2026-09-16, pass, W3C 0 errors, 15 warnings, 0 broken links
 - UX: 2026-09-16, warn, 5 of 6 script checks pass, filter chips 34 px and search 38 px

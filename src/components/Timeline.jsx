@@ -97,7 +97,7 @@ export default function Timeline() {
 
       {visible.length === 0 && (
         <div className="py-16 text-center">
-          <p className="text-ink/60">Ingen händelse matchar sökningen.</p>
+          <p className="text-ink/70">Ingen händelse matchar sökningen.</p>
           <button
             type="button"
             onClick={clear}

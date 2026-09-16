@@ -6,12 +6,12 @@ export default function App() {
     <div className="min-h-screen bg-cream">
       <header className="py-10 px-4 text-center">
         <Logo className="h-7 sm:h-9 w-auto mx-auto" />
-        <p className="mt-3 text-ink/60 text-sm">Klass, kamp och kompromiss: från 1846 till i dag</p>
+        <p className="mt-3 text-ink/70 text-sm">Klass, kamp och kompromiss: från 1846 till i dag</p>
       </header>
       <main className="max-w-4xl mx-auto px-4 py-12">
         <Timeline />
       </main>
-      <footer className="max-w-4xl mx-auto px-4 pb-10 text-sm text-ink/60">
+      <footer className="max-w-4xl mx-auto px-4 pb-10 text-sm text-ink/70">
         <a className="inline-flex min-h-[44px] items-center hover:text-accent underline underline-offset-2" href="integritet.html">
           Integritetspolicy
         </a>

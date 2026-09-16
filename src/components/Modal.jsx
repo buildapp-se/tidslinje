@@ -44,7 +44,7 @@ export default function Modal({ event, onClose }) {
               className="w-full h-52 object-cover rounded-t-xl"
             />
             {credit && (
-              <figcaption className="px-6 pt-2 text-[11px] text-gray-400 leading-snug">
+              <figcaption className="px-6 pt-2 text-[11px] text-gray-500 leading-snug">
                 {credit.caption && <span>{credit.caption}. </span>}
                 <a
                   href={credit.source}
@@ -74,7 +74,7 @@ export default function Modal({ event, onClose }) {
               ref={closeRef}
               onClick={onClose}
               aria-label="Stäng"
-              className="text-gray-400 hover:text-gray-700 text-xl leading-none ml-4 mt-0.5"
+              className="text-gray-500 hover:text-gray-700 text-xl leading-none ml-4 mt-0.5"
             >
               ✕
             </button>

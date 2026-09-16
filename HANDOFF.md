@@ -9,6 +9,13 @@ reviewedAt: 2026-09-16
 
 # Handoff: tidslinje
 
+## 2026-09-16: granskningsbatchen
+
+Filterchips, sökfält och sidfotens länk 44 px (`fdeef73`), dämpad text mörkare
+(`a202cff`, `66f38d0`: gray-500 gav 4,06 mot sidans bakgrund, gray-600 håller).
+Tester gröna, byggt, deployat med `npm run deploy`, mätt live: Lighthouse a11y
+100, 0 ytor under 44 px.
+
 ## Hela backloggen genomarbetad, 2026-09-08
 
 Chunk-läge på Patriks uppdrag: allt i `BACKLOG.md` en punkt i taget, en commit

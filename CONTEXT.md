@@ -158,7 +158,7 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - Headers: 2026-09-16, pass, 6 of 6 on buildapp.se via a host-scoped Transform Rule on the zone, measured after the change
 - Search Console: 2026-09-15, warn, unknown to Google, now in submitted buildapp.se sitemap
 - TLS: 2026-09-16, pass, SSL Labs A+ on buildapp.se, TLS 1.2 minimum and HSTS since today
-- Lighthouse: 2026-09-16, warn, a11y 96 (colour contrast), best practices 100, SEO 100 (mobile, no perf)
+- Lighthouse: 2026-09-16, pass, a11y 100 after the contrast fix, best practices 100, SEO 100 (mobile, no perf)
 - Markup: 2026-09-16, pass, W3C 0 errors, 15 warnings, 0 broken links
-- UX: 2026-09-16, warn, 5 of 6 script checks pass, filter chips 34 px and search 38 px
+- UX: 2026-09-16, pass, 0 targets under 44 px after the fix (chips, search, footer link), 5 of 6 script checks pass, no --interact
 - npm audit: 2026-09-16, pass, 0 in production, 4 high 2 moderate in the dev chain (wrangler, miniflare, sharp)

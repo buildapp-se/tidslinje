@@ -8,7 +8,7 @@ export default function EpochGroup({ epoch, events, query, onOpen }) {
       {/* Epokrubrik */}
       <div className="text-center mb-12">
         <h2 className="text-2xl font-bold text-accent">{epoch.title}</h2>
-        <p className="text-gray-500 text-sm mt-1 tracking-widest uppercase">
+        <p className="text-gray-600 text-sm mt-1 tracking-widest uppercase">
           {epoch.years}
         </p>
         <div className="mx-auto mt-3 w-12 h-0.5 bg-accent opacity-40" />

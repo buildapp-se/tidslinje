@@ -30,7 +30,8 @@ const COUNTRIES = [
   { id: 'världen', label: 'Världen' },
 ]
 
-const CHIP = 'px-3 py-1.5 rounded-full text-sm border transition-colors'
+// min-h 44 px: tryckytan på telefon (Fitts, granskningen 2026-09-16)
+const CHIP = 'px-3 min-h-[44px] rounded-full text-sm border transition-colors'
 const CHIP_ON = 'bg-accent text-white border-accent'
 const CHIP_OFF = 'bg-white text-ink/70 border-ink/15 hover:border-accent/50'
 
@@ -59,7 +60,7 @@ export default function Timeline() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Sök på ord, årtal eller ämne"
           aria-label="Sök i tidslinjen"
-          className="w-full rounded-lg border border-ink/15 bg-white px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:max-w-xs"
+          className="w-full min-h-[44px] rounded-lg border border-ink/15 bg-white px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:max-w-xs"
         />
 
         <div className="flex gap-1.5" role="group" aria-label="Filtrera på område">

@@ -12,7 +12,7 @@ export default function App() {
         <Timeline />
       </main>
       <footer className="max-w-4xl mx-auto px-4 pb-10 text-sm text-ink/60">
-        <a className="hover:text-accent underline underline-offset-2" href="integritet.html">
+        <a className="inline-flex min-h-[44px] items-center hover:text-accent underline underline-offset-2" href="integritet.html">
           Integritetspolicy
         </a>
       </footer>

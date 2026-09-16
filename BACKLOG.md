@@ -117,3 +117,10 @@
 ## Captured
 
 - [ ] [P2] [Wish] Bygga en funktion för tidslinjen. lägga till i tidslinjen ett spel som liknar spelet Hittster där man lägger kort för eller efter ett annat kort om det är för eller efter i tidslinjen.
+
+## Granskning 2026-09-16
+
+Fynd från cockpitens granskningskolumner (Lighthouse mobil, W3C, UX-skript, headers, TLS, OWASP). Mätvärdena står under `## Audits` i CONTEXT.md.
+
+- [ ] `[P2]` Lighthouse: färgkontrast under 4,5:1 någonstans på startsidan (a11y 96). Kör om Lighthouse i DevTools för att se vilka element.
+- [ ] `[P3]` UX, Fitts: filterchipsen Alla, Sverige, Världen är 34 px och sökfältet 38 px, konventionen är 44 px.

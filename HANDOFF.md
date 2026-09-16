@@ -4,7 +4,7 @@ status: active
 currentGoal: Tidslinjen är komplett nog att användas i kurs, 69 händelser varav 50 med bild, alla med källa
 nextAction: Patrik säger ja eller nej till batchen 2026-09-08 (13 nya händelser, 11 bildbyten, sökledtråd, SVG-ikoner). Sedan bild till de 13 nya händelserna, de står spärrade i NO_AUTO_IMAGE
 blockers: []
-reviewedAt: 2026-09-08
+reviewedAt: 2026-09-16
 ---
 
 # Handoff: tidslinje
@@ -252,3 +252,7 @@ Vänta på Patriks ja eller nej till batchen 2026-09-08 (se "Val tagna åt Patri
 kontrollera licensen på källsidan, lägg posten i `MANUAL` (med `url`, `by` och
 `source` om den inte ligger på Commons), ta bort id:t ur `NO_AUTO_IMAGE` och
 kör `python scripts/download-images.py`.
+
+## Granskning 2026-09-16
+
+Cross-project audit run from elwyn-dash (session 5 in the daily note). Results written to `## Audits` in CONTEXT.md, findings appended to BACKLOG.md under `## Granskning 2026-09-16`. Headers on buildapp.se and the TLS grade are zone-level and are fixed once in Cloudflare, not here.

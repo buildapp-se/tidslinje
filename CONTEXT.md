@@ -161,4 +161,6 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - Lighthouse: 2026-09-16, pass, a11y 100 after the contrast fix, best practices 100, SEO 100 (mobile, no perf)
 - Markup: 2026-09-16, pass, W3C 0 errors, 15 warnings, 0 broken links
 - UX: 2026-09-16, pass, 0 targets under 44 px after the fix (chips, search, footer link), 5 of 6 script checks pass, no --interact
-- npm audit: 2026-09-16, pass, 0 in production, 4 high 2 moderate in the dev chain (wrangler, miniflare, sharp)
+- npm audit: 2026-09-24, pass, 0 in production, 4 high 2 moderate in the dev chain
+- Secrets: 2026-09-24, pass, gitleaks 0 findings in 43 commits
+- Actions: 2026-09-24, n/a, no GitHub Actions workflows

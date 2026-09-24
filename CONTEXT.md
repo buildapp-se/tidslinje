@@ -164,3 +164,4 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - npm audit: 2026-09-24, pass, 0 in production, 4 high 2 moderate in the dev chain
 - Secrets: 2026-09-24, pass, gitleaks 0 findings in 43 commits
 - Actions: 2026-09-24, n/a, no GitHub Actions workflows
+- WCAG 2.2 AA: 2026-09-24, warn, axe 4.13.0 0 violations on buildapp.se/tidslinje (mobile, one page); manual keyboard pass not done

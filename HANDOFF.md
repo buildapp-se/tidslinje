@@ -1,8 +1,8 @@
 ---
 schemaVersion: 1
 status: active
-currentGoal: Tidslinjen är komplett nog att användas i kurs, 69 händelser varav 50 med bild, alla med källa
-nextAction: Patrik granskar grenen batch/2026-10-06 (spelet, markup, kontrast, npm audit fix), mergar och kör npm run deploy. Ja eller nej till batchen 2026-09-08 står också kvar. Sedan bild till de 13 nya händelserna, de står spärrade i NO_AUTO_IMAGE
+currentGoal: Tidslinjen är komplett nog att användas i kurs, 77 händelser varav 59 med bild, alla med källa
+nextAction: Patrik granskar grenen batch/2026-10-06 (spelet, markup, kontrast, npm audit fix, nio nya bilder, åtta nya händelser), mergar och kör npm run deploy. Ja eller nej till batchen 2026-09-08 står också kvar. Sedan bild till de tolv händelser som står spärrade i NO_AUTO_IMAGE som nya
 blockers: []
 reviewedAt: 2026-10-06
 ---
@@ -43,10 +43,48 @@ konsolmeddelanden, "Spela igen" och "Tillbaka" fungerar). 0 otillåtna element i
 69 kort och varje korts och barnelements mått identiska före och efter vid 390
 och 1280 px. Kontrast: 29 textstilar, 0 under gränsen.
 
-**Inte gjort.** Bild till de 13 nya händelserna och text till de åtta
-händelsekandidaterna (kräver källsökning och bildgranskning, nästa omgång). De
-sex bildlösa står kvar: källorna är redan genomsökta. Kontrast i hover-lägen
-och på `integritet.html` är inte mätt.
+**Inte gjort i omgång 1.** Kontrast i hover-lägen och på `integritet.html` är
+inte mätt. De sex bildlösa från före september står kvar: källorna är redan
+genomsökta.
+
+### Omgång 2, samma gren
+
+- **Bild till åtta av de 13 händelserna från september** (`f692752`): 1890
+  första maj, 1899 Åkarpslagen, 1902 storstrejken, 1919 ILO, 1928
+  kollektivavtalslagen, 1936 förhandlingsrätten, 1938 semesterlagen, 1977
+  arbetsmiljölagen. Från Commons och Digitalt museum, varje bild öppnad och
+  tittad på, licensen läst på källsidan, valen i `MANUAL`.
+- **Åtta nya händelser** (`eb73a26`), kandidaterna som stod i backloggen: 1913
+  pensionsförsäkringen, 1945 metallstrejken (med bild), 1955 sjukförsäkringen,
+  1973 styrelserepresentation, 1979 jämställdhetslagen, 1995 EU, 2003
+  kommunalstrejken, 2009 diskrimineringslagen. Nu 77 händelser, 59 med bild.
+
+**Val tagna åt Patrik, omgång 2.** (1) Bildtexten för 1890 lovar bara
+"1890-talet": Commons säger 1890 i beskrivningen men "1890-t slut" i filnamnet.
+(2) 1902 fick en tidningsteckning från rösträttsdemonstrationen 20 april, en
+månad före strejken, eftersom inget fritt foto från strejkdagarna hittades.
+(3) 1936 och 1938 är tidstypiska illustrationer (kontor 1934, cykelsemester på
+30-talet), och bildtexten säger det. (4) Jämställdhetslagen står på 1979, året
+den utfärdades, som arbetsmiljölagen står på 1977. (5) Metallstrejken beskrivs
+som "fem månader" från 5 februari, eftersom källorna ger tre olika slutdatum,
+och "omkring 120 000" när källorna säger 120 000 till 126 000. (6) De fakta
+backloggen kallade verifierade fanns inte sparade, så varje uppgift är hämtad
+på nytt ur källan som länkas i posten; det som inte gick att belägga skrevs
+inte. (7) Storlek: metallstrejken och EU `large`, övriga `medium`. (8) De sju
+nya utan bild är spärrade i `NO_AUTO_IMAGE`. (9) npm audit-resten (vite 8,
+tailwindcss 4) lämnad även i omgång 2.
+
+**Verifierat omgång 2.** `npm test` grönt (77 händelser). `npm run build`
+grönt. Chromium mot `vite preview`: alla åtta nya titlar syns, 0 trasiga
+bilder, metallstrejkens modal visar bild och bildtext, noll konsolmeddelanden.
+Alla 14 nya källänkar svarar 200.
+
+**Inte gjort.** Bild till fem av septemberhändelserna (`1944-tco`,
+`1971-saco-konflikten`, `1974-foraldraforsakring`, `1997-industriavtalet`,
+`2022-nya-las`: sökta på Commons och Digitalt museum utan fri träff) och till
+sju av de åtta nya. Poddavsnitt till de åtta nya är inte sökt. Webbsökningen
+var strypt under omgången, så källorna är Wikipedia och riksdagen.se, inte
+förbundens egna historiksidor.
 
 ## 2026-09-16: granskningsbatchen
 
@@ -219,9 +257,10 @@ sin helhet med `caption or ""`, och en bildtext som bara stod i JSON vore borta.
 
 ## Läget
 
-Sajten är live och fungerar. 69 händelser, 50 med bild, alla med minst en
-källänk, 33 med poddavsnitt, och varje publicerad bild har angiven upphovsman
-och licens. Siffrorna gällde 2026-09-08.
+Sajten är live och fungerar. Live ligger 69 händelser, 50 med bild. På grenen
+`batch/2026-10-06` (inte driftsatt) finns 77 händelser, 59 med bild, alla med
+minst en källänk, 33 med poddavsnitt, och varje bild har angiven upphovsman
+och licens. Siffrorna gällde 2026-10-06.
 
 Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
 
@@ -283,17 +322,16 @@ Arkitektur och konventioner står i `CONTEXT.md`, arbetslistan i `BACKLOG.md`.
   `2000-medling`. Commons, Digitalt museum, Stockholmskällan och
   Arbetarrörelsens arkiv på Flickr är genomsökta 2026-09-08; det som fanns var
   CC BY-NC eller fel årtionde.
-- **De 13 nya händelserna saknar bild** och är spärrade i `NO_AUTO_IMAGE` så
-  att skriptet inte hämtar en slumpad sidbild.
+- **Tolv nyare händelser saknar bild** (fem från 2026-09-08, sju från
+  2026-10-06) och är spärrade i `NO_AUTO_IMAGE` så att skriptet inte hämtar en
+  slumpad sidbild.
 - **Inget fritt foto av Folkets hus i Kristianstad** finns; posten visar
   Stockholms Folkets hus 1902 med ärlig bildtext.
-- **Åtta händelsekandidater** med verifierade fakta men utan skriven text står
-  i `BACKLOG.md` under Innehåll.
 
 ## Resume here
 
 Vänta på Patriks ja eller nej till batchen 2026-09-08 (se "Val tagna åt Patrik"
-överst). Sedan: bild till de 13 nya händelserna, en i taget, samma metod som
+överst). Sedan: bild till de tolv spärrade händelserna, en i taget, samma metod som
 2026-09-08: leta på Commons och Digitalt museum, öppna bilden och titta,
 kontrollera licensen på källsidan, lägg posten i `MANUAL` (med `url`, `by` och
 `source` om den inte ligger på Commons), ta bort id:t ur `NO_AUTO_IMAGE` och

@@ -114,6 +114,14 @@
       kolon, parentes eller ny mening, bedömda per mening 2026-09-08. Även
       ingressen i `App.jsx`. Kvar finns bara bindestreck i intervall (1914–1918).
 
+## Granskning 2026-10-06
+
+Fynd från den automatiska sviten (aifabriken `tools/audit-suite.ts`: headers, npm audit, secrets, Actions, markup, axe). Mätvärdena står som `(automated)`-rader under `## Audits` i CONTEXT.md.
+
+- [ ] `[P2]` npm audit: 16 advisories (12 high, 4 moderate), alla i byggkedjan, 0 i produktion. `npm audit fix` tar postcss, nanoid, browserslist och source-map-js; resten kräver major-hopp (vite 8, tailwindcss 4) och gh-pages har ingen framåtfix.
+- [ ] `[P3]` Markup: `<div>` och `<p>` inuti `<button>` i händelsekorten, 380 träffar (html-validate `element-permitted-content`). Byt till `span` eller gör kortet till något annat än en knapp.
+- [ ] `[P3]` WCAG: axe hittar 0 fel men kan inte avgöra kontrasten på 79 element. Manuell kontrastkontroll återstår.
+
 ## Captured
 
 - [ ] [P2] [Wish] Bygga en funktion för tidslinjen. lägga till i tidslinjen ett spel som liknar spelet Hittster där man lägger kort för eller efter ett annat kort om det är för eller efter i tidslinjen.

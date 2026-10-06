@@ -34,16 +34,19 @@ export default function EventCard({ event, query = '', onOpen }) {
         ${SIZE[event.size]}
       `}
     >
+      {/* Bara span inuti knappen: en <button> får enligt HTML inte innehålla
+          div, p eller rubriker. `block` ger samma layout som förut. Rubriknivån
+          gick ändå aldrig fram, en knapps innehåll läses upp som ren text. */}
       {/* Rubrikrad: år + titel + eventuell thumbnail */}
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex-1 min-w-0">
-          <p className="text-accent font-bold text-xs mb-1 tracking-wide">
+      <span className="flex items-start justify-between gap-2">
+        <span className="block flex-1 min-w-0">
+          <span className="block text-accent font-bold text-xs mb-1 tracking-wide">
             {event.year}
-          </p>
-          <h3 className={`font-semibold text-gray-900 leading-snug ${TITLE_SIZE[event.size]}`}>
+          </span>
+          <span className={`block font-semibold text-gray-900 leading-snug ${TITLE_SIZE[event.size]}`}>
             {event.title}
-          </h3>
-        </div>
+          </span>
+        </span>
 
         {/* Thumbnail, visas på large och medium om bild finns. Krediten får
             inte plats synligt vid 64 px, så den ligger som tooltip; den fulla
@@ -57,31 +60,31 @@ export default function EventCard({ event, query = '', onOpen }) {
             loading="lazy"
           />
         )}
-      </div>
+      </span>
 
       {/* Kort beskrivning, visas ej på small-kort */}
       {showShort && (
-        <p className="text-gray-500 text-xs mt-1 line-clamp-2 leading-relaxed">
+        <span className="text-gray-500 text-xs mt-1 line-clamp-2 leading-relaxed">
           {event.short}
-        </p>
+        </span>
       )}
 
       {/* Sökträff som inte syns i texten ovan: meningen ur den långa texten, eller taggen */}
       {hint && (
-        <p className="text-accent/80 text-xs mt-1 italic line-clamp-2 leading-relaxed">
+        <span className="text-accent/80 text-xs mt-1 italic line-clamp-2 leading-relaxed">
           {hint}
-        </p>
+        </span>
       )}
 
       {/* Länkikoner */}
       {hasLinks && (
-        <div className="flex items-center gap-2 mt-2">
+        <span className="flex items-center gap-2 mt-2">
           {event.links.map((link, i) => (
             <span key={i} title={link.type} className="text-sm leading-none">
               {linkIcon(link.type, 'w-3.5 h-3.5')}
             </span>
           ))}
-        </div>
+        </span>
       )}
     </button>
   )

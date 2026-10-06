@@ -121,7 +121,7 @@ Fynd från den automatiska sviten (aifabriken `tools/audit-suite.ts`: headers, n
 - [x] `[P2]` (2026-10-06: `npm audit fix` utan `--force`, bara `package-lock.json`, 16 blev 11) npm audit: 16 advisories (12 high, 4 moderate), alla i byggkedjan, 0 i produktion. `npm audit fix` tar postcss, nanoid, browserslist och source-map-js; resten kräver major-hopp (vite 8, tailwindcss 4) och gh-pages har ingen framåtfix.
 - [ ] `[P3]` npm audit, resten: 11 advisories (8 high, 3 moderate) kvar i byggkedjan, 0 i produktion. Kräver major-hopp till vite 8 och tailwindcss 4 (ny konfigmodell, eget arbete) och gh-pages 6.1.1 (nedgradering). Inget av det når besökaren: bara `react` och `react-dom` skeppas.
 - [x] `[P3]` (rättad 2026-10-06: `span` med `block` i `EventCard.jsx`, 0 otillåtna element i 69 kort, kortens mått oförändrade vid 390 och 1280 px. Inte driftsatt, kör om html-validate efter deploy.) Markup: `<div>` och `<p>` inuti `<button>` i händelsekorten, 380 träffar (html-validate `element-permitted-content`). Byt till `span` eller gör kortet till något annat än en knapp.
-- [ ] `[P3]` WCAG: axe hittar 0 fel men kan inte avgöra kontrasten på 79 element. Manuell kontrastkontroll återstår.
+- [x] `[P3]` (mätt och rättad 2026-10-06: kontrast uträknad i Chromium för varje textstil i start, sökning, modal, tomläge och spel vid 390 och 1280 px. Tre låg under 4,5:1 och är mörkade: sökfältets platshållare 2,51 (`ink/40` till `/70`), träffräknaren 3,2 (`ink/50` till `/70`), sökledtråden 4,27 (`accent/80` till `accent`). Efter: 29 textstilar, 0 under gränsen. Inte mätt: hover-lägen och `integritet.html`. Inte driftsatt.) WCAG: axe hittar 0 fel men kan inte avgöra kontrasten på 79 element. Manuell kontrastkontroll återstår.
 
 ## Captured
 

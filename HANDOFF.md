@@ -2,12 +2,51 @@
 schemaVersion: 1
 status: active
 currentGoal: Tidslinjen är komplett nog att användas i kurs, 69 händelser varav 50 med bild, alla med källa
-nextAction: Patrik säger ja eller nej till batchen 2026-09-08 (13 nya händelser, 11 bildbyten, sökledtråd, SVG-ikoner). Sedan bild till de 13 nya händelserna, de står spärrade i NO_AUTO_IMAGE
+nextAction: Patrik granskar grenen batch/2026-10-06 (spelet, markup, kontrast, npm audit fix), mergar och kör npm run deploy. Ja eller nej till batchen 2026-09-08 står också kvar. Sedan bild till de 13 nya händelserna, de står spärrade i NO_AUTO_IMAGE
 blockers: []
-reviewedAt: 2026-09-16
+reviewedAt: 2026-10-06
 ---
 
 # Handoff: tidslinje
+
+## 2026-10-06: nattbatchen, grenen `batch/2026-10-06`
+
+Fyra backloggpunkter byggda i en egen worktree. Inget är mergat till `main` och
+inget är driftsatt: sajten på buildapp.se är oförändrad tills grenen mergas och
+`npm run deploy` körs.
+
+- **Spelet "Lägg kortet rätt"** (önskemålet om ett Hitster-likt spel, `3a8aa24`).
+  Knapp i sidhuvudet växlar mellan tidslinje och spel. Tio kort per omgång, ett
+  ligger öppet från start. Regler i `src/game.js`, vy i `src/components/Game.jsx`.
+- **Markup** (`c847fcc`): `div`, `p` och `h3` inuti kortens `<button>` är nu
+  `span` med `block`.
+- **Kontrast**: tre textstilar under 4,5:1 mörkade (platshållare, träffräknare,
+  sökledtråd).
+- **npm audit fix** (`29910d6`): bara lockfilen, 16 blev 11. Resten kräver vite 8
+  och tailwindcss 4 och står som egen P3.
+
+**Val tagna åt Patrik.** (1) Hitster-regeln: fel lagt kort läggs åt sidan, det
+sorteras inte in. (2) Samma år räknas som rätt åt båda håll. (3) Kortet visar
+bara titel och bild, inte den korta texten, eftersom den ofta nämner årtal.
+(4) "Den stora strejken 1909" och "Storlockout 1980" spelas inte, titeln
+avslöjar året. (5) Platser väljs med knappar ("Mellan 1899 och 1931"), inget
+dra och släpp: fungerar med tangentbord och på telefon. (6) Ingen egen URL för
+spelet, samma princip som sökläget. (7) `h3` i korten blev `span`: en knapps
+innehåll läses ändå upp som ren text, så rubriknivån nådde aldrig skärmläsaren.
+(8) Inga major-hopp i byggkedjan i en nattbatch.
+
+**Verifierat 2026-10-06.** `npm test` grönt (sökning, spel, datafil, 69
+händelser). `npm run build` grönt. I Chromium mot `vite preview`: en hel
+spelomgång vid 390 px (10 kort, slutsumman stämmer med antalet rätt, tidslinjen
+sorterad, ingen vågrät rullning, inga knappar under 44 px, noll
+konsolmeddelanden, "Spela igen" och "Tillbaka" fungerar). 0 otillåtna element i
+69 kort och varje korts och barnelements mått identiska före och efter vid 390
+och 1280 px. Kontrast: 29 textstilar, 0 under gränsen.
+
+**Inte gjort.** Bild till de 13 nya händelserna och text till de åtta
+händelsekandidaterna (kräver källsökning och bildgranskning, nästa omgång). De
+sex bildlösa står kvar: källorna är redan genomsökta. Kontrast i hover-lägen
+och på `integritet.html` är inte mätt.
 
 ## 2026-09-16: granskningsbatchen
 

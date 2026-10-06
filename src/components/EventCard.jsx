@@ -71,7 +71,7 @@ export default function EventCard({ event, query = '', onOpen }) {
 
       {/* Sökträff som inte syns i texten ovan: meningen ur den långa texten, eller taggen */}
       {hint && (
-        <span className="text-accent/80 text-xs mt-1 italic line-clamp-2 leading-relaxed">
+        <span className="text-accent text-xs mt-1 italic line-clamp-2 leading-relaxed">
           {hint}
         </span>
       )}

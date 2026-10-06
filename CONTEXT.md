@@ -22,6 +22,12 @@ en artikel.
   för att `node scripts/test_search.js` ska kunna köra den utan testramverk.
   `Timeline` äger sökläget och filtrerar innan händelserna delas per epok, så en
   epok utan träffar försvinner av sig själv.
+- `src/game.js` och `src/components/Game.jsx` är spelet "Lägg kortet rätt" (efter
+  Hitster): en händelse visas utan årtal och ska läggas på rätt plats i en växande
+  tidslinje. Tio kort per omgång, rätt kort stannar, fel kort läggs åt sidan, samma
+  år räknas som rätt åt båda håll. Händelser med årtalet i titeln spelas inte.
+  Reglerna är ren JavaScript som `search.js` och körs av `node scripts/test_game.js`.
+  `App.jsx` växlar mellan tidslinje och spel med `useState`, utan URL.
 - `scripts/download-images.py` hämtar och konverterar bilder samt skriver
   `image` och `imageCredit` i `events.json`. `scripts/test_helpers.py` kontrollerar
   skriptets textparsning och datafilens invarianter.
@@ -144,9 +150,10 @@ Driftsättning är två separata steg, och `git push` är inte ett av dem:
 2. `npm run deploy` bygger med `--mode gh` och pushar `dist/` till grenen
    `gh-pages`, som är den GitHub Pages faktiskt serverar.
 
-`npm test` kör båda kontrollerna: `node scripts/test_search.js` för sökningen och
+`npm test` kör tre kontroller: `node scripts/test_search.js` för sökningen,
+`node scripts/test_game.js` för spelets regler och
 `python scripts/test_helpers.py` för datafilen och nedladdningsskriptet. Inget
-testramverk är installerat, och behövs inte för två filer med `assert`.
+testramverk är installerat, och behövs inte för tre filer med `assert`.
 
 Sajten ligger på `buildapp.se/tidslinje/`. Ingen backend, inga hemligheter, inga
 migreringar. Arbetslistan står i `BACKLOG.md` och läget i `HANDOFF.md`.

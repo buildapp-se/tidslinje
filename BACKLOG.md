@@ -125,7 +125,7 @@ Fynd från den automatiska sviten (aifabriken `tools/audit-suite.ts`: headers, n
 
 ## Captured
 
-- [ ] [P2] [Wish] Bygga en funktion för tidslinjen. lägga till i tidslinjen ett spel som liknar spelet Hittster där man lägger kort för eller efter ett annat kort om det är för eller efter i tidslinjen.
+- [x] [P2] [Wish] (byggt 2026-10-06: knappen "Spela: lägg korten i ordning" i sidhuvudet, tio kort per omgång, regler i `src/game.js`, vy i `src/components/Game.jsx`, kontroll i `scripts/test_game.js`. Inte driftsatt.) Bygga en funktion för tidslinjen. lägga till i tidslinjen ett spel som liknar spelet Hittster där man lägger kort för eller efter ett annat kort om det är för eller efter i tidslinjen.
 
 ## Granskning 2026-09-16
 

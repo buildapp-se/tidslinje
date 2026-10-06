@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "test": "node scripts/test_search.js && python scripts/test_helpers.py",
+    "test": "node scripts/test_search.js && node scripts/test_game.js && python scripts/test_helpers.py",
     "build": "vite build",
     "build:gh": "vite build --mode gh",
     "preview": "vite preview",

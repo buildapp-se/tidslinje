@@ -251,6 +251,65 @@ MANUAL = {
         "file": "Goteborg salon Tesla 1.jpg",
         "caption": "Teslas butik i Göteborg 2016. Strejken gällde Teslas svenska verksamhet",
     },
+    # ── Handplockade 2026-10-06 till händelserna som lades till 2026-09-08 ──
+    # Varje bild är öppnad och tittad på, licensen läst på källsidan.
+    # Commons säger "1890" i beskrivningen men "1890-t slut" i filnamnet, så
+    # bildtexten lovar bara årtiondet.
+    "1890-forsta-maj": {
+        "file": "1maj Heden 1890-t slut GHM.JPG",
+        "caption": "Förstamajdemonstration på Heden i Göteborg på 1890-talet",
+        "crop": (0.0, 0.2, 1.0, 0.95),
+    },
+    # Riksdagsporträtt med tryckt text under; beskärs till porträttet.
+    "1899-akarpslagen": {
+        "file": "Pehr Pehrsson i Åkarp.jpg",
+        "caption": "Pehr Pehrsson i Åkarp, riksdagsmannen som gav lagen dess namn, i riksdagsporträtt från 1903",
+        "crop": (0.1, 0.02, 0.92, 0.675),
+    },
+    # Inget fritt foto från själva strejkdagarna i maj hittades. Teckningen är
+    # från samma rösträttskampanj, en knapp månad tidigare.
+    "1902-storstrejken": {
+        "file": "Från gårdagens demonstration. Illustration ur Stockholms-Tidningen 21 april 1902.jpg",
+        "caption": "Rösträttsdemonstrationen på Jakobs torg i Stockholm den 20 april 1902, en knapp månad före storstrejken. Teckning i Stockholms-Tidningen",
+        "crop": (0.07, 0.07, 0.93, 0.905),
+    },
+    # Pressbild ur Agence Rol (BnF), daterad augusti 1919. Negativram och
+    # handskrivna namn beskärs bort.
+    "1919-ilo": {
+        "file": "Conférence internationale de travail, le bureau à la 1ère réunion à Londres, M. di Palma (Castiglione), Italie (Minoru) Oka, Japon (Ethelbert) Stewart, Amérique, M. (Arthur) Fontaine, France, président, Dr.... - btv1b53018261z.jpg",
+        "caption": "Internationella arbetskonferensens byrå vid sitt första möte i London, augusti 1919, med fransmannen Arthur Fontaine som ordförande",
+        "crop": (0.03, 0.11, 0.98, 0.76),
+    },
+    "1928-kollektivavtalslagen": {
+        "url": "https://dms-cf-01.dimu.org/image/013AjPieFh59?dimension=1200x1200",
+        "by": "Leo Olsson, Västernorrlands museum, CC BY",
+        "source": "https://digitaltmuseum.se/0210111445682",
+        "caption": "Protestmöte i Kramfors Folkets park 1928 mot lagen om arbetsdomstol",
+    },
+    # Lagen drevs fram av privattjänstemännen. Ett kontor två år före lagen.
+    "1936-forhandlingsratt": {
+        "url": "https://dms-cf-01.dimu.org/image/032s93sgWqWo?dimension=1200x1200",
+        "by": "Paul Sandberg, Upplandsmuseet, Public domain",
+        "source": "https://digitaltmuseum.se/011013993693",
+        "caption": "Kontorister på AB Upsala Margarinfabrik i Uppsala 1934, två år före lagen",
+        "crop": (0.02, 0.03, 0.98, 0.97),
+    },
+    # Museets kreditremsa nederst beskärs bort; krediten står i bildtexten.
+    "1938-semesterlagen": {
+        "url": "https://dms-cf-01.dimu.org/image/019EE7DXB2eGK?dimension=1200x1200",
+        "by": "Okänd fotograf, Örebro stadsarkiv, CC BY-SA",
+        "source": "https://digitaltmuseum.se/0210114008152",
+        "caption": "Henning Pettersson på cykelsemester, 1930-talet",
+        "crop": (0.0, 0.0, 1.0, 0.95),
+    },
+    # Enligt fotografen är mannen i mitten skyddsombud.
+    "1977-arbetsmiljolagen": {
+        "url": "https://dms-cf-01.dimu.org/image/022waVM7yDQn?dimension=1200x1200",
+        "by": "Thor-Björn Johansson, Sjöhistoriska museet, CC BY-SA",
+        "source": "https://digitaltmuseum.se/021016468606",
+        "caption": "Varvsarbetare på Finnboda varv i Nacka 1972. Mannen i mitten är skyddsombud",
+        "crop": (0.012, 0.015, 0.988, 0.985),
+    },
 }
 
 # ── Händelser som ska lämnas utan bild ────────────────────────────────────
@@ -267,14 +326,13 @@ NO_AUTO_IMAGE = {
     "1983-jamlikt":  "abstrakt händelse, varje bild vore godtycklig",
     "1994-2dagar":   "inget fritt foto från krisåren 1992-94 (Bildt, Carlsson, Dennis); Riksbankshuset är redan använt på 1985",
     "2000-medling":  "enda Commons-bilden av Drottninggatan 89 domineras av SBAB:s och Boolis logotyper",
-    # Nya händelser 2026-09-08. Spärrade tills bilden är vald för hand: utan
-    # spärr hämtar automatiken artikelns sidbild, och det var så en länskarta
-    # och ett daghem i Afghanistan hamnade i tidslinjen förra gången.
-    **{eid: "ny händelse, bild inte handplockad ännu" for eid in (
-        "1890-forsta-maj", "1899-akarpslagen", "1902-storstrejken", "1919-ilo",
-        "1928-kollektivavtalslagen", "1936-forhandlingsratt", "1938-semesterlagen",
+    # Lades till 2026-09-08, åtta av tretton fick bild 2026-10-06. De här fem
+    # är sökta på Commons och Digitalt museum 2026-10-06 utan fri träff och
+    # står kvar spärrade: utan spärr hämtar automatiken artikelns sidbild, och
+    # det var så en länskarta och ett daghem i Afghanistan hamnade här förut.
+    **{eid: "ingen fri och relevant bild hittad, sökt 2026-10-06" for eid in (
         "1944-tco", "1971-saco-konflikten", "1974-foraldraforsakring",
-        "1977-arbetsmiljolagen", "1997-industriavtalet", "2022-nya-las",
+        "1997-industriavtalet", "2022-nya-las",
     )},
 }
 

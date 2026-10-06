@@ -172,7 +172,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/F%C3%B6rsta_maj"
       }
-    ]
+    ],
+    "image": "images/1890-forsta-maj.webp",
+    "imageCredit": {
+      "caption": "Förstamajdemonstration på Heden i Göteborg på 1890-talet",
+      "by": "Göteborgs historiska museums arkiv, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:1maj_Heden_1890-t_slut_GHM.JPG"
+    }
   },
   {
     "id": "1898-lo",
@@ -222,7 +228,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/%C3%85karpslagen"
       }
-    ]
+    ],
+    "image": "images/1899-akarpslagen.webp",
+    "imageCredit": {
+      "caption": "Pehr Pehrsson i Åkarp, riksdagsmannen som gav lagen dess namn, i riksdagsporträtt från 1903",
+      "by": "Okänd upphovsman, CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pehr_Pehrsson_i_%C3%85karp.jpg"
+    }
   },
   {
     "id": "1900-barnsbord",
@@ -305,7 +317,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Storstrejken_i_Sverige_1902"
       }
-    ]
+    ],
+    "image": "images/1902-storstrejken.webp",
+    "imageCredit": {
+      "caption": "Rösträttsdemonstrationen på Jakobs torg i Stockholm den 20 april 1902, en knapp månad före storstrejken. Teckning i Stockholms-Tidningen",
+      "by": "Okänd konstnär, Stockholms-Tidningen, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Fr%C3%A5n_g%C3%A5rdagens_demonstration._Illustration_ur_Stockholms-Tidningen_21_april_1902.jpg"
+    }
   },
   {
     "id": "1906-december",
@@ -679,7 +697,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Internationella_arbetsorganisationen"
       }
-    ]
+    ],
+    "image": "images/1919-ilo.webp",
+    "imageCredit": {
+      "caption": "Internationella arbetskonferensens byrå vid sitt första möte i London, augusti 1919, med fransmannen Arthur Fontaine som ordförande",
+      "by": "Agence Rol. Agence photographique (commanditaire), Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Conf%C3%A9rence_internationale_de_travail%2C_le_bureau_%C3%A0_la_1%C3%A8re_r%C3%A9union_%C3%A0_Londres%2C_M._di_Palma_%28Castiglione%29%2C_Italie_%28Minoru%29_Oka%2C_Japon_%28Ethelbert%29_Stewart%2C_Am%C3%A9rique%2C_M._%28Arthur%29_Fontaine%2C_France%2C_pr%C3%A9sident%2C_Dr...._-_btv1b53018261z.jpg"
+    }
   },
   {
     "id": "1928-kollektivavtalslagen",
@@ -706,7 +730,13 @@
         "type": "wiki",
         "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/kungl-majts-proposition-nr-39_dp3039/html/"
       }
-    ]
+    ],
+    "image": "images/1928-kollektivavtalslagen.webp",
+    "imageCredit": {
+      "caption": "Protestmöte i Kramfors Folkets park 1928 mot lagen om arbetsdomstol",
+      "by": "Leo Olsson, Västernorrlands museum, CC BY",
+      "source": "https://digitaltmuseum.se/0210111445682"
+    }
   },
   {
     "id": "1929-arbetsdomstolen",
@@ -861,7 +891,13 @@
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/De_Anst%C3%A4lldas_Centralorganisation"
       }
-    ]
+    ],
+    "image": "images/1936-forhandlingsratt.webp",
+    "imageCredit": {
+      "caption": "Kontorister på AB Upsala Margarinfabrik i Uppsala 1934, två år före lagen",
+      "by": "Paul Sandberg, Upplandsmuseet, Public domain",
+      "source": "https://digitaltmuseum.se/011013993693"
+    }
   },
   {
     "id": "1938-saltsjobad",
@@ -921,7 +957,13 @@
         "type": "podcast",
         "url": "https://shows.acast.com/historiepodden/episodes/407-svenskarna-far-antligen-semester"
       }
-    ]
+    ],
+    "image": "images/1938-semesterlagen.webp",
+    "imageCredit": {
+      "caption": "Henning Pettersson på cykelsemester, 1930-talet",
+      "by": "Okänd fotograf, Örebro stadsarkiv, CC BY-SA",
+      "source": "https://digitaltmuseum.se/0210114008152"
+    }
   },
   {
     "id": "1939-ww2",
@@ -1428,7 +1470,13 @@
         "type": "wiki",
         "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetsmiljolag-19771160_sfs-1977-1160/"
       }
-    ]
+    ],
+    "image": "images/1977-arbetsmiljolagen.webp",
+    "imageCredit": {
+      "caption": "Varvsarbetare på Finnboda varv i Nacka 1972. Mannen i mitten är skyddsombud",
+      "by": "Thor-Björn Johansson, Sjöhistoriska museet, CC BY-SA",
+      "source": "https://digitaltmuseum.se/021016468606"
+    }
   },
   {
     "id": "1978-5veckor",

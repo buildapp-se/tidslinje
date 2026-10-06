@@ -95,8 +95,20 @@
       sjukförsäkring, 1913 folkpension, 1945 metallstrejken, 1979
       jämställdhetslagen, 1995 EU-medlemskap, 2003 kommunalstrejken, 2009
       diskrimineringslagen, 1973 styrelserepresentation.
-- [ ] Bild till de 13 nya händelserna. De står i `NO_AUTO_IMAGE` tills någon
-      valt bild för hand, så att skriptet inte hämtar en slumpad sidbild.
+- [x] Bild till åtta av de 13 nya händelserna (2026-10-06), var och en öppnad
+      och tittad på, licensen läst på källsidan: `1890-forsta-maj` (Heden i
+      Göteborg, 1890-talet), `1899-akarpslagen` (Pehr Pehrsson, riksdagsporträtt
+      1903), `1902-storstrejken` (tidningsteckning av rösträttsdemonstrationen
+      20 april 1902), `1919-ilo` (konferensens byrå i London, augusti 1919),
+      `1928-kollektivavtalslagen` (protestmöte i Kramfors 1928),
+      `1936-forhandlingsratt` (kontor i Uppsala 1934), `1938-semesterlagen`
+      (cykelsemester, 1930-talet), `1977-arbetsmiljolagen` (varvsarbetare med
+      skyddsombud, Finnboda 1972). Inte driftsatt.
+- [ ] Fem av de nya händelserna saknar fortfarande bild och står kvar i
+      `NO_AUTO_IMAGE`: `1944-tco`, `1971-saco-konflikten`,
+      `1974-foraldraforsakring`, `1997-industriavtalet`, `2022-nya-las`. Sökta
+      på Commons och Digitalt museum 2026-10-06 utan fri träff. Inte sökt:
+      Stockholmskällan, TAM-Arkiv, Arbetarrörelsens arkiv på Flickr.
 
 ## Funktioner
 

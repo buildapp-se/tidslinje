@@ -454,6 +454,32 @@
     }
   },
   {
+    "id": "1913-pensionsforsakring",
+    "year": 1913,
+    "title": "Allmän pensionsförsäkring",
+    "epoch": "informera-och-agitera",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Riksdagen beslutar om allmän pensionsförsäkring. Sverige blir först i världen med en pension för i stort sett hela befolkningen.",
+    "long": "1913 antar riksdagen lagen om allmän pensionsförsäkring, med stor majoritet i båda kamrarna och i alla tre partierna. Försäkringen är obligatorisk med avgifter i tre klasser för alla mellan 16 och 66 år. Den ger pension vid arbetsinvaliditet och senast vid fyllda 67 år, med tillägg och understöd av statsmedel. Sverige blir därmed först i världen med en försäkring som i stort sett omfattar hela befolkningen. Kritiken mot systemet, bland annat att det missgynnade kvinnor, drev fram folkpensionen 1948.",
+    "tags": [
+      "lag",
+      "pension",
+      "välfärd"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Folkpension"
+      },
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Sveriges_historia_1905%E2%80%931914"
+      }
+    ]
+  },
+  {
     "id": "1914-ww1",
     "year": 1914,
     "title": "Första världskriget",
@@ -1088,6 +1114,38 @@
     }
   },
   {
+    "id": "1945-metallstrejken",
+    "year": 1945,
+    "title": "Metallstrejken",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "large",
+    "short": "Omkring 120 000 verkstadsarbetare strejkar i fem månader. Fler arbetsdagar går förlorade än under storstrejken 1909.",
+    "long": "Den 5 februari 1945 går Metalls medlemmar i verkstadsindustrin ut i strejk, och konflikten pågår i fem månader. Omkring 120 000 arbetare deltar, och fler arbetsdagar går förlorade än under storstrejken 1909. Strejken slutar med att facket godtar samma lönetillägg som övriga förbund redan fått utan strid. Kommunisternas inflytande i Metall var som störst vid den här tiden och bidrog starkt till strejken. Efteråt trappade Socialdemokraterna upp arbetet för att minska det kommunistiska inflytandet i fackföreningsrörelsen.",
+    "tags": [
+      "strejk",
+      "konflikt",
+      "lön"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Metallstrejken_1945"
+      },
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Svenska_metallindustriarbetaref%C3%B6rbundet"
+      }
+    ],
+    "image": "images/1945-metallstrejken.webp",
+    "imageCredit": {
+      "caption": "Demonstration i Göteborg den 8 april 1945 under banderollen För seger i metallstrejken",
+      "by": "Okänd upphovsman, Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Metallstrejken.jpg"
+    }
+  },
+  {
     "id": "1951-3veckor",
     "year": 1951,
     "title": "Tre veckors lagstadgad semester",
@@ -1113,6 +1171,31 @@
       "by": "Gunnar Herbert Lundh, CC BY 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Tv%C3%A5_unga_kvinnor_i_baddr%C3%A4kt_p%C3%A5_strand._Malen%2C_B%C3%A5stad%2C_Sk%C3%A5ne_-_Nordiska_museet_-_NMA.0034002.jpg"
     }
+  },
+  {
+    "id": "1955-sjukforsakring",
+    "year": 1955,
+    "title": "Allmän sjukförsäkring",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Den allmänna sjukförsäkringen införs. De frivilliga sjukkassorna ersätts av en obligatorisk försäkring för alla.",
+    "long": "Den 1 januari 1955 införs den allmänna och obligatoriska sjukförsäkringen. Den ersätter de frivilliga sjukkassorna, och alla i Sverige blir anslutna. Reformen sjösattes av socialminister Gunnar Sträng och byggde på en nyhet, inkomstbortfallsprincipen: ersättningen ska stå i förhållande till den inkomst man förlorar som sjuk.",
+    "tags": [
+      "lag",
+      "välfärd"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Sjukf%C3%B6rs%C3%A4kring_i_Sverige"
+      },
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Gunnar_Str%C3%A4ng"
+      }
+    ]
   },
   {
     "id": "1959-atp",
@@ -1368,6 +1451,31 @@
     ]
   },
   {
+    "id": "1973-styrelserepresentation",
+    "year": 1973,
+    "title": "Anställda får plats i bolagsstyrelsen",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "medium",
+    "short": "De anställda får rätt att utse två ledamöter i styrelsen i företag med minst 100 anställda.",
+    "long": "Den 1 april 1973 börjar lagen om styrelserepresentation för de anställda i aktiebolag och ekonomiska föreningar (SFS 1972:829) att gälla. I företag med minst 100 anställda får de anställda två platser i styrelsen, och ledamöterna utses av de fackliga organisationerna. Lagen införs på försök till utgången av juni 1976. I dag gäller rätten redan från 25 anställda, enligt lagen om styrelserepresentation för de privatanställda från 1987.",
+    "tags": [
+      "lag",
+      "medbestämmande"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/kungl-majts-proposition-med-forslag-till-lag-om_fv03116/"
+      },
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Arbetsr%C3%A4tt_i_Sverige"
+      }
+    ]
+  },
+  {
     "id": "1974-las-fml",
     "year": 1974,
     "title": "LAS och FML stiftas",
@@ -1523,6 +1631,31 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Timbro"
+      }
+    ]
+  },
+  {
+    "id": "1979-jamstalldhetslagen",
+    "year": 1979,
+    "title": "Jämställdhetslagen",
+    "epoch": "folkhemmet-och-valfardsstaten",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Lagen om jämställdhet i arbetslivet förbjuder arbetsgivare att missgynna någon på grund av kön. JämO inrättas.",
+    "long": "Lagen om jämställdhet mellan kvinnor och män i arbetslivet (SFS 1979:1118) utfärdas den 17 december 1979 och träder i kraft den 1 juli 1980. En arbetsgivare får inte missgynna en arbetstagare eller arbetssökande på grund av kön, och lagen ska främja lika rätt i fråga om arbete, arbetsvillkor och utvecklingsmöjligheter. Samtidigt inrättas Jämställdhetsombudsmannen, JämO, med Inga-Britt Törnell som den första. Lagen ersattes av 1991 års jämställdhetslag, som i sin tur gick upp i diskrimineringslagen 2009.",
+    "tags": [
+      "lag",
+      "jämställdhet"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-19791118om-jamstalldhet-mellan-kvinnor_sfs-1979-1118/"
+      },
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/J%C3%A4mst%C3%A4lldhetsombudsmannen_(Sverige)"
       }
     ]
   },
@@ -1763,6 +1896,27 @@
     ]
   },
   {
+    "id": "1995-eu",
+    "year": 1995,
+    "title": "Sverige går med i EU",
+    "epoch": "forvaltande",
+    "country": "sverige",
+    "size": "large",
+    "short": "Sverige blir medlem i EU efter en folkomröstning där 52,3 procent röstar ja.",
+    "long": "Den 1 januari 1995 blir Sverige medlem i Europeiska unionen. Hösten 1990, mitt i den begynnande finanskrisen, meddelade regeringen Carlsson att Sverige borde gå med i EG, och ansökan lämnades in i juli 1991. I den rådgivande folkomröstningen den 13 november 1994 röstar 52,3 procent ja och 46,8 procent nej, med ett valdeltagande på 83,3 procent. Vad medlemskapet betyder för den svenska modellen ställdes på sin spets i Lavalmålet 2007.",
+    "tags": [
+      "politisk",
+      "EU"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Folkomr%C3%B6stningen_om_EU-medlemskap_i_Sverige_1994"
+      }
+    ]
+  },
+  {
     "id": "1997-industriavtalet",
     "year": 1997,
     "title": "Industriavtalet",
@@ -1803,6 +1957,28 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Medlingsinstitutet"
+      }
+    ]
+  },
+  {
+    "id": "2003-kommunalstrejken",
+    "year": 2003,
+    "title": "Kommunalstrejken",
+    "epoch": "forvaltande",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Kommunals största strejk: nära 83 000 medlemmar i barnomsorg, skola och sophämtning deltar under fem veckor.",
+    "long": "Från den 23 april till den 28 maj 2003 strejkar Kommunal mot arbetsgivarna i Kommunförbundet. Nära 83 000 medlemmar deltar, framför allt i barnomsorgen, skolorna och sophämtningen, och det är den största strejken i förbundets historia. Konflikten slutar utan att arbetsgivarna skjuter till mer pengar till löner. I stället omfördelas lönepengarna till vissa prioriterade yrken, vilket väcker missnöje bland dem som får mindre än arbetsgivaren först tänkt.",
+    "tags": [
+      "strejk",
+      "konflikt",
+      "lön"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Kommunalstrejken_i_Sverige_2003"
       }
     ]
   },
@@ -1888,6 +2064,32 @@
       "by": "Torstensson_and_Littorin.JPG : Henrik Ishihara Globaljuggler derivative work: Entheta ( talk ), CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Littorin.jpg"
     }
+  },
+  {
+    "id": "2009-diskrimineringslagen",
+    "year": 2009,
+    "title": "Diskrimineringslagen",
+    "epoch": "forvaltande",
+    "country": "sverige",
+    "size": "medium",
+    "short": "Sju lagar blir en. Diskrimineringslagen samlar skyddet mot diskriminering, och fyra ombudsmän slås ihop till DO.",
+    "long": "Den 1 januari 2009 träder diskrimineringslagen (SFS 2008:567) i kraft. Den ersätter sju tidigare lagar, bland dem jämställdhetslagen och 1999 års lagar mot diskriminering i arbetslivet. Lagen gäller sju diskrimineringsgrunder: kön, könsöverskridande identitet eller uttryck, etnisk tillhörighet, religion eller annan trosuppfattning, funktionsnedsättning, sexuell läggning och ålder. Samtidigt slås de fyra tidigare ombudsmännen, bland dem JämO, ihop till Diskrimineringsombudsmannen, DO.",
+    "tags": [
+      "lag",
+      "jämställdhet",
+      "jämlikhet"
+    ],
+    "persons": [],
+    "links": [
+      {
+        "type": "wiki",
+        "url": "https://sv.wikipedia.org/wiki/Diskrimineringslagen"
+      },
+      {
+        "type": "wiki",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/diskrimineringslag-2008567_sfs-2008-567/"
+      }
+    ]
   },
   {
     "id": "2015-huvudentreprenad",

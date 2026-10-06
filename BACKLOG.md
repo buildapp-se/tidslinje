@@ -91,10 +91,16 @@
       föräldraförsäkringen, 1977 arbetsmiljölagen, 1997 Industriavtalet, 2022
       nya LAS. Sakfel rättat på vägen: Saltsjöbadsavtalet innehöll ingen
       semester, det var 1938 års semesterlag.
-- [ ] Fler kandidater med verifierade fakta men utan skriven text: 1955 allmän
-      sjukförsäkring, 1913 folkpension, 1945 metallstrejken, 1979
+- [x] De åtta kandidaterna skrivna 2026-10-06, varje sakuppgift tagen ur källan
+      i posten: 1913 allmän pensionsförsäkring, 1945 metallstrejken (med bild),
+      1955 allmän sjukförsäkring, 1973 styrelserepresentation, 1979
       jämställdhetslagen, 1995 EU-medlemskap, 2003 kommunalstrejken, 2009
-      diskrimineringslagen, 1973 styrelserepresentation.
+      diskrimineringslagen. 77 händelser. Metallstrejkens slutdatum skiljer sig
+      mellan källorna (juni, 2 juli, 9 juli), därför "fem månader". Inte
+      driftsatt.
+- [ ] Bild till sju av de åtta händelserna från 2026-10-06 (alla utom
+      metallstrejken). De står i `NO_AUTO_IMAGE` tills någon valt bild för hand.
+- [ ] Poddavsnitt till de åtta händelserna från 2026-10-06: inte sökt.
 - [x] Bild till åtta av de 13 nya händelserna (2026-10-06), var och en öppnad
       och tittad på, licensen läst på källsidan: `1890-forsta-maj` (Heden i
       Göteborg, 1890-talet), `1899-akarpslagen` (Pehr Pehrsson, riksdagsporträtt

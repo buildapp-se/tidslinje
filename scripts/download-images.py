@@ -310,6 +310,11 @@ MANUAL = {
         "caption": "Varvsarbetare på Finnboda varv i Nacka 1972. Mannen i mitten är skyddsombud",
         "crop": (0.012, 0.015, 0.988, 0.985),
     },
+    # Enda fria fotot från själva strejken som hittades; banderollen bär motivet.
+    "1945-metallstrejken": {
+        "file": "Metallstrejken.jpg",
+        "caption": "Demonstration i Göteborg den 8 april 1945 under banderollen För seger i metallstrejken",
+    },
 }
 
 # ── Händelser som ska lämnas utan bild ────────────────────────────────────
@@ -333,6 +338,12 @@ NO_AUTO_IMAGE = {
     **{eid: "ingen fri och relevant bild hittad, sökt 2026-10-06" for eid in (
         "1944-tco", "1971-saco-konflikten", "1974-foraldraforsakring",
         "1997-industriavtalet", "2022-nya-las",
+    )},
+    # Nya händelser 2026-10-06, samma spärr tills bilden är vald för hand.
+    **{eid: "ny händelse, bild inte handplockad ännu" for eid in (
+        "1913-pensionsforsakring", "1955-sjukforsakring",
+        "1973-styrelserepresentation", "1979-jamstalldhetslagen", "1995-eu",
+        "2003-kommunalstrejken", "2009-diskrimineringslagen",
     )},
 }
 

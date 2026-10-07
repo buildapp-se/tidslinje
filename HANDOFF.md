@@ -2,18 +2,17 @@
 schemaVersion: 1
 status: active
 currentGoal: Tidslinjen är komplett nog att användas i kurs, 77 händelser varav 59 med bild, alla med källa
-nextAction: Patrik granskar grenen batch/2026-10-06 (spelet, markup, kontrast, npm audit fix, nio nya bilder, åtta nya händelser), mergar och kör npm run deploy. Ja eller nej till batchen 2026-09-08 står också kvar. Sedan bild till de tolv händelser som står spärrade i NO_AUTO_IMAGE som nya
+nextAction: Ja eller nej till batchen 2026-09-08 står kvar. Sedan bild till de tolv händelser som står spärrade i NO_AUTO_IMAGE som nya
 blockers: []
-reviewedAt: 2026-10-06
+reviewedAt: 2026-10-07
 ---
 
 # Handoff: tidslinje
 
 ## 2026-10-06: nattbatchen, grenen `batch/2026-10-06`
 
-Fyra backloggpunkter byggda i en egen worktree. Inget är mergat till `main` och
-inget är driftsatt: sajten på buildapp.se är oförändrad tills grenen mergas och
-`npm run deploy` körs.
+Fyra backloggpunkter byggda i en egen worktree. Mergat till `main` och
+driftsatt med `npm run deploy` 2026-10-07 på Patriks order.
 
 - **Spelet "Lägg kortet rätt"** (önskemålet om ett Hitster-likt spel, `3a8aa24`).
   Knapp i sidhuvudet växlar mellan tidslinje och spel. Tio kort per omgång, ett
@@ -257,8 +256,8 @@ sin helhet med `caption or ""`, och en bildtext som bara stod i JSON vore borta.
 
 ## Läget
 
-Sajten är live och fungerar. Live ligger 69 händelser, 50 med bild. På grenen
-`batch/2026-10-06` (inte driftsatt) finns 77 händelser, 59 med bild, alla med
+Sajten är live och fungerar. Sedan grenen `batch/2026-10-06` mergades och
+driftsattes 2026-10-07 ligger 77 händelser live, 59 med bild, alla med
 minst en källänk, 33 med poddavsnitt, och varje bild har angiven upphovsman
 och licens. Siffrorna gällde 2026-10-06.
 

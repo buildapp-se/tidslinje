@@ -96,8 +96,8 @@
       1955 allmän sjukförsäkring, 1973 styrelserepresentation, 1979
       jämställdhetslagen, 1995 EU-medlemskap, 2003 kommunalstrejken, 2009
       diskrimineringslagen. 77 händelser. Metallstrejkens slutdatum skiljer sig
-      mellan källorna (juni, 2 juli, 9 juli), därför "fem månader". Inte
-      driftsatt.
+      mellan källorna (juni, 2 juli, 9 juli), därför "fem månader". Driftsatt
+      2026-10-07.
 - [ ] Bild till sju av de åtta händelserna från 2026-10-06 (alla utom
       metallstrejken). De står i `NO_AUTO_IMAGE` tills någon valt bild för hand.
 - [ ] Poddavsnitt till de åtta händelserna från 2026-10-06: inte sökt.
@@ -109,7 +109,7 @@
       `1928-kollektivavtalslagen` (protestmöte i Kramfors 1928),
       `1936-forhandlingsratt` (kontor i Uppsala 1934), `1938-semesterlagen`
       (cykelsemester, 1930-talet), `1977-arbetsmiljolagen` (varvsarbetare med
-      skyddsombud, Finnboda 1972). Inte driftsatt.
+      skyddsombud, Finnboda 1972). Driftsatt 2026-10-07.
 - [ ] Fem av de nya händelserna saknar fortfarande bild och står kvar i
       `NO_AUTO_IMAGE`: `1944-tco`, `1971-saco-konflikten`,
       `1974-foraldraforsakring`, `1997-industriavtalet`, `2022-nya-las`. Sökta
@@ -138,12 +138,12 @@ Fynd från den automatiska sviten (aifabriken `tools/audit-suite.ts`: headers, n
 
 - [x] `[P2]` (2026-10-06: `npm audit fix` utan `--force`, bara `package-lock.json`, 16 blev 11) npm audit: 16 advisories (12 high, 4 moderate), alla i byggkedjan, 0 i produktion. `npm audit fix` tar postcss, nanoid, browserslist och source-map-js; resten kräver major-hopp (vite 8, tailwindcss 4) och gh-pages har ingen framåtfix.
 - [ ] `[P3]` npm audit, resten: 11 advisories (8 high, 3 moderate) kvar i byggkedjan, 0 i produktion. Kräver major-hopp till vite 8 och tailwindcss 4 (ny konfigmodell, eget arbete) och gh-pages 6.1.1 (nedgradering). Inget av det når besökaren: bara `react` och `react-dom` skeppas.
-- [x] `[P3]` (rättad 2026-10-06: `span` med `block` i `EventCard.jsx`, 0 otillåtna element i 69 kort, kortens mått oförändrade vid 390 och 1280 px. Inte driftsatt, kör om html-validate efter deploy.) Markup: `<div>` och `<p>` inuti `<button>` i händelsekorten, 380 träffar (html-validate `element-permitted-content`). Byt till `span` eller gör kortet till något annat än en knapp.
-- [x] `[P3]` (mätt och rättad 2026-10-06: kontrast uträknad i Chromium för varje textstil i start, sökning, modal, tomläge och spel vid 390 och 1280 px. Tre låg under 4,5:1 och är mörkade: sökfältets platshållare 2,51 (`ink/40` till `/70`), träffräknaren 3,2 (`ink/50` till `/70`), sökledtråden 4,27 (`accent/80` till `accent`). Efter: 29 textstilar, 0 under gränsen. Inte mätt: hover-lägen och `integritet.html`. Inte driftsatt.) WCAG: axe hittar 0 fel men kan inte avgöra kontrasten på 79 element. Manuell kontrastkontroll återstår.
+- [x] `[P3]` (rättad 2026-10-06: `span` med `block` i `EventCard.jsx`, 0 otillåtna element i 69 kort, kortens mått oförändrade vid 390 och 1280 px. Driftsatt 2026-10-07, html-validate inte omkört mot live.) Markup: `<div>` och `<p>` inuti `<button>` i händelsekorten, 380 träffar (html-validate `element-permitted-content`). Byt till `span` eller gör kortet till något annat än en knapp.
+- [x] `[P3]` (mätt och rättad 2026-10-06: kontrast uträknad i Chromium för varje textstil i start, sökning, modal, tomläge och spel vid 390 och 1280 px. Tre låg under 4,5:1 och är mörkade: sökfältets platshållare 2,51 (`ink/40` till `/70`), träffräknaren 3,2 (`ink/50` till `/70`), sökledtråden 4,27 (`accent/80` till `accent`). Efter: 29 textstilar, 0 under gränsen. Inte mätt: hover-lägen och `integritet.html`. Driftsatt 2026-10-07.) WCAG: axe hittar 0 fel men kan inte avgöra kontrasten på 79 element. Manuell kontrastkontroll återstår.
 
 ## Captured
 
-- [x] [P2] [Wish] (byggt 2026-10-06: knappen "Spela: lägg korten i ordning" i sidhuvudet, tio kort per omgång, regler i `src/game.js`, vy i `src/components/Game.jsx`, kontroll i `scripts/test_game.js`. Inte driftsatt.) Bygga en funktion för tidslinjen. lägga till i tidslinjen ett spel som liknar spelet Hittster där man lägger kort för eller efter ett annat kort om det är för eller efter i tidslinjen.
+- [x] [P2] [Wish] (byggt 2026-10-06: knappen "Spela: lägg korten i ordning" i sidhuvudet, tio kort per omgång, regler i `src/game.js`, vy i `src/components/Game.jsx`, kontroll i `scripts/test_game.js`. Driftsatt 2026-10-07.) Bygga en funktion för tidslinjen. lägga till i tidslinjen ett spel som liknar spelet Hittster där man lägger kort för eller efter ett annat kort om det är för eller efter i tidslinjen.
 
 ## Granskning 2026-09-16
 

@@ -4,10 +4,23 @@ status: active
 currentGoal: Tidslinjen är komplett nog att användas i kurs, 77 händelser varav 59 med bild, alla med källa
 nextAction: Ja eller nej till batchen 2026-09-08 står kvar. Sedan bild till de tolv händelser som står spärrade i NO_AUTO_IMAGE som nya
 blockers: []
-reviewedAt: 2026-10-07
+reviewedAt: 2026-10-17
 ---
 
 # Handoff: tidslinje
+
+## 2026-10-17: beroenden uppdaterade, ej pushat eller deployat
+
+Commits `af3fbcb` (minor/patch), `4132c76` (vite 5 till 8, plugin-react 4 till
+6), `716925e` (react 19), `3ef0b8d` (tailwindcss 3 till 4). Tailwind migrerat
+med `@tailwindcss/upgrade`: temat ligger i `@theme` i `src/index.css`, bygget
+går via `@tailwindcss/vite`, så `tailwind.config.js`, `postcss.config.js`,
+`postcss` och `autoprefixer` är borta. Knappar behåller `cursor: pointer` som i
+v3. Verifierat efter varje steg: `npm test` och `npm run build` gröna (även
+`--mode gh` med rätt base), skärmbilder av tidslinje, modal och spel vid 1280
+och 390 px jämförda mot före: högst 1/255 i skillnad, noll konsolmeddelanden i
+preview och dev. npm audit 11 blev 5, rest i gh-pages, se BACKLOG. Live-sajten
+kör fortfarande gamla bygget tills `npm run deploy` körs.
 
 ## 2026-10-06: nattbatchen, grenen `batch/2026-10-06`
 

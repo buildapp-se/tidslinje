@@ -4,7 +4,7 @@ import { matchHint } from '../search'
 // Tailwind-klasser per kortstorlek
 const SIZE = {
   large: 'p-5 shadow-md border-l-4',
-  medium: 'p-4 shadow-sm border-l-2',
+  medium: 'p-4 shadow-xs border-l-2',
   small: 'p-3 border-l',
 }
 
@@ -56,7 +56,7 @@ export default function EventCard({ event, query = '', onOpen }) {
             src={thumb}
             alt=""
             title={event.imageCredit && [event.imageCredit.caption, event.imageCredit.by].filter(Boolean).join('. ')}
-            className="w-16 h-16 object-cover rounded flex-none"
+            className="w-16 h-16 object-cover rounded-sm flex-none"
             loading="lazy"
           />
         )}

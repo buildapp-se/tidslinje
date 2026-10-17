@@ -107,7 +107,7 @@ tidstypiska illustrationer, inte foton av själva händelsen.
 
 ## Design
 
-- Accentfärg dämpad tegelröd `#B0342B`, definierad som `accent` i `tailwind.config.js`.
+- Accentfärg dämpad tegelröd `#B0342B`, definierad som `--color-accent` i `@theme` i `src/index.css` (Tailwind 4, ingen `tailwind.config.js`).
 - Bakgrund varm krämvit `#EFEBE4` (`cream`), kort i vitt (`paper`).
 - Loggan är inline SVG i `src/components/Logo.jsx`, horisontell variant.
 - Typografi i loggan: Fraunces serif 500 och Archivo versal grotesk 800, laddade

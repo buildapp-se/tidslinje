@@ -34,7 +34,7 @@ export default function Game() {
 
       {/* Återkopplingen ligger i en status-region så att skärmläsare får facit
           utan att fokus flyttas. */}
-      <p className="mb-4 min-h-[1.5rem] text-center text-sm font-semibold" role="status">
+      <p className="mb-4 min-h-6 text-center text-sm font-semibold" role="status">
         {last && (
           <span className={last.ok ? 'text-green-800' : 'text-accent'}>
             {last.ok ? 'Rätt' : 'Fel'}: {last.card.title} var {last.card.year}.
@@ -51,7 +51,7 @@ export default function Game() {
             </p>
             <h3 className="mt-1 font-semibold leading-snug text-gray-900">{current.title}</h3>
           </div>
-          {thumb && <img src={thumb} alt="" className="h-16 w-16 flex-none rounded object-cover" />}
+          {thumb && <img src={thumb} alt="" className="h-16 w-16 flex-none rounded-sm object-cover" />}
         </div>
       ) : (
         <div className="mb-6 rounded-lg bg-white p-6 text-center shadow-md">

@@ -60,7 +60,7 @@ export default function Timeline() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Sök på ord, årtal eller ämne"
           aria-label="Sök i tidslinjen"
-          className="w-full min-h-[44px] rounded-lg border border-ink/15 bg-white px-3 py-2 text-sm text-ink placeholder:text-ink/70 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:max-w-xs"
+          className="w-full min-h-[44px] rounded-lg border border-ink/15 bg-white px-3 py-2 text-sm text-ink placeholder:text-ink/70 focus:border-accent focus:outline-hidden focus:ring-1 focus:ring-accent sm:max-w-xs"
         />
 
         <div className="flex gap-1.5" role="group" aria-label="Filtrera på område">

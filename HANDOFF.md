@@ -29,8 +29,8 @@ går via `@tailwindcss/vite`, så `tailwind.config.js`, `postcss.config.js`,
 v3. Verifierat efter varje steg: `npm test` och `npm run build` gröna (även
 `--mode gh` med rätt base), skärmbilder av tidslinje, modal och spel vid 1280
 och 390 px jämförda mot före: högst 1/255 i skillnad, noll konsolmeddelanden i
-preview och dev. npm audit 11 blev 5, rest i gh-pages, se BACKLOG. Live-sajten
-kör fortfarande gamla bygget tills `npm run deploy` körs.
+preview och dev. npm audit 11 blev 5, rest i gh-pages, se BACKLOG. Driftsatt
+2026-10-28 tillsammans med spelet.
 
 ## 2026-10-06: nattbatchen, grenen `batch/2026-10-06`
 

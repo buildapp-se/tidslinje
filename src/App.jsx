@@ -9,7 +9,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-cream">
-      <header className="py-10 px-4 text-center">
+      {/* I spelet krymper luften runt rubriken, så att kortet och tidslinjen
+          syns direkt på en mobilskärm. */}
+      <header className={`px-4 text-center ${playing ? 'pt-6 pb-2 sm:py-10' : 'py-10'}`}>
         <Logo className="h-7 sm:h-9 w-auto mx-auto" />
         <p className="mt-3 text-ink/70 text-sm">Klass, kamp och kompromiss: från 1846 till i dag</p>
         <button
@@ -20,7 +22,7 @@ export default function App() {
           {playing ? 'Tillbaka till tidslinjen' : 'Spela: lägg korten i ordning'}
         </button>
       </header>
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className={`max-w-4xl mx-auto px-4 ${playing ? 'py-4 sm:py-8' : 'py-12'}`}>
         {playing ? <Game /> : <Timeline />}
       </main>
       <footer className="max-w-4xl mx-auto px-4 pb-10 text-sm text-ink/70">

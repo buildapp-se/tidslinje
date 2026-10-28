@@ -4,6 +4,22 @@
   --color-accent: #b0342b;
   --color-cream: #efebe4;
   --color-ink: #1a1a1a;
+
+  /* Spelets återkoppling. Bara bakom motion-safe:, så reducerad rörelse får
+     färg och text men inget som hoppar. */
+  --animate-pop: pop 0.25s ease-out;
+  --animate-shake: shake 0.4s ease-in-out;
+
+  @keyframes pop {
+    0% { transform: scale(0.94); opacity: 0.6; }
+    60% { transform: scale(1.02); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+  }
 }
 
 /*
@@ -21,14 +37,6 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
-  }
-}
-
-/* Tailwind 4 ger knappar cursor: default; v3 hade pointer. Behåll v3-beteendet. */
-@layer base {
-  button:not(:disabled),
-  [role='button']:not(:disabled) {
-    cursor: pointer;
   }
 }
 

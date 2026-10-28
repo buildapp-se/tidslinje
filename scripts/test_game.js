@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
-import { ROUNDS, playable, shuffle, fits, newGame, place } from '../src/game.js'
+import { ROUNDS, playable, shuffle, fits, newGame, place, rightIndex } from '../src/game.js'
 
 const events = JSON.parse(
   readFileSync(fileURLToPath(new URL('../src/data/events.json', import.meta.url)), 'utf-8'),
@@ -48,5 +48,10 @@ assert.equal(wrong.last.ok, false)
 assert.equal(wrong.score, 0)
 assert.equal(wrong.timeline.length, 1, 'fel lagt kort ska inte hamna i tidslinjen')
 assert.equal(wrong.deck.length, 0)
+assert.equal(wrong.last.right, 1, 'facit ska peka på platsen efter 1900')
+assert.deepEqual(wrong.results, [false])
+
+// Facit hamnar alltid på en plats där kortet passar, även vid samma år.
+for (const y of [1850, 1900, 1925, 1950, 2000]) assert.ok(fits(line, card(y), rightIndex(line, card(y))))
 
 console.log('spelet: alla kontroller OK')

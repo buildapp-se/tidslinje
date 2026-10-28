@@ -33,16 +33,26 @@ export function fits(timeline, card, index) {
 // Ett kort ligger öppet från början, resten dras ett i taget.
 export function newGame(events, random = Math.random) {
   const [first, ...deck] = shuffle(playable(events), random).slice(0, ROUNDS + 1)
-  return { timeline: [first], deck, score: 0, last: null }
+  return { timeline: [first], deck, score: 0, results: [], last: null }
+}
+
+// Första platsen där kortet passar. Det finns alltid en, eftersom tidslinjen
+// är sorterad.
+export function rightIndex(timeline, card) {
+  const i = timeline.findIndex((e) => card.year < e.year)
+  return i === -1 ? timeline.length : i
 }
 
 // Som i Hitster: rätt lagt kort stannar i tidslinjen, fel lagt kort läggs åt
-// sidan. `last` bär facit till återkopplingen.
+// sidan. `last` bär facit till återkopplingen: `index` är var kortet lades,
+// `right` var det hörde hemma (samma plats när det var rätt).
 export function place(game, index) {
   const [card, ...deck] = game.deck
   const ok = fits(game.timeline, card, index)
   const timeline = ok
     ? [...game.timeline.slice(0, index), card, ...game.timeline.slice(index)]
     : game.timeline
-  return { timeline, deck, score: game.score + (ok ? 1 : 0), last: { card, ok } }
+  const right = ok ? index : rightIndex(game.timeline, card)
+  const results = [...(game.results ?? []), ok]
+  return { timeline, deck, score: game.score + (ok ? 1 : 0), results, last: { card, ok, index, right } }
 }

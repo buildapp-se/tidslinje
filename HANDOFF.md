@@ -4,10 +4,20 @@ status: active
 currentGoal: Tidslinjen är komplett nog att användas i kurs, 77 händelser varav 59 med bild, alla med källa
 nextAction: Ja eller nej till batchen 2026-09-08 står kvar. Sedan bild till de tolv händelser som står spärrade i NO_AUTO_IMAGE som nya
 blockers: []
-reviewedAt: 2026-10-17
+reviewedAt: 2026-10-28
 ---
 
 # Handoff: tidslinje
+
+## 2026-10-28: spelet fick dra och släpp och tydligare facit
+
+Patrik tyckte spelet var otydligt. Commits `748cc85` och `7d34902`: kortet dras
+till sin plats (mus och touch), en släppmarkör och en levande rad i panelen visar
+målet, sidan rullar vid kanten. Rätt ger grön panel, fel ger röd panel med
+förklaring plus markörerna "Du lade den här" och "Hit hörde den". En agent
+granskade i tre rundor vid 1280 px, Pixel 7, iPhone 13 och SE med CDP-touch,
+tangentbord och reducerad rörelse. `npm test` och bygget gröna, inga
+konsolfel. Inte testat: riktig iPhone med Safari (touch och avstavning).
 
 ## 2026-10-17: beroenden uppdaterade, ej pushat eller deployat
 

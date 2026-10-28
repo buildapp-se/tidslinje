@@ -26,6 +26,10 @@ en artikel.
   Hitster): en händelse visas utan årtal och ska läggas på rätt plats i en växande
   tidslinje. Tio kort per omgång, rätt kort stannar, fel kort läggs åt sidan, samma
   år räknas som rätt åt båda håll. Händelser med årtalet i titeln spelas inte.
+  Kortet dras med Pointer Events (mus och touch, inget bibliotek) eller läggs
+  via tryckplatser, som också bär tangentbord och skärmläsare. Efter varje kort
+  visas facit: vid fel både var kortet lades och var det hörde hemma (`last.index`
+  och `last.right` från `place()`).
   Reglerna är ren JavaScript som `search.js` och körs av `node scripts/test_game.js`.
   `App.jsx` växlar mellan tidslinje och spel med `useState`, utan URL.
 - `scripts/download-images.py` hämtar och konverterar bilder samt skriver

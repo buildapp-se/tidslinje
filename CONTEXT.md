@@ -165,7 +165,7 @@ migreringar. Arbetslistan står i `BACKLOG.md` och läget i `HANDOFF.md`.
 ## Audits
 Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; conventions in elwyn-dash `docs/security.md`.
 
-- OWASP Top 10: 2026-07-25, clean, no backend
+- OWASP Top 10: 2026-10-30, warn, code review (Mistral Large, medium and high checked by Claude), no live probe; 0 high, 1 medium: no CSP in repo, zone CSP lacks script-src (shared zone rule)
 - Headers: 2026-09-16, pass, 6 of 6 on buildapp.se via a host-scoped Transform Rule on the zone, measured after the change
 - Search Console: 2026-09-15, warn, unknown to Google, now in submitted buildapp.se sitemap
 - TLS: 2026-09-16, pass, SSL Labs A+ on buildapp.se, TLS 1.2 minimum and HSTS since today

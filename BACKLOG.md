@@ -31,6 +31,13 @@
       bara i `events.json`, eftersom `imageCredit` skrivs över helt vid en ny
       nedladdning.
 
+- [x] Modalen håller fokus (fokusfälla) och lämnar tillbaka det till kortet,
+      stängknappen och länkarna har 44 px tryckyta (2026-11-04).
+- [x] CSP som `<meta>` i bygget och på integritetssidan, med Cloudflares
+      beacon tillåten (2026-11-04). Löser OWASP-fyndet "no CSP in repo".
+- [x] Integritetssidan granskad med axe 2026-11-04: kontrast, länknamn och
+      tryckytor rättade, 0 fel.
+
 ## Bilder
 
 - [x] Bild till `1902-saf` (SAF:s hus på Blasieholmen, tidigt 1900-tal),

@@ -49,6 +49,10 @@ en artikel.
 - `vite.config.js` har en `base` som måste matcha reponamnet, annars bryts alla
   relativa sökvägar i produktion.
 - Ingen backend. All data är statisk JSON i bygget.
+- Innehållspolicyn (CSP) ligger som `<meta>`: i `vite.config.js` för appen
+  (bara vid bygge) och direkt i `public/integritet.html`. En ny extern resurs,
+  till exempel ett typsnitt eller en bild från en annan värd än https, kräver
+  att policyn utökas. Cloudflares beacon är tillåten där.
 
 ## Epoker
 
@@ -132,9 +136,8 @@ kontexten och behöver inte grunderna förklarade.
   så ett strängregister vore ett extra led utan mottagare.
 - Epokerna är tre och namngivna, vilket styr både gruppering och layout.
 - Alternerande vänster och höger på desktop, men allt till höger på mobil.
-- Emoji används som ikoner för podcast, video och wiki. SVG är ett senare val om
-  emojin visar sig otillräcklig. Wiki-ikonen är dock redan egen SVG i
-  `src/components/icons.jsx`.
+- Ikonerna för podcast, video och wiki är egna SVG i `src/components/icons.jsx`
+  (emojin byttes 2026-09-08, se BACKLOG).
 - Inga UI-bibliotek utöver Tailwind.
 - `persons`-fältet finns i JSON men ingen personsida byggs.
 - Sökningen matchar år, titel, kort text, lång text och taggar. Den normaliserar
@@ -175,7 +178,7 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - npm audit: 2026-10-27, pass, 0 in production, 0 in the dev chain
 - Secrets: 2026-09-24, pass, gitleaks 0 findings in 43 commits
 - Actions: 2026-09-24, n/a, no GitHub Actions workflows
-- WCAG 2.2 AA: 2026-09-24, warn, axe 4.13.0 0 violations on buildapp.se/tidslinje (mobile, one page); manual keyboard pass not done
+- WCAG 2.2 AA: 2026-11-04, pass, axe 4.14.0 0 violations on local build (timeline, modal, game, integritet.html; 390 and 1280 px), keyboard pass of the modal done; not run against live
 - Headers (automated): 2026-10-27, pass, 6 of 6 on buildapp.se/tidslinje, Observatory B+ on buildapp.se
 - Secrets (automated): 2026-10-06, pass, 2 targets; 0 failed, 0 blocked; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a/tidslinje.json
 - Actions (automated): 2026-10-06, n/a, no GitHub Actions workflows; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a/tidslinje.json

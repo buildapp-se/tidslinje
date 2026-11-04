@@ -185,3 +185,4 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - Database: 2026-10-25, none, static site
 - ZAP baseline: 2026-10-27, n/a, static site on GitHub Pages with no server, cookies or forms; headers, TLS and markup are covered by their own columns, so a passive ZAP scan would repeat them
 - Dependabot: 2026-10-29, pass, 0 open alerts
+- Mutation: 2026-11-04, pass, Stryker 90,68 % (before 75,42 %) on src/search.js and src/game.js, 11 surviving mutants reviewed, all equivalent; download-images.py is Python and not covered by Stryker

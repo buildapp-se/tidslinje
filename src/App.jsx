@@ -12,7 +12,11 @@ export default function App() {
       {/* I spelet krymper luften runt rubriken, så att kortet och tidslinjen
           syns direkt på en mobilskärm. */}
       <header className={`px-4 text-center ${playing ? 'pt-6 pb-2 sm:py-10' : 'py-10'}`}>
-        <Logo className="h-7 sm:h-9 w-auto mx-auto" />
+        {/* Loggan är sidans namn och därför dess h1: utan den saknade sidan
+            huvudrubrik, och epokernas h2 hängde i luften för skärmläsare. */}
+        <h1 className="m-0">
+          <Logo className="h-7 sm:h-9 w-auto mx-auto" />
+        </h1>
         <p className="mt-3 text-ink/70 text-sm">Klass, kamp och kompromiss: från 1846 till i dag</p>
         <button
           type="button"

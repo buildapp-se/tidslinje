@@ -4,11 +4,40 @@ status: active
 currentGoal: Tidslinjen är komplett nog att användas i kurs, 77 händelser varav 59 med bild, alla med källa
 nextAction: Ja eller nej till batchen 2026-09-08 står kvar. Sedan bild till de tolv händelser som står spärrade i NO_AUTO_IMAGE som nya
 blockers: []
-reviewedAt: 2026-11-02
+reviewedAt: 2026-11-04
 ---
 **2026-11-02:** kontaktadressen är nu `kontakt@buildapp.se` (förut `kontakt@orgutveckling.se`). Integritetstexten version 1.2.
 
 # Handoff: tidslinje
+
+## 2026-11-04: förbättringsrunda, grenen `claude/forbattringar-2026-11-04`, PR #1
+
+Bara förbättringar, inga nya funktioner. Inte mergat, inte deployat.
+
+- **Modalen** (`Modal.jsx`): fokusfälla (Tab och Skift+Tab stannar i dialogen),
+  fokus tillbaka till kortet som öppnade den, stängknappen 44x44 px (var 17x20)
+  och länkraden 44 px hög.
+- **h1** (`App.jsx`): loggan ligger i en `h1`, sidan saknade huvudrubrik.
+  Pixelidentiskt före och efter.
+- **CSP** (`vite.config.js`, `integritet.html`): `<meta http-equiv>` med
+  `script-src 'self'` plus Cloudflares beacon, läggs bara in vid bygge eftersom
+  dev-servern kör inline-skript. Provad mot live med utbytt HTML: beacon och
+  `/cdn-cgi/rum` fungerar, noll överträdelser. Ändrar Cloudflare var beacon
+  hämtas måste policyn följa med.
+- **Integritetssidan**: fyra texter under 4,5:1 mörkade till ink/70, loggans
+  `aria-label` borttagen (stämde inte med synlig text), sidfotslänkar 44 px.
+
+**Redan gjort sedan tidigare.** Dubbletterna av `imgSrc()` och ikonerna låg
+redan i `src/shared.jsx`, och frågan om hårdkodade strängar är redan avgjord i
+`CONTEXT.md`. Ingen bild saknas på disk: 59 bildfiler, alla finns, inga
+föräldralösa.
+
+**Verifierat.** `npm test` grönt (77 händelser), `npm run build` och
+`build:gh` gröna. axe-core 4.14.0 via Playwright, 390 och 1280 px: tidslinje,
+modal, spel och integritetssida 0 fel efter (före: `page-has-heading-one` på
+tidslinje och spel, kontrast och länknamn på integritetssidan). En hel
+spelomgång med dra och släpp under CSP:n, ingen vågrät rullning, noll
+konsolfel. **Inte verifierat:** riktig skärmläsare, Safari och Firefox.
 
 ## 2026-10-28: spelet fick dra och släpp och tydligare facit
 

@@ -64,4 +64,29 @@ assert.equal(matchHint(val1932, '', shownOnCard), null)
 const ad = events.find((e) => e.id === '1929-arbetsdomstolen')
 assert.equal(matchHint(ad, 'rattsvasende', `${ad.year} ${ad.title} ${ad.short}`), 'Ämne: rättsväsende')
 
+// Sökningen måste smala av, inte bara hitta. Utan de här raderna gick det att
+// låta varje sökning visa allt utan att något test föll (mutationstest 2026-11-04).
+const strejk1909 = filterEvents(events, { query: 'strejk 1909' })
+assert.ok(strejk.size < events.length, '"strejk" ska inte ge allt')
+assert.ok(strejk1909.length > 0 && strejk1909.length < strejk.size, '"strejk 1909" ska ge färre än "strejk"')
+assert.equal(filterEvents(events, { query: 'qqqzz' }).length, 0)
+assert.deepEqual(ids(filterEvents(events, { query: 'rattsvasende' })), ['1929-arbetsdomstolen'], 'träff bara i taggarna')
+
+// Konstruerade händelser för det som datat inte tvingar fram.
+const fake = (extra) => ({ id: 'x', year: 1900, title: 'Ab', short: 'Cd', long: '', country: 'sverige', ...extra })
+assert.equal(filterEvents([fake()], { query: 'bc' }).length, 0, 'fälten får inte flyta ihop till ett ord')
+assert.equal(filterEvents([fake()], { query: 'ab cd' }).length, 1)
+assert.equal(filterEvents([fake({ tags: undefined })], { query: 'ab' }).length, 1, 'händelse utan taggar')
+
+// Ledtråden är hela meningen med sitt skiljetecken, trimmad, och den första
+// mening som innehåller något av de saknade orden.
+const lang = fake({ long: 'Först kom lockouten. Sedan strejken?! Till sist avtalet.', tags: ['lön', 'avtal'] })
+assert.equal(matchHint(lang, 'strejken', 'Ab Cd'), 'Sedan strejken?!')
+assert.equal(matchHint(lang, 'avtalet lockouten', 'Ab Cd'), 'Först kom lockouten.')
+assert.equal(matchHint(lang, 'lon', 'Ab Cd'), 'Ämne: lön')
+assert.equal(matchHint(lang, 'ab lon', 'Ab Cd'), 'Ämne: lön', 'ordet som syns på kortet räknas inte')
+assert.equal(matchHint(fake({ long: 'Skotten i Ådalen' }), 'adalen', 'Ab Cd'), 'Skotten i Ådalen', 'långtext utan skiljetecken')
+assert.equal(matchHint(fake({ long: 'Inget här.' }), 'saknas', 'Ab Cd'), null)
+assert.equal(matchHint(fake({ tags: ['lön', 'avtal'] }), 'lon avtal', 'Ab Cd'), 'Ämne: lön', 'en tagg räcker för ett av orden')
+
 console.log(`alla kontroller OK (${events.length} händelser)`)

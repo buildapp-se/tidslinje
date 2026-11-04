@@ -23,3 +23,7 @@ AGENTS.md
 .ignore
 .mcp.json
 .vscode/
+
+# Stryker: rapporter och sandlåda från mutationstestet, regenererbara.
+reports/
+.stryker-tmp/

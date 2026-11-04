@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "testRunner": "command",
+  "commandRunner": { "command": "node scripts/test_search.js && node scripts/test_game.js" },
+  "mutate": ["src/game.js", "src/search.js"],
+  "ignorePatterns": ["dist", "public", "graft", ".repowise"],
+  "reporters": ["clear-text", "progress", "json", "html"],
+  "coverageAnalysis": "off",
+  "concurrency": 4
+}

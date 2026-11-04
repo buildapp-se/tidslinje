@@ -12,7 +12,7 @@ reviewedAt: 2026-11-04
 
 ## 2026-11-04: förbättringsrunda, grenen `claude/forbattringar-2026-11-04`, PR #1
 
-Bara förbättringar, inga nya funktioner. Inte mergat, inte deployat.
+Bara förbättringar, inga nya funktioner. Mergad 2026-11-04.
 
 - **Modalen** (`Modal.jsx`): fokusfälla (Tab och Skift+Tab stannar i dialogen),
   fokus tillbaka till kortet som öppnade den, stängknappen 44x44 px (var 17x20)
@@ -38,6 +38,17 @@ modal, spel och integritetssida 0 fel efter (före: `page-has-heading-one` på
 tidslinje och spel, kontrast och länknamn på integritetssidan). En hel
 spelomgång med dra och släpp under CSP:n, ingen vågrät rullning, noll
 konsolfel. **Inte verifierat:** riktig skärmläsare, Safari och Firefox.
+
+## 2026-11-04: mutationstest
+
+Stryker (command runner, `node scripts/test_search.js && node scripts/test_game.js`)
+på `src/search.js` och `src/game.js`: 75,42 % före, 90,68 % efter. Viktigast:
+sökningen kunde sluta filtrera helt (varje sökning visar allt) utan att något
+test föll, och `shuffle` kunde sluta blanda. Nu testat, plus `matchHint` på
+konstruerade händelser och facit vid samma år. De 11 kvarvarande är ekvivalenta
+(se PR-texten). Bara tester, ingen bugg. Kör om med
+`npm i --no-save @stryker-mutator/core && npx stryker run`, rapporten i
+`reports/` är ignorerad. Gren `claude/mutation-2026-11-04`, PR #2, mergad 2026-11-04.
 
 ## 2026-10-28: spelet fick dra och släpp och tydligare facit
 

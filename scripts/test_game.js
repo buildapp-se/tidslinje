@@ -54,4 +54,21 @@ assert.deepEqual(wrong.results, [false])
 // Facit hamnar alltid på en plats där kortet passar, även vid samma år.
 for (const y of [1850, 1900, 1925, 1950, 2000]) assert.ok(fits(line, card(y), rightIndex(line, card(y))))
 
+// Blandningen blandar, och följer `random` exakt (mutationstest 2026-11-04).
+assert.deepEqual(shuffle([1, 2, 3, 4], () => 0.5), [1, 4, 2, 3])
+assert.deepEqual(shuffle([1, 2, 3, 4], () => 0), [2, 3, 4, 1])
+assert.deepEqual(shuffle([], () => 0), [])
+const input = [1, 2, 3]
+shuffle(input, () => 0)
+assert.deepEqual(input, [1, 2, 3], 'listan som skickas in rörs inte')
+const fresh = newGame(events, () => 0.5)
+assert.deepEqual(fresh.results, [])
+assert.deepEqual([fresh.score, fresh.last], [0, null])
+assert.deepEqual([fresh.timeline[0], ...fresh.deck], shuffle(playable(events), () => 0.5).slice(0, ROUNDS + 1))
+
+// Facit vid samma år pekar efter korten med samma år, inte före.
+assert.equal(rightIndex(line, card(1900)), 1)
+assert.equal(rightIndex(line, card(1950)), 2)
+assert.equal(rightIndex(line, card(1800)), 0)
+
 console.log('spelet: alla kontroller OK')

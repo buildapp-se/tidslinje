@@ -36,6 +36,47 @@ en artikel.
   `image` och `imageCredit` i `events.json`. `scripts/test_helpers.py` kontrollerar
   skriptets textparsning och datafilens invarianter.
 
+```mermaid
+graph LR
+  USER[Webbläsare]
+
+  subgraph LOCAL["Lokalt"]
+    DL[scripts/download-images.py]
+    DATA[src/data/events.json]
+    BUILD[vite build --mode gh]
+  end
+
+  SRC[Wikimedia Commons och DigitaltMuseum]
+
+  subgraph WEB["buildapp.se/tidslinje"]
+    APP[React-app]
+    TL[Timeline]
+    GAME[Lägg kortet rätt]
+    IMG[public/images]
+  end
+
+  LINKS[Wikipedia, LO Play, poddar]
+
+  SRC --> DL
+  DL --> DATA
+  DL --> IMG
+  DATA --> BUILD
+  BUILD -->|gh-pages-grenen| APP
+  USER --> APP
+  APP --> TL
+  APP --> GAME
+  TL --> LINKS
+```
+
+## Stack
+
+- Frontend: React 19, Vite, Tailwind 4
+- Kod: JavaScript (JSX), Python för bildskriptet
+- Data: `src/data/events.json`, ingen backend
+- Tester: `npm test` (node-skript med assert och `scripts/test_helpers.py`), inget testramverk
+- Deploy: `npm run deploy` bygger och pushar `dist/` till grenen `gh-pages`; `git push` driftsätter inget
+- Hosting: GitHub Pages, buildapp.se/tidslinje
+
 ## Constraints
 
 - Händelsens `id` måste vara ren ASCII. Bildfilen döps efter id:t, och å, ä och ö

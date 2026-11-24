@@ -92,6 +92,9 @@ export default function Game() {
   const items = useRef([])
   const nextButton = useRef(null)
   const handTitle = useRef(null)
+  const result = useRef(null)
+  // Sant när spelaren har gjort något. Fokus flyttas bara då, inte vid start.
+  const touched = useRef(false)
 
   const { timeline, deck, score, results, last } = game
   const current = revealing ? null : deck[0]
@@ -114,6 +117,7 @@ export default function Game() {
   }
 
   function commit(index) {
+    touched.current = true
     const next = place(game, index)
     setGame(next)
     setRevealing(true)
@@ -190,11 +194,13 @@ export default function Game() {
     scrollBy({ top: dy, behavior: still ? 'auto' : 'smooth' })
   }, [revealing])
 
-  // Nästa kort: fokus på kortets titel, så att skärmläsaren läser det och Tab
-  // går vidare till platserna. Inte vid start, då ska sidan inte hoppa.
+  // Nästa kort (även efter "Spela igen"): fokus på kortets titel, så att
+  // skärmläsaren läser det och Tab går vidare till platserna. Efter sista kortet
+  // på resultatet, annars hamnade fokus på body när knappen försvann. Inte vid
+  // start, då ska sidan inte hoppa.
   useEffect(() => {
-    if (!revealing && played > 0) handTitle.current?.focus({ preventScroll: true })
-  }, [revealing, played])
+    if (!revealing && touched.current) (handTitle.current ?? result.current)?.focus({ preventScroll: true })
+  }, [revealing, game])
 
   function restart() {
     setGame(newGame(events))
@@ -341,7 +347,7 @@ export default function Game() {
         )}
 
         {finished && (
-          <div className="rounded-2xl bg-white p-6 text-center shadow-lg ring-1 ring-black/5 motion-safe:animate-pop">
+          <div ref={result} tabIndex={-1} className="rounded-2xl bg-white p-6 text-center shadow-lg ring-1 ring-black/5 outline-none motion-safe:animate-pop">
             <p className="text-4xl font-bold text-accent tabular-nums">
               {score}/{ROUNDS}
             </p>

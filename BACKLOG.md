@@ -140,6 +140,13 @@
       eller kort text visar kortet den mening ur den långa texten som innehåller
       det, annars taggen (`matchHint` i `src/search.js`, kontrollerad i
       `test_search.js`). Byggt 2026-09-08.
+- [x] Sökningen på korta förkortningar (2026-11-24): `LO` gav 43 av 77
+      händelser eftersom ordet söktes som delsträng (lockout, lön, blockad),
+      `AD` 69. Nu är ett eller två tecken ett helt ord, tre tecken en ordbörjan.
+      I webbläsaren mot `vite preview`: `lo` 14, `ad` 1, `eu` 2, `las` 3, `str`
+      21, `strejk` 18; träffledtråden för `lo` pekar på meningar med LO. Ett
+      sökfält med bara blanksteg visar inte längre räknaren "77 av 77".
+      Kontroller i `test_search.js`, som faller utan rättningen.
 
 ## Städning
 

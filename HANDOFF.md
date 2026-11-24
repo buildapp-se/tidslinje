@@ -12,6 +12,22 @@ reviewedAt: 2026-11-24
 
 # Handoff: tidslinje
 
+## 2026-11-24: funktionspass, grenen `feat/2026-11-24` (worktree `C:\dev\_wt\tidslinje-1124f`)
+
+Inga öppna P0 till P2 i backloggen; det som står öppet är bilder (urval och
+licens, Patriks) och poddar redan sökta i dag. Letade i stället användarbuggar i
+appen mot `vite preview`.
+
+- **Sökningen på förkortningar** (`src/search.js`, `has()`): `LO` gav 43 av 77,
+  `AD` 69, eftersom korta ord söktes som delsträng. Nu helt ord för ett eller två
+  tecken, ordbörjan för tre, delsträng för fyra och fler och för siffror. Samma
+  regel i träffledtråden. Uppmätt i webbläsaren: `lo` 14, `ad` 1, `las` 3, `str`
+  21, `strejk` 18. Val taget åt Patrik: gränserna två och tre tecken.
+- **Blanksteg i sökfältet** visade räknaren "77 av 77" (`Timeline.jsx`, nu `trim()`).
+
+Verifierat: `npm test` grönt (de nya kontrollerna faller utan rättningen),
+`npm run build` grönt, noll konsolmeddelanden.
+
 ## 2026-11-24: djupgenomgång, grenen `deep/2026-11-24` (worktree `C:\dev\tidslinje-deep-1124`)
 
 Klar. Pushat till `main` och driftsatt med `npm run deploy`.

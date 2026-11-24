@@ -34,7 +34,10 @@ export function matchHint(event, query, shown) {
   const visible = normalize(shown)
   const missing = terms.filter((term) => !has(visible, term))
   if (missing.length === 0) return null
-  const sentences = String(event.long).match(/[^.!?]+[.!?]+/g) ?? [event.long]
+  // Meningsgräns = skiljetecken, blanksteg och versal eller siffra. Så delar
+  // varken "t.ex. driftsinskränkningar" eller Joe Hills citat med utropstecken
+  // meningen mitt itu.
+  const sentences = String(event.long).split(/(?<=[.!?])\s+(?=[\p{Lu}\d])/u)
   const sentence = sentences.find((s) => missing.some((term) => has(normalize(s), term)))
   if (sentence) return sentence.trim()
   const tag = (event.tags ?? []).find((t) => missing.some((term) => has(normalize(t), term)))

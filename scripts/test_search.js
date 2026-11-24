@@ -105,4 +105,13 @@ assert.ok(ids(filterEvents(events, { query: 'LO' })).includes('1898-lo'))
 assert.ok(filterEvents(events, { query: 'LO' }).length < 20, '"LO" ska inte ge hälften av tidslinjen')
 assert.equal(matchHint(fake({ long: 'En lockout. LO svarade.' }), 'lo', 'Ab Cd'), 'LO svarade.')
 
+// "t.ex." mitt i en mening är ingen meningsgräns. Förut visade MBL-kortet på
+// "outsourcing" bara svansen "driftsinskränkningar, outsourcing eller ...".
+assert.equal(
+  matchHint(fake({ long: 'Förhandla före t.ex. outsourcing. Sedan mer.' }), 'outsourcing', 'Ab Cd'),
+  'Förhandla före t.ex. outsourcing.',
+)
+const mbl = events.find((e) => e.id === '1976-mbl')
+assert.ok(matchHint(mbl, 'outsourcing', `${mbl.year} ${mbl.title} ${mbl.short}`).startsWith('Lagen om'))
+
 console.log(`alla kontroller OK (${events.length} händelser)`)

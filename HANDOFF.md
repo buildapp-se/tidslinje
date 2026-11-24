@@ -23,6 +23,12 @@ Klar. Pushat till `main` och driftsatt med `npm run deploy`.
   `src/game.js` så att de går att testa utan React, med kontroller i
   `scripts/test_game.js`. Stryker 92,62 % (90,68 %), 138 av 149 dödade; de 11
   kvar är samma ekvivalenta som 2026-11-04. Ingen bugg hittad.
+- **UX-granskning** (ux-audit-skriptet med `--interact` mot `vite preview --mode gh`,
+  tidslinjen och `integritet.html`): 5 av 6 före, Fitts varnade för loggans länk
+  på integritetssidan (31 px). Rättad, 6 av 6 efter. Skärmbildsgranskning vid 390
+  och 1440 px av start, sökning, tomläge, modal, facit och slutresultat: alla
+  lagar ok (Goal-Gradient: "Kort 1 av 10" och prickar; Peak-End: grön/röd panel
+  och slutpoäng; tomläget har "Rensa sökning och filter"). Noll sidfel.
 - **Kvar åt Patrik**: bilderna till de tolv spärrade händelserna (urval och
   licensbedömning per bild, och nextAction väntar på hans ja till batchen 2026-09-08).
 

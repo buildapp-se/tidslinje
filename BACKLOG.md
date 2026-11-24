@@ -167,3 +167,7 @@ Fynd från cockpitens granskningskolumner (Lighthouse mobil, W3C, UX-skript, hea
 
 - [x] `[P2]` (rättad 2026-09-16: `text-ink/60` till `/70`, `text-gray-400` till `gray-600`; Lighthouse a11y 100 live) Lighthouse: färgkontrast under 4,5:1 någonstans på startsidan (a11y 96). Kör om Lighthouse i DevTools för att se vilka element.
 - [x] `[P3]` (rättad 2026-09-16, `min-h-[44px]`, 0 ytor under 44 px live) UX, Fitts: filterchipsen Alla, Sverige, Världen är 34 px och sökfältet 38 px, konventionen är 44 px.
+
+## Granskning 2026-11-24
+
+- [x] `[P3]` (rättad 2026-11-24: `header>a` med `min-height:44px` i `public/integritet.html`; UX-skriptet 6 av 6 efter, mätt live) UX, Fitts: loggans länk överst på integritetssidan var 31 px hög vid 390 px bredd.

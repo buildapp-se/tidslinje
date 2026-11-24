@@ -215,7 +215,7 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - TLS: 2026-09-16, pass, SSL Labs A+ on buildapp.se, TLS 1.2 minimum and HSTS since today
 - Lighthouse: 2026-09-16, pass, a11y 100 after the contrast fix, best practices 100, SEO 100 (mobile, no perf)
 - Markup: 2026-09-16, pass, W3C 0 errors, 15 warnings, 0 broken links
-- UX: 2026-09-16, pass, 0 targets under 44 px after the fix (chips, search, footer link), 5 of 6 script checks pass, no --interact
+- UX: 2026-11-24, pass, 6 of 6 script checks pass with --interact on timeline and integritet.html after the fix (integritet.html logo link was 31 px), screenshot review of timeline, search, empty state, modal and a whole game round at 390 and 1440 px: no findings (2026-09-16: pass, 5 of 6)
 - npm audit: 2026-11-24, pass, 0 in production, 0 in the dev chain (2026-10-27: pass, 0; 2026-11-17 had 9 high in picomatch, advisory no longer matches)
 - Secrets: 2026-09-24, pass, gitleaks 0 findings in 43 commits
 - Actions: 2026-09-24, n/a, no GitHub Actions workflows

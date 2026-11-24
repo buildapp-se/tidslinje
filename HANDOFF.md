@@ -12,6 +12,28 @@ reviewedAt: 2026-11-24
 
 # Handoff: tidslinje
 
+## 2026-11-24: buggjakt, grenen `hunt/2026-11-24` (worktree `C:\dev\_wt\tidslinje-1124h`)
+
+Klar. Gick användarflödena med Playwright vid 390 och 1440 px mot `vite preview
+--mode gh`: första besök, sökning (tomt, 300 tecken, å/ä/ö, decimalkomma, 0,
+negativt, `<script>`), alla 77 modaler, tangentbord, tillbakaknapp, offline,
+en hel spelomgång och integritetssidan. Två buggar, båda rättade:
+
+- **Sökledtråden visade halva meningar** (`src/search.js`, `matchHint`):
+  "t.ex." räknades som meningsslut, så `outsourcing` gav bara svansen av
+  MBL-meningen. Gränsen kräver nu versal eller siffra efter skiljetecknet.
+  Kontroll i `test_search.js` som föll före rättningen.
+- **Spelet tappade tangentbordsfokus** (`Game.jsx`) till `body` efter "Se
+  resultatet" och efter "Spela igen". Nu resultatrutan respektive kortets titel.
+
+Verifierat: `npm test` grönt, `npm run build:gh` grönt, ett verdiktskript
+(Playwright, hel omgång med bara tangentbord plus ledtråden) föll före och går
+igenom efter, lokalt och live på buildapp.se/tidslinje efter `npm run deploy`.
+Inga sidfel, ingen vågrät rullning, inga trasiga bilder i någon av 77 modaler.
+
+**Kvar åt Patrik:** tillbakaknappen med öppen modal (och i spelet) lämnar
+sajten, se BACKLOG P3. Rör beslutet att inget läge har egen URL.
+
 ## 2026-11-24: funktionspass, grenen `feat/2026-11-24` (worktree `C:\dev\_wt\tidslinje-1124f`)
 
 Inga öppna P0 till P2 i backloggen; det som står öppet är bilder (urval och

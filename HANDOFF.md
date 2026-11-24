@@ -4,13 +4,27 @@ status: active
 currentGoal: Tidslinjen är komplett nog att användas i kurs, 77 händelser varav 59 med bild, alla med källa
 nextAction: Ja eller nej till batchen 2026-09-08 står kvar. Sedan bild till de tolv händelser som står spärrade i NO_AUTO_IMAGE som nya
 blockers: []
-reviewedAt: 2026-11-17
+reviewedAt: 2026-11-24
 ---
 **2026-11-17:** uppdateringsrundan: `npm update` inom intervallen (vite 8.3.8, plugin-react 6.3, tailwind 4.3.5), pushat till main, sajten omdeployad. `npm audit` 9 high före och efter: alla är picomatch <=4.0.7 (ingen fixad version finns) bakom vite och gh-pages, se BACKLOG. Inga majors utestående.
 
 **2026-11-02:** kontaktadressen är nu `kontakt@buildapp.se` (förut `kontakt@orgutveckling.se`). Integritetstexten version 1.2.
 
 # Handoff: tidslinje
+
+## 2026-11-24: djupgenomgång, grenen `deep/2026-11-24` (worktree `C:\dev\tidslinje-deep-1124`)
+
+Klar. Pushat till `main` och driftsatt med `npm run deploy`.
+
+- **Poddavsnitt** till `1955-sjukforsakring`, `2003-kommunalstrejken` och
+  `1995-eu` (detaljer i BACKLOG under Innehåll). Länkarna svarar 200.
+- **npm audit 0**: picomatch-advisoryn träffar inte längre, ingen ändring behövdes.
+- **Mutationstest**: `slotLabel` och `verdict` flyttade från `Game.jsx` till
+  `src/game.js` så att de går att testa utan React, med kontroller i
+  `scripts/test_game.js`. Stryker 92,62 % (90,68 %), 138 av 149 dödade; de 11
+  kvar är samma ekvivalenta som 2026-11-04. Ingen bugg hittad.
+- **Kvar åt Patrik**: bilderna till de tolv spärrade händelserna (urval och
+  licensbedömning per bild, och nextAction väntar på hans ja till batchen 2026-09-08).
 
 ## 2026-11-04: förbättringsrunda, grenen `claude/forbattringar-2026-11-04`, PR #1
 

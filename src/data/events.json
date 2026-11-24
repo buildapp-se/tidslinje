@@ -1194,6 +1194,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Gunnar_Str%C3%A4ng"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/vi-bygger-landet/episodes/67926ba6850b1ddbd3104142"
       }
     ]
   },
@@ -1913,6 +1917,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Folkomr%C3%B6stningen_om_EU-medlemskap_i_Sverige_1994"
+      },
+      {
+        "type": "podcast",
+        "url": "https://www.sverigesradio.se/artikel/6016900"
       }
     ]
   },
@@ -1979,6 +1987,10 @@
       {
         "type": "wiki",
         "url": "https://sv.wikipedia.org/wiki/Kommunalstrejken_i_Sverige_2003"
+      },
+      {
+        "type": "podcast",
+        "url": "https://shows.acast.com/vi-bygger-landet/episodes/6554d5eff0fa320012c06435"
       }
     ]
   },

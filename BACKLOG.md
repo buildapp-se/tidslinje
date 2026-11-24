@@ -107,7 +107,15 @@
       2026-10-07.
 - [ ] Bild till sju av de åtta händelserna från 2026-10-06 (alla utom
       metallstrejken). De står i `NO_AUTO_IMAGE` tills någon valt bild för hand.
-- [ ] Poddavsnitt till de åtta händelserna från 2026-10-06: inte sökt.
+- [x] Poddavsnitt till de åtta händelserna från 2026-10-06 (sökt 2026-11-24:
+      alla avsnittstitlar i RSS-flödena för Vi bygger landet och Historiepodden,
+      plus webbsökning på Sveriges Radio). Tre träffar, beskrivningen läst och
+      länken svarar 200: `1955-sjukforsakring` (Vi bygger landet,
+      "Sjukförsäkringen: bjälken som brast", om reformen 1955 och vad som hände
+      sedan), `2003-kommunalstrejken` (Vi bygger landet, "Kommunalstrejken: när
+      välfärdarbetarna tog fajten") och `1995-eu` (SR Radiofynd, "Sverige i EU
+      20 år", om folkomröstningen 13 november 1994). Ingen träff för 1913,
+      metallstrejken 1945, 1973, 1979 och 2009.
 - [x] Bild till åtta av de 13 nya händelserna (2026-10-06), var och en öppnad
       och tittad på, licensen läst på källsidan: `1890-forsta-maj` (Heden i
       Göteborg, 1890-talet), `1899-akarpslagen` (Pehr Pehrsson, riksdagsporträtt
@@ -145,7 +153,7 @@ Fynd från den automatiska sviten (aifabriken `tools/audit-suite.ts`: headers, n
 
 - [x] `[P2]` (2026-10-06: `npm audit fix` utan `--force`, bara `package-lock.json`, 16 blev 11) npm audit: 16 advisories (12 high, 4 moderate), alla i byggkedjan, 0 i produktion. `npm audit fix` tar postcss, nanoid, browserslist och source-map-js; resten kräver major-hopp (vite 8, tailwindcss 4) och gh-pages har ingen framåtfix.
 - [x] `[P3]` (2026-10-17: vite 8, plugin-react 6, react 19 och tailwindcss 4 införda, 11 blev 5) npm audit, resten: 11 advisories kvar i byggkedjan efter audit fix.
-- [ ] `[P3]` (2026-11-17: nu 9 high, alla picomatch <=4.0.7, ReDoS GHSA-fc5q-39xc-vjpf, via vite och via gh-pages; ingen fixad picomatch finns, `npm audit fix` gör inget. Höj när picomatch 4.0.8 släpps.) npm audit 2026-10-17: 5 high kvar, alla en kedja `gh-pages` > `globby` > `fast-glob` > `micromatch` > `braces` (DoS via nästlade mönster). `braces` har ingen fixad version, enda vägen är nedgradering till gh-pages 6.1.1, som inte gjorts eftersom deployen inte kan provas utan att deploya. 0 i produktion, når inte besökaren.
+- [x] `[P3]` (löst av sig själv 2026-11-24: `npm audit` 0 sårbarheter med oförändrad lockfil, picomatch fortfarande 4.0.7 och braces 3.0.3; senaste picomatch på npm är 4.0.7, så det är advisoryn som inte längre träffar, ingen kod eller beroende ändrad.) (2026-11-17: nu 9 high, alla picomatch <=4.0.7, ReDoS GHSA-fc5q-39xc-vjpf, via vite och via gh-pages; ingen fixad picomatch finns, `npm audit fix` gör inget. Höj när picomatch 4.0.8 släpps.) npm audit 2026-10-17: 5 high kvar, alla en kedja `gh-pages` > `globby` > `fast-glob` > `micromatch` > `braces` (DoS via nästlade mönster). `braces` har ingen fixad version, enda vägen är nedgradering till gh-pages 6.1.1, som inte gjorts eftersom deployen inte kan provas utan att deploya. 0 i produktion, når inte besökaren.
 - [x] `[P3]` (rättad 2026-10-06: `span` med `block` i `EventCard.jsx`, 0 otillåtna element i 69 kort, kortens mått oförändrade vid 390 och 1280 px. Driftsatt 2026-10-07, html-validate inte omkört mot live.) Markup: `<div>` och `<p>` inuti `<button>` i händelsekorten, 380 träffar (html-validate `element-permitted-content`). Byt till `span` eller gör kortet till något annat än en knapp.
 - [x] `[P3]` (mätt och rättad 2026-10-06: kontrast uträknad i Chromium för varje textstil i start, sökning, modal, tomläge och spel vid 390 och 1280 px. Tre låg under 4,5:1 och är mörkade: sökfältets platshållare 2,51 (`ink/40` till `/70`), träffräknaren 3,2 (`ink/50` till `/70`), sökledtråden 4,27 (`accent/80` till `accent`). Efter: 29 textstilar, 0 under gränsen. Inte mätt: hover-lägen och `integritet.html`. Driftsatt 2026-10-07.) WCAG: axe hittar 0 fel men kan inte avgöra kontrasten på 79 element. Manuell kontrastkontroll återstår.
 

@@ -26,7 +26,9 @@ appen mot `vite preview`.
 - **Blanksteg i sökfältet** visade räknaren "77 av 77" (`Timeline.jsx`, nu `trim()`).
 
 Verifierat: `npm test` grönt (de nya kontrollerna faller utan rättningen),
-`npm run build` grönt, noll konsolmeddelanden.
+`npm run build` grönt, noll konsolmeddelanden. Pushat till `main`, driftsatt
+med `npm run deploy` och mätt live på buildapp.se/tidslinje: `lo` 14, `las` 3,
+`strejk` 18, blanksteg ingen räknare.
 
 ## 2026-11-24: djupgenomgång, grenen `deep/2026-11-24` (worktree `C:\dev\tidslinje-deep-1124`)
 

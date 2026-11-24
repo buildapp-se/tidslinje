@@ -56,3 +56,22 @@ export function place(game, index) {
   const results = [...(game.results ?? []), ok]
   return { timeline, deck, score: game.score + (ok ? 1 : 0), results, last: { card, ok, index, right } }
 }
+
+// Etiketten säger var kortet hamnar, i klartext. Den är både knappens synliga
+// text och det skärmläsaren läser upp, så ingen aria-label behövs.
+export function slotLabel(timeline, index) {
+  const before = timeline[index - 1]
+  const after = timeline[index]
+  if (!before) return `Före ${after.year}`
+  if (!after) return `Efter ${before.year}`
+  if (before.year === after.year) return `Mellan ${before.year} och ${after.year} (samma år)`
+  return `Mellan ${before.year} och ${after.year}`
+}
+
+// Slutomdömet efter omgången.
+export function verdict(score) {
+  if (score === ROUNDS) return 'Fullpott! Du kan din historia.'
+  if (score >= 8) return 'Riktigt starkt.'
+  if (score >= 5) return 'Godkänt, och mer än halvvägs.'
+  return 'Tidslinjen är full av överraskningar. Ett varv till?'
+}

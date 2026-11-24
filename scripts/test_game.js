@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
-import { ROUNDS, playable, shuffle, fits, newGame, place, rightIndex } from '../src/game.js'
+import { ROUNDS, playable, shuffle, fits, newGame, place, rightIndex, slotLabel, verdict } from '../src/game.js'
 
 const events = JSON.parse(
   readFileSync(fileURLToPath(new URL('../src/data/events.json', import.meta.url)), 'utf-8'),
@@ -70,5 +70,22 @@ assert.deepEqual([fresh.timeline[0], ...fresh.deck], shuffle(playable(events), (
 assert.equal(rightIndex(line, card(1900)), 1)
 assert.equal(rightIndex(line, card(1950)), 2)
 assert.equal(rightIndex(line, card(1800)), 0)
+
+// Platsens etikett är knappens text och det skärmläsaren läser.
+assert.equal(slotLabel(line, 0), 'Före 1900')
+assert.equal(slotLabel(line, 1), 'Mellan 1900 och 1950')
+assert.equal(slotLabel(line, 2), 'Efter 1950')
+assert.equal(slotLabel([card(1919), card(1919)], 1), 'Mellan 1919 och 1919 (samma år)')
+assert.equal(slotLabel([card(1919)], 0), 'Före 1919')
+assert.equal(slotLabel([card(1919)], 1), 'Efter 1919')
+
+// Omdömet: gränserna 10, 8 och 5.
+assert.equal(verdict(ROUNDS), 'Fullpott! Du kan din historia.')
+assert.equal(verdict(9), 'Riktigt starkt.')
+assert.equal(verdict(8), 'Riktigt starkt.')
+assert.equal(verdict(7), 'Godkänt, och mer än halvvägs.')
+assert.equal(verdict(5), 'Godkänt, och mer än halvvägs.')
+assert.equal(verdict(4), 'Tidslinjen är full av överraskningar. Ett varv till?')
+assert.equal(verdict(0), 'Tidslinjen är full av överraskningar. Ett varv till?')
 
 console.log('spelet: alla kontroller OK')

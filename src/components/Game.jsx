@@ -1,18 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import events from '../data/events.json'
-import { ROUNDS, newGame, place } from '../game'
+import { ROUNDS, newGame, place, slotLabel, verdict } from '../game'
 import { imgSrc } from '../shared'
-
-// Etiketten säger var kortet hamnar, i klartext. Den är både knappens synliga
-// text och det skärmläsaren läser upp, så ingen aria-label behövs.
-function slotLabel(timeline, index) {
-  const before = timeline[index - 1]
-  const after = timeline[index]
-  if (!before) return `Före ${after.year}`
-  if (!after) return `Efter ${before.year}`
-  if (before.year === after.year) return `Mellan ${before.year} och ${after.year} (samma år)`
-  return `Mellan ${before.year} och ${after.year}`
-}
 
 // Så långt måste fingret röra sig innan ett tryck blir ett drag.
 const DRAG_THRESHOLD = 6
@@ -20,13 +9,6 @@ const DRAG_THRESHOLD = 6
 // den klistrade panelens underkant, eftersom panelen täcker toppen av sidan.
 const EDGE = 80
 const MAX_SPEED = 22
-
-function verdict(score) {
-  if (score === ROUNDS) return 'Fullpott! Du kan din historia.'
-  if (score >= 8) return 'Riktigt starkt.'
-  if (score >= 5) return 'Godkänt, och mer än halvvägs.'
-  return 'Tidslinjen är full av överraskningar. Ett varv till?'
-}
 
 // Tio prickar: grå för kvar, grön för rätt, röd för fel. På färgad panel:
 // fylld för rätt, ihålig för fel, så att de skiljs åt utan färg.

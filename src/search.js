@@ -10,6 +10,18 @@ function normalize(text) {
   return String(text).toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '')
 }
 
+// Ett sökord mot en normaliserad text. Korta bokstavsord är nästan alltid
+// förkortningar, och som delsträng träffar de allt: "lo" gav 43 av 77 (lockout,
+// lön, blockad), "ad" 69. Därför: ett eller två bokstäver måste vara ett helt ord
+// (LO, AD, EU), tre bokstäver en ordbörjan (LAS, SAF, men också "str" medan man
+// skriver "strejk"). Fyra och fler matchar var som helst, så att "strejk" hittar
+// "storstrejken". Siffror matchar alltid var som helst: "193" ger 1930-talet.
+function has(text, term) {
+  if (term.length > 3 || !/^\p{L}+$/u.test(term)) return text.includes(term)
+  const words = text.split(/[^\p{L}\p{N}]+/u)
+  return term.length === 3 ? words.some((w) => w.startsWith(term)) : words.includes(term)
+}
+
 // Varför visas kortet? Kortet visar år, titel och (på större kort) den korta
 // texten, men sökningen går även på den långa texten och taggarna. När träffen
 // bara finns där ser läsaren inte varför Saltsjöbadsavtalet dyker upp på
@@ -20,12 +32,12 @@ function normalize(text) {
 export function matchHint(event, query, shown) {
   const terms = normalize(query).split(/\s+/).filter(Boolean)
   const visible = normalize(shown)
-  const missing = terms.filter((term) => !visible.includes(term))
+  const missing = terms.filter((term) => !has(visible, term))
   if (missing.length === 0) return null
   const sentences = String(event.long).match(/[^.!?]+[.!?]+/g) ?? [event.long]
-  const sentence = sentences.find((s) => missing.some((term) => normalize(s).includes(term)))
+  const sentence = sentences.find((s) => missing.some((term) => has(normalize(s), term)))
   if (sentence) return sentence.trim()
-  const tag = (event.tags ?? []).find((t) => missing.some((term) => normalize(t).includes(term)))
+  const tag = (event.tags ?? []).find((t) => missing.some((term) => has(normalize(t), term)))
   return tag ? `Ämne: ${tag}` : null
 }
 
@@ -48,6 +60,6 @@ export function filterEvents(events, { query = '', country = ALL_COUNTRIES } = {
     if (country !== ALL_COUNTRIES && event.country !== country) return false
     if (terms.length === 0) return true
     const text = haystack(event)
-    return terms.every((term) => text.includes(term))
+    return terms.every((term) => has(text, term))
   })
 }

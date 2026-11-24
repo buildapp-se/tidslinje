@@ -183,7 +183,10 @@ kontexten och behöver inte grunderna förklarade.
 - `persons`-fältet finns i JSON men ingen personsida byggs.
 - Sökningen matchar år, titel, kort text, lång text och taggar. Den normaliserar
   bort diakriter, så `jamstalldhet` hittar `jämställdhet`. Flera sökord smalnar
-  av träffmängden i stället för att vidga den.
+  av träffmängden i stället för att vidga den. Korta bokstavsord är förkortningar:
+  ett eller två tecken måste vara ett helt ord (`LO`, `AD`, `EU`), tre tecken en
+  ordbörjan (`LAS`, och `str` medan man skriver). Fyra och fler, och siffror,
+  matchar var som helst, så `strejk` hittar `storstrejken`.
 - Sökläget lever bara i komponentens `useState`. Ingen URL-parameter och ingen
   `localStorage`: en delad länk ska visa hela tidslinjen, inte någon annans
   filtrering.

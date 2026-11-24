@@ -89,4 +89,20 @@ assert.equal(matchHint(fake({ long: 'Skotten i Ådalen' }), 'adalen', 'Ab Cd'), 
 assert.equal(matchHint(fake({ long: 'Inget här.' }), 'saknas', 'Ab Cd'), null)
 assert.equal(matchHint(fake({ tags: ['lön', 'avtal'] }), 'lon avtal', 'Ab Cd'), 'Ämne: lön', 'en tagg räcker för ett av orden')
 
+// Korta bokstavsord är förkortningar. Som delsträng gav "lo" 43 av 77 (lockout,
+// lön, blockad) och "ad" 69. Ett eller två tecken: helt ord. Tre: ordbörjan.
+// Fyra och fler, och siffror: var som helst.
+const hits = (long, query) => filterEvents([fake({ long })], { query }).length
+assert.equal(hits('En lockout och en blockad.', 'lo'), 0)
+assert.equal(hits('LO:s kongress.', 'lo'), 1, 'LO följt av kolon är ett ord')
+assert.equal(hits('Ett väl utbyggt fackligt nät.', 'ad'), 0)
+assert.equal(hits('Arbetarklassen.', 'las'), 0)
+assert.equal(hits('Nya LAS-regler.', 'las'), 1)
+assert.equal(hits('Strejken bröt ut.', 'str'), 1, 'medan man skriver "strejk"')
+assert.equal(hits('Storstrejken bröt ut.', 'strejk'), 1, 'sammansättningar')
+assert.equal(hits('Under 1930-talet.', '193'), 1)
+assert.ok(ids(filterEvents(events, { query: 'LO' })).includes('1898-lo'))
+assert.ok(filterEvents(events, { query: 'LO' }).length < 20, '"LO" ska inte ge hälften av tidslinjen')
+assert.equal(matchHint(fake({ long: 'En lockout. LO svarade.' }), 'lo', 'Ab Cd'), 'LO svarade.')
+
 console.log(`alla kontroller OK (${events.length} händelser)`)

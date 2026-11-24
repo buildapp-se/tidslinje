@@ -42,7 +42,7 @@ export default function Timeline() {
 
   const sorted = [...events].sort((a, b) => a.year - b.year)
   const visible = filterEvents(sorted, { query, country })
-  const filtering = query !== '' || country !== ALL_COUNTRIES
+  const filtering = query.trim() !== '' || country !== ALL_COUNTRIES
 
   const clear = () => {
     setQuery('')

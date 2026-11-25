@@ -12,6 +12,20 @@ reviewedAt: 2026-11-25
 
 # Handoff: tidslinje
 
+## 2026-11-25: webbläsarpass, grenen `xb/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125x`)
+
+Klar. Pushat till `main` (`13646cc`) och driftsatt med `npm run deploy`,
+verifierat live. Huvudflödena i WebKit (Playwright, profilen iPhone 13),
+Firefox vid 1440 px och Chromium, detaljer i BACKLOG under Webbläsarpass.
+
+- **Lookbehind i sökledtråden** (`src/search.js`): `(?<=[.!?])` kan Safari
+  först från 16.4, och i huvudbunten ger den en tom sida på äldre iPhone.
+  Nu `replace` plus `split`, samma meningar; `test_search.js` fäller
+  lookbehind och jämför mot den gamla delningen. Inte provat i en gammal
+  WebKit, bara att bunten live saknar lookbehind och att ledtråden är
+  densamma i alla tre motorerna.
+- Inga andra skillnader som skadar en användare. iOS är inte testat.
+
 ## 2026-11-25: scenariojakt, grenen `scen/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125c`)
 
 Klar. Pushat till `main` och driftsatt med `npm run deploy`, verifierat live.

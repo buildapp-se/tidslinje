@@ -1,5 +1,23 @@
 @import 'tailwindcss';
 
+/* Loggans typsnitt, självhostade i public/fonts (OFL). Appen använder dem
+   bara i loggan, så filerna är skurna till loggans bokstäver (2 KB styck) och
+   förladdas i index.html. Ny text i loggan kräver ny delmängd, se
+   CONTEXT.md. Förut hämtades de från Google Fonts: två extra värdar och en
+   renderingsblockerande CSS före första text, och besökarens IP till Google. */
+@font-face {
+  font-family: Archivo;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/logo-archivo.woff2') format('woff2');
+}
+@font-face {
+  font-family: Fraunces;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/logo-fraunces.woff2') format('woff2');
+}
+
 @theme {
   --color-accent: #b0342b;
   --color-cream: #efebe4;

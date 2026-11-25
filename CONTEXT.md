@@ -162,8 +162,15 @@ tidstypiska illustrationer, inte foton av själva händelsen.
 - Accentfärg dämpad tegelröd `#B0342B`, definierad som `--color-accent` i `@theme` i `src/index.css` (Tailwind 4, ingen `tailwind.config.js`).
 - Bakgrund varm krämvit `#EFEBE4` (`cream`), kort i vitt (`paper`).
 - Loggan är inline SVG i `src/components/Logo.jsx`, horisontell variant.
-- Typografi i loggan: Fraunces serif 500 och Archivo versal grotesk 800, laddade
-  via Google Fonts i `index.html`.
+- Typografi i loggan: Fraunces serif 500 och Archivo versal grotesk 800,
+  självhostade i `public/fonts/` (OFL, latin-delmängden från Google Fonts,
+  sedan 2026-11-25). Appen laddar bara `logo-*.woff2`, skurna till loggans
+  bokstäver och förladdade i `index.html`; `integritet.html` använder hela
+  latin-filerna. Ändras loggans text måste delmängden göras om, i
+  `public/fonts`:
+  `uvx --from fonttools[woff] pyftsubset fraunces-500-latin.woff2 --text="Arbetarrörelsens" --flavor=woff2 --output-file=logo-fraunces.woff2`
+  och samma med `archivo-latin.woff2`, `--text="TIDSLINJE"` och
+  `logo-archivo.woff2`.
 - Tre kortstorlekar styrda per händelse i JSON. Modal öppnas vid klick på kort.
 
 ## Målgrupp

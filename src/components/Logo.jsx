@@ -1,4 +1,4 @@
-// Inline SVG (inte <img>) så webbfonterna som laddas i index.html faktiskt används.
+// Inline SVG (inte <img>) så webbfonterna i src/index.css faktiskt används.
 export default function Logo({ className = 'h-7 sm:h-9 w-auto' }) {
   return (
     <svg viewBox="0 0 560 48" className={className} role="img" aria-label="Arbetarrörelsens tidslinje">

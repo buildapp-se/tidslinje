@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // Innehållspolicy (CSP) för den byggda sajten. GitHub Pages kan inte sätta
 // egna headers och zonens gemensamma regel på buildapp.se saknar script-src,
 // så policyn ligger som <meta> i sidan. Bara skript från sajten själv, inga
-// inline-skript. Typsnitten kommer från Google Fonts, bilder från sajten eller
+// inline-skript. Typsnitten ligger i public/fonts, bilder kommer från sajten eller
 // via https (datamodellen tillåter en extern URL i `image`). Cloudflare Web
 // Analytics lägger in beacon.min.js vid kanten (se integritet.html) och
 // skickar mätvärden till /cdn-cgi/rum på samma domän.
@@ -14,8 +14,8 @@ import tailwindcss from '@tailwindcss/vite'
 const CSP = [
   "default-src 'self'",
   "script-src 'self' https://static.cloudflareinsights.com",
-  "style-src 'self' https://fonts.googleapis.com",
-  'font-src https://fonts.gstatic.com',
+  "style-src 'self'",
+  "font-src 'self'",
   "img-src 'self' https: data:",
   "connect-src 'self' https://cloudflareinsights.com",
   "object-src 'none'",

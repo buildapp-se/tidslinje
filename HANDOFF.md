@@ -12,6 +12,12 @@ reviewedAt: 2026-11-25
 
 # Handoff: tidslinje
 
+## 2026-11-25: språk- och inställningspass, grenen `prefs/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125t`)
+
+Pågår. Svensk text i källan, sedan mörkt läge, reducerad rörelse, 200 %
+textzoom och tvingade färger med Playwright.
+
+
 ## 2026-11-25: webbläsarpass, grenen `xb/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125x`)
 
 Klar. Pushat till `main` (`13646cc`) och driftsatt med `npm run deploy`,

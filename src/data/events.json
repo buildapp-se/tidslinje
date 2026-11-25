@@ -389,7 +389,7 @@
     "image": "images/1908-amalthea.webp",
     "imageCredit": {
       "caption": "S/S Amalthea i Malmö hamn 1908, med hålet efter sprängningen",
-      "by": "Unknown photographer, Public domain",
+      "by": "Okänd fotograf, Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Amalthea-1908.jpg"
     }
   },
@@ -866,8 +866,8 @@
     "epoch": "folkhemmet-och-valfardsstaten",
     "country": "sverige",
     "size": "large",
-    "short": "Per-Albin Hanssons SAP vinner valet och inleder decennier av socialdemokratiskt styre.",
-    "long": "Socialdemokraterna under Per-Albin Hansson vinner riksdagsvalet 1932 och inleder en period av socialdemokratiskt styre som i nästan oavbruten följd sträcker sig till 1976. Det är under dessa år som folkhemsbygget och välfärdsstaten tar form. Valsegern kom i kölvattnet av den ekonomiska krisen och skotten i Ådalen 1931.",
+    "short": "Per Albin Hanssons SAP vinner valet och inleder decennier av socialdemokratiskt styre.",
+    "long": "Socialdemokraterna under Per Albin Hansson vinner riksdagsvalet 1932 och inleder en period av socialdemokratiskt styre som i nästan oavbruten följd sträcker sig till 1976. Det är under dessa år som folkhemsbygget och välfärdsstaten tar form. Valsegern kom i kölvattnet av den ekonomiska krisen och skotten i Ådalen 1931.",
     "tags": [
       "politisk",
       "val"
@@ -956,7 +956,7 @@
     "image": "images/1938-saltsjobad.webp",
     "imageCredit": {
       "caption": "Underskrift av Saltsjöbadsavtalet 1938",
-      "by": "Photographer Meyerhöffer, Public domain",
+      "by": "Meyerhöffer, Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Saltsjobadsavtalet.jpg"
     }
   },
@@ -1209,7 +1209,7 @@
     "country": "sverige",
     "size": "large",
     "short": "Riksdagen beslutar om ATP, en avgörande seger för LO och socialdemokratin.",
-    "long": "Efter en av 1900-talets hetaste politiska debatter beslutar riksdagen att genomföra Allmän tilläggspension (ATP). LO och SAP kämpade hårt för reformen mot hårt motstånd. ATP-frågan ledde till extra val 1958 och till att Folkpartiet sprack. Reformen lade grunden för det svenska pensionssystemet och ses som en av socialdemokratins viktigaste segrar.",
+    "long": "Efter en av 1900-talets hetaste politiska debatter beslutar riksdagen att genomföra Allmän tilläggspension (ATP). LO och SAP kämpade hårt för reformen mot hårt motstånd. ATP-frågan ledde till extraval 1958 och till att Folkpartiet sprack. Reformen lade grunden för det svenska pensionssystemet och ses som en av socialdemokratins viktigaste segrar.",
     "tags": [
       "lag",
       "pension",
@@ -1727,7 +1727,7 @@
     "country": "sverige",
     "size": "large",
     "short": "LO:s förslag om löntagarfonder antas av SAP i starkt beskuren version.",
-    "long": "Rudolf Meidners ursprungliga förslag om löntagarfonder, där en del av företagens vinster successivt skulle övergå i kollektivt ägande via fackförbunden, mötte hårt motstånd från arbetsgivarna och högerpartierna. Det SAP slutligen antog 1983 var ett kraftigt nedbantad kompromissförslag. Löntagarfonderna avvecklades 1990 av en borgerlig regering. Frågan är en av de mest kontroversiella i modern svensk politisk historia.",
+    "long": "Rudolf Meidners ursprungliga förslag om löntagarfonder, där en del av företagens vinster successivt skulle övergå i kollektivt ägande via fackförbunden, mötte hårt motstånd från arbetsgivarna och högerpartierna. Det SAP slutligen antog 1983 var ett kraftigt nedbantat kompromissförslag. Löntagarfonderna avvecklades 1990 av en borgerlig regering. Frågan är en av de mest kontroversiella i modern svensk politisk historia.",
     "tags": [
       "politisk",
       "ekonomi",
@@ -2002,7 +2002,7 @@
     "country": "sverige",
     "size": "large",
     "short": "EU-domstolen begränsar svenska fackförbunds rätt att vidta stridsåtgärder mot utländska bolag.",
-    "long": "EU-domstolens dom i Laval-målet fastslår att ett latviskt bolag som utstationerade lettiska byggnadsarbetare i Sverige inte kunde krävas på svenska kollektivavtalsvillkor utan vidare. Domen tvingade Sverige att ändra sin lagstiftning (Lex Laval) och begränsade kraftigt fackens möjlighet att vidta stridsåtgärder mot utländska bolag. Lex Laval ses som ett allvarligt ingrepp i den svenska modellen och skapade en intensiv debatt om EU och arbetsrätt.",
+    "long": "EU-domstolens dom i Lavalmålet fastslår att ett lettiskt bolag som utstationerade lettiska byggnadsarbetare i Sverige inte kunde krävas på svenska kollektivavtalsvillkor utan vidare. Domen tvingade Sverige att ändra sin lagstiftning (Lex Laval) och begränsade kraftigt fackens möjlighet att vidta stridsåtgärder mot utländska bolag. Lex Laval ses som ett allvarligt ingrepp i den svenska modellen och skapade en intensiv debatt om EU och arbetsrätt.",
     "tags": [
       "lag",
       "EU",

@@ -32,32 +32,21 @@ export default function EpochGroup({ epoch, events, query, onOpen }) {
               /*
                 Grid på mobil:  [1.5rem dot-kolumn | 1fr kort-kolumn]
                 Grid på desktop:[1fr vänster | 2rem dot-kolumn | 1fr höger]
-                display:none-element tar inte upp grid-plats → fungerar på mobil.
+                Kortet finns en gång och flyttas mellan kolumnerna med CSS.
+                Förut låg det två gånger (en mobil- och en desktopkopia), och
+                vreds telefonen med modalen öppen gick fokus tillbaka till den
+                kopia som just gömts, alltså till body.
               */
               className="grid grid-cols-[1.5rem_1fr] md:grid-cols-[1fr_2rem_1fr] mb-8 items-start"
             >
-              {/* Desktop: vänster kort (hidden på mobil → tar ej grid-plats) */}
-              <div className="hidden md:flex md:justify-end md:pr-4">
-                {goLeft && <EventCard event={event} query={query} onOpen={onOpen} />}
-              </div>
-
               {/* Dot, alltid synlig, centrerad i sin kolumn */}
-              <div className="flex flex-col items-center pt-4">
+              <div className="col-start-1 md:col-start-2 row-start-1 flex flex-col items-center pt-4">
                 <div className="w-3 h-3 rounded-full bg-accent border-2 border-white shadow-sm relative z-10" />
               </div>
 
-              {/* Mobil: alltid höger. Desktop: höger kort om !goLeft */}
-              <div className="pl-3 md:pl-4">
-                {/* Mobil: visa alltid */}
-                <div className="md:hidden">
-                  <EventCard event={event} query={query} onOpen={onOpen} />
-                </div>
-                {/* Desktop: visa bara om kortet ska till höger */}
-                {!goLeft && (
-                  <div className="hidden md:block">
-                    <EventCard event={event} query={query} onOpen={onOpen} />
-                  </div>
-                )}
+              {/* Mobil: alltid höger. Desktop: varannan till vänster */}
+              <div className={`col-start-2 row-start-1 pl-3 ${goLeft ? 'md:col-start-1 md:flex md:justify-end md:pl-0 md:pr-4' : 'md:col-start-3 md:pl-4'}`}>
+                <EventCard event={event} query={query} onOpen={onOpen} />
               </div>
             </div>
           )

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'unsafe-inline'; font-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>Integritetspolicy | Arbetarrörelsens tidslinje</title>
 <meta name="description" content="Hur Arbetarrörelsens tidslinje behandlar personuppgifter. Kort svar: sajten är statisk, sparar ingenting och har inga cookies.">
 <link rel="canonical" href="https://buildapp.se/tidslinje/integritet.html">
@@ -24,10 +24,10 @@
 <meta name="twitter:description" content="Hur Arbetarrörelsens tidslinje behandlar personuppgifter. Kort svar: sajten är statisk, sparar ingenting och har inga cookies.">
 <meta name="twitter:image" content="https://buildapp.se/tidslinje/og.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Fraunces:wght@500&display=swap" rel="stylesheet">
 <style>
+/* Typsnitten ligger på sajten själv (public/fonts), inte hos Google Fonts. */
+@font-face{font-family:Archivo;font-weight:600 800;font-display:swap;src:url(fonts/archivo-latin.woff2) format('woff2')}
+@font-face{font-family:Fraunces;font-weight:500;font-display:swap;src:url(fonts/fraunces-500-latin.woff2) format('woff2')}
 :root{--accent:#B0342B;--cream:#EFEBE4;--ink:#1A1A1A}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--cream);color:var(--ink);
@@ -78,7 +78,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 
 <main>
   <h1>Integritetspolicy</h1>
-  <p class="meta">Senast uppdaterad 2 november 2026 &middot; Version 1.2</p>
+  <p class="meta">Senast uppdaterad 25 november 2026 &middot; Version 1.3</p>
 
   <p class="lede">Tidslinjen är en statisk sajt. Den har inga konton, inga formulär, ingen databas och sparar ingenting om dig. Det finns inga annonser, ingen beteendespårning och inga personuppgifter att sälja.</p>
 
@@ -91,7 +91,6 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
     <li><strong>Cloudflare</strong> levererar och skyddar sajten. I det ledet behandlas IP-adress, tidpunkt, efterfrågad adress och webbläsarinformation.</li>
     <li><strong>Cloudflare Web Analytics</strong> ger aggregerad besöksstatistik: vilken sida som visats, land, webbläsare, hänvisande sida och laddningstid. Cloudflare lägger in ett litet skript (<code>beacon.min.js</code> från <code>static.cloudflareinsights.com</code>) som skickar mätvärdena till buildapp.se. Tjänsten sätter inga cookies, skapar ingen enhetsprofil och sparar inte din IP-adress; den används bara i stunden för att avgöra land och sålla bort robotar.</li>
     <li><strong>GitHub Pages</strong> är webbhotellet och för motsvarande tekniska loggar.</li>
-    <li><strong>Google Fonts</strong> levererar sajtens typsnitt. När din webbläsare hämtar dem går din IP-adress till Google. Utöver Cloudflare är det den enda tredjeparten som får uppgifter direkt från din webbläsare.</li>
   </ul>
   <p>Ingen profilering och inget automatiserat beslutsfattande med rättsliga eller liknande betydande effekter sker.</p>
 
@@ -105,7 +104,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
   <p>Tekniska loggar hos Cloudflare och GitHub styrs av deras egna rutiner och rör sig normalt om dagar till veckor. Sajten själv sparar ingenting.</p>
 
   <h2>Leverantörer och överföring utanför EU/EES</h2>
-  <p>Cloudflare tillhandahåller leverans och skydd, GitHub webbhotellet och Google typsnitten. Samtliga är amerikanska bolag och kan behandla uppgifter utanför EU/EES. För dessa överföringar tillämpas leverantörernas dataskyddsvillkor och godkända överföringsmekanismer, exempelvis Data Privacy Framework och standardavtalsklausuler där de är tillämpliga.</p>
+  <p>Cloudflare tillhandahåller leverans och skydd och GitHub webbhotellet. Båda är amerikanska bolag och kan behandla uppgifter utanför EU/EES. För dessa överföringar tillämpas leverantörernas dataskyddsvillkor och godkända överföringsmekanismer, exempelvis Data Privacy Framework och standardavtalsklausuler där de är tillämpliga.</p>
 
   <h2>Dina rättigheter</h2>
   <p>Du kan begära tillgång, rättelse, radering, begränsning eller dataportabilitet, och invända mot behandling som grundas på berättigat intresse. Eftersom sajten inte lagrar något om dig saknas i praktiken uppgifter att lämna ut. Begäran hanteras manuellt via kontaktadressen ovan. Du har också rätt att klaga hos <a href="https://www.imy.se/" rel="external noopener" target="_blank">Integritetsskyddsmyndigheten (IMY)</a>.</p>

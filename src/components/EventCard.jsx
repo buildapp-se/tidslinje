@@ -1,4 +1,4 @@
-import { imgSrc, linkIcon } from '../shared'
+import { imgSrc, linkIcon, LINK_LABEL } from '../shared'
 import { matchHint } from '../search'
 
 // Tailwind-klasser per kortstorlek
@@ -80,7 +80,7 @@ export default function EventCard({ event, query = '', onOpen }) {
       {hasLinks && (
         <span className="flex items-center gap-2 mt-2">
           {event.links.map((link, i) => (
-            <span key={i} title={link.type} className="text-sm leading-none">
+            <span key={i} title={LINK_LABEL[link.type] || link.type} className="text-sm leading-none">
               {linkIcon(link.type, 'w-3.5 h-3.5')}
             </span>
           ))}

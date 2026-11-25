@@ -12,6 +12,33 @@ reviewedAt: 2026-11-24
 
 # Handoff: tidslinje
 
+## 2026-11-24: andra buggjakten, grenen `hunt2/2026-11-24` (worktree `C:\dev\_wt\tidslinje-1124k`)
+
+Klar. Täckte det första passet inte gick: alla 183 externa länkar och
+bildkällor (GET, wikilänkarna även mot Wikipedias API för saknade sidor och
+grensidor), 404-sidan, datafilens årtal mot epokerna, decimalpunkt och
+tusentalsavgränsare i texterna, engelska rester i attribut, sidtitlar, trasiga
+bilder, samt laddning med 400 ms fördröjning, blockerade typsnitt och
+blockerade bilder (Playwright mot `vite preview --mode gh`, 390 px). Rättat:
+
+- **Tre wikilänkar** (`events.json`): ABF och Arbetsdomstolen gick till
+  grensidor, Allmän visstid gav 404.
+- **Sakfel i `1908-amalthea`**: en dödad och 23 skadade, inte tre och dussintals.
+- **404-sidan** (`public/404.html`): var GitHubs engelska sida.
+- **Kortens ikontips** (`EventCard.jsx`): "wiki", "podcast", "video" blev
+  `LINK_LABEL`.
+
+Verifierat: `npm test` och `npm run build:gh` gröna, i webbläsaren noll
+konsolfel, 0 trasiga bilder av 92, inga engelska tips kvar, 404-sidans länk
+leder till tidslinjen. Live efter `npm run deploy` på buildapp.se/tidslinje:
+de tre länkarna i den driftsatta bunten, 404 med svensk sida, ikontipsen
+svenska och Amalthea-texten rättad.
+Inte rättat: ingen service worker finns, men `index.html` cachas 600 s av
+GitHub Pages och gamla hashade JS-filer tas bort vid deploy, så en besökare
+med cachad sida kan få en tom sida i upp till tio minuter efter en deploy
+(inte testat, plattformens begränsning). Inget fanns parkerat från pass 5
+och 6 utöver tillbakaknappen, som är Patriks beslut.
+
 ## 2026-11-24: buggjakt, grenen `hunt/2026-11-24` (worktree `C:\dev\_wt\tidslinje-1124h`)
 
 Klar. Gick användarflödena med Playwright vid 390 och 1440 px mot `vite preview

@@ -12,7 +12,7 @@ reviewedAt: 2026-11-25
 
 # Handoff: tidslinje
 
-## 2026-11-25: fart, tillgänglighet och metadata, grenen `speed/2026-11-25` (worktree `C:\dev\_wt	idslinje-1125s`)
+## 2026-11-25: fart, tillgänglighet och metadata, grenen `speed/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125s`)
 
 Klar. Pushat till `main` och driftsatt med `npm run deploy`. Mätt live med
 Playwright (390 px med 4x CPU och Slow 4G, samt 1440 px) och axe-core 4.14.0

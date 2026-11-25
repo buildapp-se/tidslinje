@@ -36,8 +36,9 @@ export function matchHint(event, query, shown) {
   if (missing.length === 0) return null
   // Meningsgräns = skiljetecken, blanksteg och versal eller siffra. Så delar
   // varken "t.ex. driftsinskränkningar" eller Joe Hills citat med utropstecken
-  // meningen mitt itu.
-  const sentences = String(event.long).split(/(?<=[.!?])\s+(?=[\p{Lu}\d])/u)
+  // meningen mitt itu. Utan lookbehind: Safari före 16.4 kan inte tolka den,
+  // och då faller hela bunten, så gränsen märks med \0 och delas på den.
+  const sentences = String(event.long).replace(/([.!?])\s+(?=[\p{Lu}\d])/gu, '$1\0').split('\0')
   const sentence = sentences.find((s) => missing.some((term) => has(normalize(s), term)))
   if (sentence) return sentence.trim()
   const tag = (event.tags ?? []).find((t) => missing.some((term) => has(normalize(t), term)))

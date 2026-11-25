@@ -114,4 +114,23 @@ assert.equal(
 const mbl = events.find((e) => e.id === '1976-mbl')
 assert.ok(matchHint(mbl, 'outsourcing', `${mbl.year} ${mbl.title} ${mbl.short}`).startsWith('Lagen om'))
 
+// Ingen lookbehind i regexarna: Safari före 16.4 kan inte tolka (?<= och (?<!,
+// och eftersom search.js ligger i huvudbunten blir hela sidan tom, inte bara
+// ledtråden. Vite skriver inte om regexar, så kontrollen måste ligga här.
+const source = readFileSync(fileURLToPath(new URL('../src/search.js', import.meta.url)), 'utf-8')
+assert.ok(!/\(\?<[=!]/.test(source), 'lookbehind i src/search.js bryter Safari före 16.4')
+// Samma meningar som den gamla lookbehind-delningen, för varje händelse.
+const norm = (t) => t.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '')
+let compared = 0
+for (const e of events) {
+  const old = String(e.long).split(/(?<=[.!?])\s+(?=[\p{Lu}\d])/u)
+  for (const s of old) {
+    const word = norm(s).match(/\p{L}{6,}/u)?.[0]
+    if (!word) continue
+    assert.equal(matchHint(e, word, 'x'), old.find((o) => norm(o).includes(word)).trim(), `${e.id} på "${word}"`)
+    compared++
+  }
+}
+assert.ok(compared > 200, `för få meningar jämförda: ${compared}`)
+
 console.log(`alla kontroller OK (${events.length} händelser)`)

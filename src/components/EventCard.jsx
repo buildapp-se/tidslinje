@@ -29,7 +29,7 @@ export default function EventCard({ event, query = '', onOpen }) {
     <button
       onClick={() => onOpen(event)}
       className={`
-        text-left w-full bg-white rounded-lg border border-gray-100
+        text-left w-full bg-white rounded-lg border border-gray-100 [overflow-wrap:anywhere]
         border-l-accent hover:shadow-lg transition-shadow cursor-pointer
         ${SIZE[event.size]}
       `}
@@ -38,8 +38,10 @@ export default function EventCard({ event, query = '', onOpen }) {
           div, p eller rubriker. `block` ger samma layout som förut. Rubriknivån
           gick ändå aldrig fram, en knapps innehåll läses upp som ren text. */}
       {/* Rubrikrad: år + titel + eventuell thumbnail */}
-      <span className="flex items-start justify-between gap-2">
-        <span className="block flex-1 min-w-0">
+      {/* flex-wrap och min-w-[min(8rem,100%)]: vid förstorad text tog miniatyren nästan
+          hela bredden och titeln fick en bokstav per rad; nu hamnar bilden under. */}
+      <span className="flex flex-wrap items-start justify-between gap-2">
+        <span className="block flex-1 min-w-[min(8rem,100%)]">
           <span className="block text-accent font-bold text-xs mb-1 tracking-wide">
             {event.year}
           </span>

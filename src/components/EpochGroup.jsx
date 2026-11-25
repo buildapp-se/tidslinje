@@ -37,7 +37,7 @@ export default function EpochGroup({ epoch, events, query, onOpen }) {
                 vreds telefonen med modalen öppen gick fokus tillbaka till den
                 kopia som just gömts, alltså till body.
               */
-              className="grid grid-cols-[1.5rem_1fr] md:grid-cols-[1fr_2rem_1fr] mb-8 items-start"
+              className="grid grid-cols-[1.5rem_minmax(0,1fr)] md:grid-cols-[minmax(0,1fr)_2rem_minmax(0,1fr)] mb-8 items-start"
             >
               {/* Dot, alltid synlig, centrerad i sin kolumn */}
               <div className="col-start-1 md:col-start-2 row-start-1 flex flex-col items-center pt-4">

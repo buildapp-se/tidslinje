@@ -72,7 +72,7 @@ export default function Modal({ event, onClose }) {
               className="w-full h-52 object-cover rounded-t-xl"
             />
             {credit && (
-              <figcaption className="px-6 pt-2 text-[11px] text-gray-600 leading-snug">
+              <figcaption className="px-6 pt-2 text-[0.6875rem] text-gray-600 leading-snug">
                 {credit.caption && <span>{credit.caption}. </span>}
                 <a
                   href={credit.source}

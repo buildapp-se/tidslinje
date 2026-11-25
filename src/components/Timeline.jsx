@@ -32,7 +32,9 @@ const COUNTRIES = [
 
 // min-h 44 px: tryckytan på telefon (Fitts, granskningen 2026-09-16)
 const CHIP = 'px-3 min-h-[44px] rounded-full text-sm border transition-colors'
-const CHIP_ON = 'bg-accent text-white border-accent'
+// Tvingade färger tar bort bakgrunden, och då såg valt och ovalt filter likadana
+// ut. Systemfärgen Highlight är det läget har för valt.
+const CHIP_ON = 'bg-accent text-white border-accent forced-colors:forced-color-adjust-none forced-colors:bg-[Highlight] forced-colors:text-[HighlightText] forced-colors:border-[Highlight]'
 const CHIP_OFF = 'bg-white text-ink/70 border-ink/15 hover:border-accent/50'
 
 export default function Timeline() {
@@ -63,7 +65,7 @@ export default function Timeline() {
           className="w-full min-h-[44px] rounded-lg border border-ink/15 bg-white px-3 py-2 text-sm text-ink placeholder:text-ink/70 focus:border-accent focus:outline-hidden focus:ring-1 focus:ring-accent sm:max-w-xs"
         />
 
-        <div className="flex gap-1.5" role="group" aria-label="Filtrera på område">
+        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Filtrera på område">
           {COUNTRIES.map((c) => (
             <button
               key={c.id}

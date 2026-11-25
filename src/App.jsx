@@ -15,7 +15,7 @@ export default function App() {
         {/* Loggan är sidans namn och därför dess h1: utan den saknade sidan
             huvudrubrik, och epokernas h2 hängde i luften för skärmläsare. */}
         <h1 className="m-0">
-          <Logo className="h-7 sm:h-9 w-auto mx-auto" />
+          <Logo className="h-7 sm:h-9 w-auto max-w-full mx-auto" />
         </h1>
         <p className="mt-3 text-ink/70 text-sm">Klass, kamp och kompromiss: från 1846 till i dag</p>
         <button

@@ -37,24 +37,27 @@ function Card({ event, year, tone = 'plain', className = '' }) {
     wrong: 'border-accent bg-red-50 ring-2 ring-accent motion-safe:animate-shake',
   }
   return (
-    <div className={`flex items-center gap-3 rounded-xl border px-3 py-2.5 shadow-xs ${TONE[tone]} ${className}`}>
+    <div className={`flex flex-wrap items-center gap-3 rounded-xl border px-3 py-2.5 shadow-xs ${TONE[tone]} ${className}`}>
       <span
         className={`w-12 flex-none text-center text-sm font-bold tabular-nums ${tone === 'right' ? 'text-green-800' : 'text-accent'}`}
       >
         {year}
       </span>
-      <span className="min-w-0 flex-1 text-sm leading-snug text-gray-900 hyphens-auto [overflow-wrap:anywhere]">{event.title}</span>
+      <span className="min-w-[min(8rem,100%)] flex-1 text-sm leading-snug text-gray-900 hyphens-auto [overflow-wrap:anywhere]">{event.title}</span>
       {thumb && <img src={thumb} width="40" height="40" alt="" className="h-10 w-10 flex-none rounded-md object-cover" loading="lazy" />}
     </div>
   )
 }
+
+// Korten radbryts (flex-wrap, titeln minst 8rem): vid förstorad text fick
+// titeln annars en stavelse per rad bredvid årtal och bild.
 
 // Kortet på hand: samma uppställning som tidslinjens kort men med ett "?" där
 // årtalet brukar stå, så att det syns vad som saknas och var det ska in.
 function HandCard({ event, titleRef, className = '' }) {
   const thumb = thumbSrc(event.image)
   return (
-    <div className={`flex items-center gap-3 rounded-xl border-2 border-accent bg-white p-2.5 ${className}`}>
+    <div className={`flex flex-wrap items-center gap-3 rounded-xl border-2 border-accent bg-white p-2.5 ${className}`}>
       <span aria-hidden="true" className="grid flex-none grid-cols-2 gap-0.5 text-accent/60">
         {Array.from({ length: 6 }, (_, i) => (
           <span key={i} className="h-1 w-1 rounded-full bg-current" />
@@ -66,7 +69,7 @@ function HandCard({ event, titleRef, className = '' }) {
       >
         ?
       </span>
-      <h3 ref={titleRef} tabIndex={-1} className="min-w-0 flex-1 font-semibold leading-snug text-gray-900 outline-none hyphens-auto [overflow-wrap:anywhere]">
+      <h3 ref={titleRef} tabIndex={-1} className="min-w-[min(8rem,100%)] flex-1 font-semibold leading-snug text-gray-900 outline-none hyphens-auto [overflow-wrap:anywhere]">
         {event.title}
       </h3>
       {thumb && (
@@ -266,7 +269,10 @@ export default function Game() {
         Dra kortet till rätt år i tidslinjen, eller tryck på en plats.
       </p>
 
-      <div ref={panel} className="sticky top-2 z-20 mb-4">
+      {/* Klistrad bara när skärmen rymmer den. Vid förstorad text (36em följer
+          webbläsarens textstorlek) blev panelen högre än skärmen och dolde
+          platserna den pekar på. */}
+      <div ref={panel} className="top-2 z-20 mb-4 [@media(min-height:36em)]:sticky">
         {/* Återkopplingen ligger i en status-region så att skärmläsare får facit
             utan att fokus flyttas. */}
         <div role="status" className="sr-only">
@@ -323,7 +329,7 @@ export default function Game() {
               >
                 {last.ok ? '✓' : '✕'}
               </span>
-              <div className="min-w-0 flex-1">
+              <div className="min-w-0 flex-1 [overflow-wrap:anywhere]">
                 <p className="text-lg font-bold">{last.ok ? 'Rätt!' : 'Inte riktigt'}</p>
                 <p className="text-sm text-white">
                   {last.card.title} var <strong>{last.card.year}</strong>
@@ -334,7 +340,7 @@ export default function Game() {
                 </p>
               </div>
             </div>
-            <div className="mt-3 flex items-center justify-between gap-3">
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
               <Pips results={results} onColor />
               <button
                 ref={nextButton}

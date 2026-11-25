@@ -14,9 +14,26 @@ reviewedAt: 2026-11-25
 
 ## 2026-11-25: språk- och inställningspass, grenen `prefs/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125t`)
 
-Pågår. Svensk text i källan, sedan mörkt läge, reducerad rörelse, 200 %
-textzoom och tvingade färger med Playwright.
+Klar. Pushat till `main` (`5840c89`) och driftsatt med `npm run deploy`,
+verifierat live. Svensk text i källan läst, sedan Playwright med mörkt läge, reducerad
+rörelse, 200 % text (1280 och 390 px) och tvingade färger. Detaljer i BACKLOG
+under Språk- och inställningspass 2026-11-25.
 
+- **Språkfel** i `events.json`: lettiskt, Lavalmålet, extraval, nedbantat,
+  Per Albin Hansson, två engelska bildkrediter.
+- **200 % text vid 390 px**: loggan, filtren, korten och spelets kort
+  spillde över eller fick en bokstav per rad; spelpanelen var klistrad och
+  högre än skärmen, så platserna gick inte att trycka på. Panelen klistras
+  nu bara från 36em skärmhöjd, vilket också tar bort den på en telefon på
+  tvären (val taget åt Patrik).
+- **Tvingade färger**: valt filter syns (Highlight), loggans text syns i
+  mörkt högkontrastläge (`CanvasText`).
+- Vanlig storlek oförändrad: elementmåtten identiska mot live vid 390 och
+  1280 px på tidslinje, spel och integritetssida.
+- Live efter deploy: inställningsskriptet 0 fynd, en hel spelomgång med tryck
+  vid 200 % och 390 px går igenom (föll före). GitHub Pages-bygget fastnade
+  på `building` i 20 minuter; en ny byggbegäran via API:t
+  (`POST pages/builds`) gick igenom på en minut.
 
 ## 2026-11-25: webbläsarpass, grenen `xb/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125x`)
 

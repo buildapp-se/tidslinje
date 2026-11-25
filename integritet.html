@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'unsafe-inline'; font-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<!-- script-src 'self': Cloudflares e-postskydd byter kontaktadressen mot
+     [email protected] och avkodar den med ett skript under /cdn-cgi/ på samma
+     domän. Utan 'self' blockerades skriptet och adressen syntes aldrig. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'unsafe-inline'; font-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>Integritetspolicy | Arbetarrörelsens tidslinje</title>
 <meta name="description" content="Hur Arbetarrörelsens tidslinje behandlar personuppgifter. Kort svar: sajten är statisk, sparar ingenting och har inga cookies.">
 <link rel="canonical" href="https://buildapp.se/tidslinje/integritet.html">

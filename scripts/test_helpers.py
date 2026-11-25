@@ -45,6 +45,8 @@ for ev in events:
     if ev.get("image", "").startswith("images/"):
         assert ev["image"] == f"images/{ev['id']}.webp", \
             f"bildnamn måste följa id: {ev['id']} har {ev['image']}"
+        # Korten visar miniatyren, saknas den blir kortet utan bild i produktion.
+        assert (Path(__file__).parent.parent / "public/images/thumbs" / f"{ev['id']}.webp").exists(),             f"miniatyr saknas, kör download-images.py: {ev['id']}"
     credit = ev.get("imageCredit")
     if credit:
         assert credit.get("by") and credit.get("source"), \

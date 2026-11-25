@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import events from '../data/events.json'
 import { ROUNDS, newGame, place, slotLabel, verdict } from '../game'
-import { imgSrc } from '../shared'
+import { thumbSrc } from '../shared'
 
 // Så långt måste fingret röra sig innan ett tryck blir ett drag.
 const DRAG_THRESHOLD = 6
@@ -30,7 +30,7 @@ function Pips({ results, onColor = false }) {
 }
 
 function Card({ event, year, tone = 'plain', className = '' }) {
-  const thumb = imgSrc(event.image)
+  const thumb = thumbSrc(event.image)
   const TONE = {
     plain: 'border-gray-100 bg-white',
     right: 'border-green-600 bg-green-50 ring-2 ring-green-600 motion-safe:animate-pop',
@@ -44,7 +44,7 @@ function Card({ event, year, tone = 'plain', className = '' }) {
         {year}
       </span>
       <span className="min-w-0 flex-1 text-sm leading-snug text-gray-900 hyphens-auto [overflow-wrap:anywhere]">{event.title}</span>
-      {thumb && <img src={thumb} alt="" className="h-10 w-10 flex-none rounded-md object-cover" loading="lazy" />}
+      {thumb && <img src={thumb} width="40" height="40" alt="" className="h-10 w-10 flex-none rounded-md object-cover" loading="lazy" />}
     </div>
   )
 }
@@ -52,7 +52,7 @@ function Card({ event, year, tone = 'plain', className = '' }) {
 // Kortet på hand: samma uppställning som tidslinjens kort men med ett "?" där
 // årtalet brukar stå, så att det syns vad som saknas och var det ska in.
 function HandCard({ event, titleRef, className = '' }) {
-  const thumb = imgSrc(event.image)
+  const thumb = thumbSrc(event.image)
   return (
     <div className={`flex items-center gap-3 rounded-xl border-2 border-accent bg-white p-2.5 ${className}`}>
       <span aria-hidden="true" className="grid flex-none grid-cols-2 gap-0.5 text-accent/60">
@@ -72,6 +72,8 @@ function HandCard({ event, titleRef, className = '' }) {
       {thumb && (
         <img
           src={thumb}
+          width="64"
+          height="64"
           alt=""
           draggable="false"
           className="h-12 w-12 flex-none rounded-lg object-cover sm:h-16 sm:w-16"

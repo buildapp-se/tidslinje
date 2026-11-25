@@ -20,7 +20,7 @@ Uppdaterar src/data/events.json med image-fältet.
 """
 
 import json, requests, os, io, time, sys, urllib.parse
-from PIL import Image
+from PIL import Image, ImageOps
 from pathlib import Path
 
 # Windows-konsolen är ofta cp1252 och kraschar på ✓/→ annars.
@@ -689,6 +689,21 @@ def resolve_image(ev):
     return None, None
 
 
+THUMBS_DIR = IMAGES_DIR / "thumbs"
+
+
+def save_thumb(src, size=128):
+    """Kvadratisk miniatyr till kort och spel (visas i högst 64 px, 128 för
+    skarpa skärmar). Mittbeskuren som CSS-klassen object-cover, så kortet ser
+    likadant ut men laddar några KB i stället för hela 800 px-bilden."""
+    THUMBS_DIR.mkdir(exist_ok=True)
+    out = THUMBS_DIR / src.name
+    if out.exists() and out.stat().st_mtime >= src.stat().st_mtime:
+        return
+    with Image.open(src) as img:
+        ImageOps.fit(img.convert("RGB"), (size, size), Image.LANCZOS).save(out, "WEBP", quality=80)
+
+
 def main():
     with open(EVENTS, encoding="utf-8") as f:
         events = json.load(f)
@@ -703,6 +718,7 @@ def main():
         if out.exists():
             if "image" not in ev:
                 ev["image"] = f"images/{eid}.webp"
+            save_thumb(out)
             print(f"{eid}  ->  redan klar")
             skip += 1
             continue
@@ -733,6 +749,7 @@ def main():
             fail += 1
             continue
 
+        save_thumb(out)
         ev["image"] = f"images/{eid}.webp"
         ev["imageCredit"] = credit
         print(f"    credit: {credit['by']}")

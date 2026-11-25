@@ -1,4 +1,4 @@
-import { imgSrc, linkIcon, LINK_LABEL } from '../shared'
+import { thumbSrc, linkIcon, LINK_LABEL } from '../shared'
 import { matchHint } from '../search'
 
 // Tailwind-klasser per kortstorlek
@@ -16,7 +16,7 @@ const TITLE_SIZE = {
 
 export default function EventCard({ event, query = '', onOpen }) {
   const hasLinks = event.links && event.links.length > 0
-  const thumb    = imgSrc(event.image)
+  const thumb    = thumbSrc(event.image)
   const showShort = event.size !== 'small'
   // Varför är kortet med i sökresultatet? Ledtråden visas bara när sökordet inte
   // redan syns på kortet, alltså när träffen sitter i den långa texten eller i
@@ -54,6 +54,8 @@ export default function EventCard({ event, query = '', onOpen }) {
         {thumb && event.size !== 'small' && (
           <img
             src={thumb}
+            width="64"
+            height="64"
             alt=""
             title={event.imageCredit && [event.imageCredit.caption, event.imageCredit.by].filter(Boolean).join('. ')}
             className="w-16 h-16 object-cover rounded-sm flex-none"

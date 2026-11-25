@@ -10,6 +10,14 @@ export function imgSrc(path) {
   return `${import.meta.env.BASE_URL}${path}`
 }
 
+// Miniatyren (128 px, mittbeskuren) till kort och spel, som visar bilden i
+// högst 64 px. Hela bilden är upp till 250 KB och behövs bara i modalen.
+// Skapas av save_thumb() i scripts/download-images.py; en extern bild har
+// ingen miniatyr och används som den är.
+export function thumbSrc(path) {
+  return imgSrc(path?.startsWith('images/') ? path.replace('images/', 'images/thumbs/') : path)
+}
+
 // Ikon per länktyp. Storleken skickas in eftersom kortet vill ha mindre
 // ikoner än modalen, allt annat är gemensamt.
 const ICON = { wiki: WikiIcon, podcast: PodcastIcon, video: VideoIcon }

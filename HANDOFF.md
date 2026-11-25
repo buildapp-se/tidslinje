@@ -4,13 +4,30 @@ status: active
 currentGoal: Tidslinjen är komplett nog att användas i kurs, 77 händelser varav 59 med bild, alla med källa
 nextAction: Ja eller nej till batchen 2026-09-08 står kvar. Sedan bild till de tolv händelser som står spärrade i NO_AUTO_IMAGE som nya
 blockers: []
-reviewedAt: 2026-11-24
+reviewedAt: 2026-11-25
 ---
 **2026-11-17:** uppdateringsrundan: `npm update` inom intervallen (vite 8.3.8, plugin-react 6.3, tailwind 4.3.5), pushat till main, sajten omdeployad. `npm audit` 9 high före och efter: alla är picomatch <=4.0.7 (ingen fixad version finns) bakom vite och gh-pages, se BACKLOG. Inga majors utestående.
 
 **2026-11-02:** kontaktadressen är nu `kontakt@buildapp.se` (förut `kontakt@orgutveckling.se`). Integritetstexten version 1.2.
 
 # Handoff: tidslinje
+
+## 2026-11-25: fart, tillgänglighet och metadata, grenen `speed/2026-11-25` (worktree `C:\dev\_wt	idslinje-1125s`)
+
+Klar. Pushat till `main` och driftsatt med `npm run deploy`. Mätt live med
+Playwright (390 px med 4x CPU och Slow 4G, samt 1440 px) och axe-core 4.14.0
+på tidslinje, spel, modal, `integritet.html` och 404.
+
+- **Miniatyrer** (`save_thumb()` i `download-images.py`, `thumbSrc()` i
+  `shared.jsx`): korten laddade hela 800 px-bilden för en 64 px-ruta. Live
+  första laddning 390 px 782 till 177 KB, 1440 px 1611 till 216 KB; LCP vid
+  390 px 1520 till 1316 ms (LCP är text). CLS 0 före och efter.
+  `test_helpers.py` fäller en bild utan miniatyr.
+- **width/height** på miniatyrerna, **canonical** på startsidan.
+- axe 0 violations före och efter, alla vyer, båda bredderna.
+
+Kvar (BACKLOG, Granskning 2026-11-25): assets cachas bara 4 h av GitHub Pages
+(Cloudflare-regel vore Patriks beslut), Google Fonts blockerar renderingen.
 
 ## 2026-11-24: andra buggjakten, grenen `hunt2/2026-11-24` (worktree `C:\dev\_wt\tidslinje-1124k`)
 

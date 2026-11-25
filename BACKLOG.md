@@ -185,3 +185,15 @@ Fynd från cockpitens granskningskolumner (Lighthouse mobil, W3C, UX-skript, hea
 - [x] `[P3]` (rättad 2026-11-24, andra buggjakten: `public/404.html`; mätt live efter deploy) En saknad adress under `/tidslinje/` gav GitHubs engelska "Page not found" utan väg tillbaka. Nu en svensk sida med länk till tidslinjen.
 - [x] `[P3]` (rättad 2026-11-24, andra buggjakten: `EventCard.jsx` använder `LINK_LABEL`) Kortens länkikoner hade engelska tooltips "wiki", "podcast", "video". Nu "Läs mer", "Podcast", "Video" som i modalen.
 - [ ] `[P3]` Tillbakaknappen med modalen öppen lämnar sajten i stället för att stänga modalen (uppmätt 2026-11-24). Samma sak i spelet. Kräver en historikpost utan URL-ändring; berör beslutet att spel och sökläge inte har egen URL, därför Patriks val.
+
+## Granskning 2026-11-25 (fart, tillgänglighet, metadata)
+
+Mätt live med Playwright vid 390 px (4x CPU, Slow 4G) och 1440 px, axe-core 4.14.0 i båda bredderna på tidslinje, spel, modal, `integritet.html` och 404.
+
+- [x] `[P2]` (rättad 2026-11-25: 128 px miniatyrer i `public/images/thumbs/` via `save_thumb()`, `thumbSrc()` i kort och spel; live första laddning 390 px 782 till 177 KB, 1440 px 1611 till 216 KB, LCP vid 390 px 1520 till 1316 ms, CLS 0 före och efter, skärmbilden identisk utom omsamplingen i miniatyrerna) Korten laddade hela 800 px-bilden, upp till 250 KB (`1889-sap`), för en 64 px-ruta.
+- [x] `[P3]` (rättad 2026-11-25: `width`/`height` på miniatyrerna, 0 av 92 bilder utan mått live) Ingen `img` hade width och height. Gav ingen mätbar CLS eftersom CSS satte storleken.
+- [x] `[P3]` (rättad 2026-11-25, live) Startsidan saknade `<link rel="canonical">`; `integritet.html` hade en.
+- [ ] `[P3]` Hashade filer i `assets/` cachas bara 4 h (`max-age=14400`) och `index.html` 600 s: GitHub Pages sätter det, repot kan inte ändra. En Cloudflare-cacheregel för `/tidslinje/assets/*` är en zoninställning, Patriks beslut.
+- [ ] `[P3]` Google Fonts-CSS:en blockerar renderingen på alla sidor (två extra värdar före första text). Självhostade typsnitt skulle ta bort det men kräver ändrad CSP i `vite.config.js` och `integritet.html`; inte gjort i passet, LCP är 1,3 s vid 390 px ändå.
+
+axe: 0 violations på alla fem vyer i båda bredderna, före och efter. Inget manifest: sajten är ingen PWA. 404-sidan saknar description och canonical, avsiktligt (ska inte indexeras).

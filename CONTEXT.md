@@ -33,7 +33,10 @@ en artikel.
   Reglerna är ren JavaScript som `search.js` och körs av `node scripts/test_game.js`.
   `App.jsx` växlar mellan tidslinje och spel med `useState`, utan URL.
 - `scripts/download-images.py` hämtar och konverterar bilder samt skriver
-  `image` och `imageCredit` i `events.json`. `scripts/test_helpers.py` kontrollerar
+  `image` och `imageCredit` i `events.json`, och skapar 128 px miniatyrer i
+  `public/images/thumbs/` (`save_thumb()`). Kort och spel visar miniatyren via
+  `thumbSrc()`, bara modalen laddar hela 800 px-bilden; `test_helpers.py` fäller
+  en bild utan miniatyr. `scripts/test_helpers.py` kontrollerar
   skriptets textparsning och datafilens invarianter.
 
 ```mermaid
@@ -222,11 +225,12 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - npm audit: 2026-11-24, pass, 0 in production, 0 in the dev chain (2026-10-27: pass, 0; 2026-11-17 had 9 high in picomatch, advisory no longer matches)
 - Secrets: 2026-09-24, pass, gitleaks 0 findings in 43 commits
 - Actions: 2026-09-24, n/a, no GitHub Actions workflows
-- WCAG 2.2 AA: 2026-11-04, pass, axe 4.14.0 0 violations on local build (timeline, modal, game, integritet.html; 390 and 1280 px), keyboard pass of the modal done; not run against live
+- WCAG 2.2 AA: 2026-11-25, pass, axe 4.14.0 0 violations live on buildapp.se/tidslinje (timeline, game, modal, integritet.html, 404; 390 and 1440 px), before and after the speed pass (2026-11-04: pass, axe 4.14.0 0 violations on local build (timeline, modal, game, integritet.html; 390 and 1280 px), keyboard pass of the modal done; not run against live
 - Headers (automated): 2026-10-27, pass, 6 of 6 on buildapp.se/tidslinje, Observatory B+ on buildapp.se
 - Secrets (automated): 2026-10-06, pass, 2 targets; 0 failed, 0 blocked; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a/tidslinje.json
 - Actions (automated): 2026-10-06, n/a, no GitHub Actions workflows; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a/tidslinje.json
 - Markup (automated): 2026-10-27, pass, 1 targets; 0 failed, 0 blocked; evidence C:/dev/aifabriken/.runs/audits/2026-10-27-markup-w/tidslinje.json
+- Speed: 2026-11-25, pass, live Playwright at 390 px with 4x CPU and Slow 4G: timeline first load 782 KB to 177 KB, LCP 1520 ms to 1316 ms (text, not an image), CLS 0; at 1440 px 1611 KB to 216 KB, LCP 328 to 348 ms; open: hashed assets cached only 4 h (GitHub Pages), Google Fonts CSS render-blocking
 - WCAG 2.2 AA (automated): 2026-10-06, blocked, 1 targets; 0 failed, 1 blocked; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a2/tidslinje.json
 - OG image: 2026-10-25, pass, 1200x630 PNG, https://buildapp.se/tidslinje/og.png
 - Database: 2026-10-25, none, static site

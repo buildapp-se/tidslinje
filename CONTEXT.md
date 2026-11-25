@@ -237,7 +237,7 @@ Read by the cockpit Audits tab. One `- Label: YYYY-MM-DD, result` per check; con
 - Secrets (automated): 2026-10-06, pass, 2 targets; 0 failed, 0 blocked; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a/tidslinje.json
 - Actions (automated): 2026-10-06, n/a, no GitHub Actions workflows; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a/tidslinje.json
 - Markup (automated): 2026-10-27, pass, 1 targets; 0 failed, 0 blocked; evidence C:/dev/aifabriken/.runs/audits/2026-10-27-markup-w/tidslinje.json
-- Speed: 2026-11-25, pass, live Playwright at 390 px with 4x CPU and Slow 4G: timeline first load 782 KB to 177 KB, LCP 1520 ms to 1316 ms (text, not an image), CLS 0; at 1440 px 1611 KB to 216 KB, LCP 328 to 348 ms; open: hashed assets cached only 4 h (GitHub Pages), Google Fonts CSS render-blocking
+- Speed: 2026-11-25, pass, live Playwright at 390 px with 4x CPU and Slow 4G: timeline first load 782 KB to 177 KB, LCP 1520 ms to 1316 ms (text, not an image), CLS 0; at 1440 px 1611 KB to 216 KB, LCP 328 to 348 ms; later the same day Google Fonts self-hosted (integritet.html FCP 1164 to 704 ms locally, 720 ms live; logo font ready 5234 to 1041 ms locally, same throttling); open: hashed assets cached only 4 h (GitHub Pages)
 - WCAG 2.2 AA (automated): 2026-10-06, blocked, 1 targets; 0 failed, 1 blocked; evidence C:/dev/aifabriken/.runs/audits/2026-10-06-batch-a2/tidslinje.json
 - OG image: 2026-10-25, pass, 1200x630 PNG, https://buildapp.se/tidslinje/og.png
 - Database: 2026-10-25, none, static site

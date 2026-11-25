@@ -12,6 +12,27 @@ reviewedAt: 2026-11-25
 
 # Handoff: tidslinje
 
+## 2026-11-25: scenariojakt, grenen `scen/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125c`)
+
+Klar. Pushat till `main` och driftsatt med `npm run deploy`, verifierat live.
+Flerstegsscenarier med Playwright mot en lokal server som härmar GitHub Pages
+(`max-age=600`, gzip), detaljer i BACKLOG under Scenariojakt 2026-11-25.
+
+- **Fokus efter vriden skärm** (`EpochGroup.jsx`): varje kort fanns i två
+  kopior, och stängdes modalen efter att bredden passerat 768 px gick fokus
+  till `body`. Nu en kopia, flyttad med CSS; skärmbilder byte-identiska.
+- **Kontaktadressen på integritetssidan** syntes som "[email protected]":
+  sidans CSP blockerade Cloudflares avkodningsskript. `script-src 'self'`.
+- **Självhostade typsnitt** (batch 8-punkten): Google Fonts borta, CSP bara
+  `'self'` för typsnitt och stil, integritetstexten version 1.3 utan Google.
+- Uppgraderingsscenariot är nu provat: inom cachefönstret har webbläsaren både
+  `index.html` och JS cachade och visar det gamla bygget helt, ingen tom sida.
+
+Verifierat: `npm test` och `npm run build` gröna; scenarioskripten (vecka,
+två flikar, vridning) gröna lokalt och live; typsnitt laddade utan
+konsolfel på app och integritetssida vid 390 och 1440 px live.
+Patrik bör läsa: integritetstexten ändrad (Google Fonts-punkten struken).
+
 ## 2026-11-25: fart, tillgänglighet och metadata, grenen `speed/2026-11-25` (worktree `C:\dev\_wt\tidslinje-1125s`)
 
 Klar. Pushat till `main` och driftsatt med `npm run deploy`. Mätt live med
